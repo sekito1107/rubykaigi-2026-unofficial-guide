@@ -3,9 +3,12 @@ import DayTabs from './DayTabs';
 interface HeaderProps {
   selectedDay: number;
   onDayChange: (day: number) => void;
+  showOnlyFavorites: boolean;
+  onToggleFavoritesView: () => void;
+  favoritesCount: number;
 }
 
-const Header = ({ selectedDay, onDayChange }: HeaderProps) => {
+const Header = ({ selectedDay, onDayChange, showOnlyFavorites, onToggleFavoritesView, favoritesCount }: HeaderProps) => {
   return (
     <header className="px-6 py-4 border-b border-white/5 flex flex-col gap-6 bg-[#0c1427] sticky top-0 z-50">
       <div className="flex justify-between items-center">
@@ -27,8 +30,18 @@ const Header = ({ selectedDay, onDayChange }: HeaderProps) => {
             />
             <svg className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-500" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
           </div>
-          <button className="flex items-center gap-2 px-4 py-2 rounded-lg bg-white/5 border border-white/10 text-xs font-black text-slate-300 hover:bg-white/10 transition-colors uppercase tracking-widest">
-            <span>☆</span> Show All
+          <button 
+            onClick={onToggleFavoritesView}
+            className={`flex items-center gap-2 px-4 py-2 rounded-lg border text-xs font-black transition-all uppercase tracking-widest ${
+              showOnlyFavorites 
+                ? 'bg-amber-500/10 border-amber-500/50 text-amber-500' 
+                : 'bg-white/5 border-white/10 text-slate-300 hover:bg-white/10'
+            }`}
+          >
+            <span className={showOnlyFavorites ? 'fill-amber-500' : ''}>
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill={showOnlyFavorites ? "currentColor" : "none"} stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </span>
+            {showOnlyFavorites ? `Favorites (${favoritesCount})` : 'Show All'}
           </button>
         </div>
       </div>

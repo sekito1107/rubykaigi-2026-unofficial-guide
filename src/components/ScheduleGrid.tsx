@@ -7,18 +7,28 @@ const allSessions = sessionsData as Session[]
 
 interface ScheduleGridProps {
   selectedDay: number
+  favorites: string[]
+  onToggleFavorite: (id: string) => void
+  showOnlyFavorites: boolean
 }
 
-export default function ScheduleGrid({ selectedDay }: ScheduleGridProps) {
-  const filteredSessions = allSessions.filter(s => s.day === selectedDay)
+export default function ScheduleGrid({ selectedDay, favorites, onToggleFavorite, showOnlyFavorites }: ScheduleGridProps) {
+  // 1. セッションの抽出とフィルタリング
+  let filteredSessions = allSessions.filter(s => s.day === selectedDay)
+  
+  if (showOnlyFavorites) {
+    filteredSessions = filteredSessions.filter(s => favorites.includes(s.id))
+  }
 
+  // 2. 開始時間（startTime）でグルーピング
   const timeSlots = Array.from(new Set(filteredSessions.map(s => s.startTime))).sort()
 
-  // 現在時刻のシミュレーション（デモ用）
+  // 3. 現在時刻のシミュレーション（デモ用）
   const currentTime = '10:15'
 
   return (
     <div className="max-w-[1600px] mx-auto px-4 py-8">
+      {/* 会場ヘッダー: ... */}
       <div className="grid grid-cols-[100px_1fr_1fr_1fr] gap-6 mb-8 sticky top-[148px] z-40 bg-[#0c1427]/95 backdrop-blur py-4 border-b border-white/5">
         <div className="flex items-end justify-center pb-2">
           <span className="text-[10px] font-black text-slate-500 tracking-widest uppercase">Time</span>
@@ -40,7 +50,8 @@ export default function ScheduleGrid({ selectedDay }: ScheduleGridProps) {
       <div className="relative space-y-4">
         {timeSlots.map((time, index) => {
           const sessionsInSlot = filteredSessions.filter(s => s.startTime === time)
-
+          
+          // LIVE / DONE / NEXT 判定ロジック
           const endTime = sessionsInSlot[0]?.endTime || ''
           const isLive = currentTime >= time && currentTime < endTime
           const isDone = currentTime >= endTime
@@ -51,6 +62,7 @@ export default function ScheduleGrid({ selectedDay }: ScheduleGridProps) {
               isLive ? 'bg-ruby-red/10 ring-1 ring-ruby-red/20 shadow-lg shadow-ruby-red/5' : 
               isNext ? 'bg-next-blue/5 ring-1 ring-next-blue/20' : 'bg-transparent'
             }`}>
+              {/* 時間・ステータスカラム */}
               <div className="flex flex-col items-center justify-start pt-2 gap-2">
                 <span className={`text-xl font-black font-mono tracking-tighter ${
                   isLive ? 'text-white' : isNext ? 'text-next-blue' : isDone ? 'text-slate-600' : 'text-slate-400'
@@ -75,11 +87,16 @@ export default function ScheduleGrid({ selectedDay }: ScheduleGridProps) {
                 )}
               </div>
 
+              {/* 会場セッション */}
               {['Large', 'Sub', 'Small'].map(room => {
                 const session = sessionsInSlot.find(s => s.room === room)
                 return session ? (
                   <div key={session.id} className={isDone ? 'opacity-40 grayscale-[0.5] transition-opacity' : ''}>
-                    <SessionCard session={session} />
+                    <SessionCard 
+                      session={session} 
+                      isFavorite={favorites.includes(session.id)}
+                      onToggleFavorite={onToggleFavorite}
+                    />
                   </div>
                 ) : (
                   <div key={room} className="flex items-center justify-center rounded-lg bg-white/[0.01] border border-dashed border-white/5 min-h-[160px]">
