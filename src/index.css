@@ -1,17 +1,42 @@
 @import "tailwindcss";
 
 @theme {
-  --color-ruby: #e11d48;
-  --color-next: #0ea5e9;
+  --color-ruby-red: #e11d48;
+  --color-ruby-dark: #9f1239;
+  --color-slate-dark: #0c1427;
+  --color-surface: #131c33;
+  --color-surface-hover: #1e293b;
+  --color-next-blue: #0ea5e9;
+  
+  --font-inter: "Inter", system-ui, sans-serif;
+  --font-outfit: "Outfit", system-ui, sans-serif;
 }
 
 :root {
-  background-color: #0c1427;
-  color: white;
-  font-family: Inter, system-ui, sans-serif;
+  background-color: var(--color-slate-dark);
+  color: #f8fafc;
+  font-family: var(--font-inter);
+  -webkit-font-smoothing: antialiased;
 }
 
 body {
   margin: 0;
   min-height: 100vh;
+  line-height: 1.5;
+}
+
+/* スムーズなスクロールと基本アニメーション */
+html {
+  scroll-behavior: smooth;
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 4px 24px -1px rgba(0, 0, 0, 0.2);
+}
+
+.ruby-gradient {
+  background: linear-gradient(135deg, var(--color-ruby-red) 0%, var(--color-ruby-dark) 100%);
 }
