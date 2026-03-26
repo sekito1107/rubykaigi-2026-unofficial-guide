@@ -158,16 +158,23 @@ const SessionDetail = ({ session, onClose, languageMode }: SessionDetailProps) =
           </button>
           {showAbstract && (
             <div className="space-y-4 pb-6 animate-in slide-in-from-top-2 duration-300">
-              {(languageMode === 'JA' && session.abstract_ja) && (
-                <div className="text-sm text-slate-200 leading-relaxed bg-white/[0.03] p-4 rounded-lg border border-white/5">
-                  <span className="block mb-2 text-[10px] text-ruby-red uppercase font-black tracking-widest">日本語訳 (Japanese Translation)</span>
-                  {session.abstract_ja}
+              {/* アクティブな言語の概要をハイライト表示 */}
+              <div className="text-sm text-slate-200 leading-relaxed bg-white/[0.03] p-5 rounded-xl border border-white/5 shadow-inner">
+                <span className="block mb-3 text-[10px] text-ruby-red uppercase font-black tracking-[0.2em]">
+                  {languageMode === 'JA' ? '概要 (Japanese Translation)' : 'Official Summary'}
+                </span>
+                {(languageMode === 'JA' && session.abstract_ja) ? session.abstract_ja : session.abstract}
+              </div>
+
+              {/* JAモードで翻訳を表示している場合のみ、原文を控えめに併記 */}
+              {languageMode === 'JA' && session.abstract_ja && (
+                <div className="px-5 pt-4 border-t border-white/5">
+                  <span className="block mb-2 text-[10px] text-slate-600 uppercase font-black tracking-[0.2em]">原文 (Original English)</span>
+                  <div className="text-xs text-slate-500 leading-relaxed opacity-70">
+                    {session.abstract}
+                  </div>
                 </div>
               )}
-              <div className="text-xs text-slate-500 leading-relaxed px-4 opacity-80">
-                <span className="block mb-2 text-[10px] text-slate-600 uppercase font-black tracking-widest">原文 (Original English)</span>
-                {session.abstract}
-              </div>
             </div>
           )}
         </div>
