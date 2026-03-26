@@ -1,0 +1,80 @@
+{
+  "WASM": {
+    "name": "WebAssembly / Ruby/WASM",
+    "description": "ブラウザ上で高速動作するプログラム形式。Rubyをブラウザで直接動かす「ruby.wasm」の基盤です。",
+    "detail": "WebAssembly(WASM)は、ブラウザ上でネイティブコードに近い速度で実行できるバイナリ形式の命令セットです。これまでJavaScriptしか動かなかったブラウザ環境において、RubyやC、Rustといった言語が直接動作する道を開きました。\n\nRubyKaigiでは、この技術を使って『ブラウザ完結型のRubyエディタ』や『ブラウザ上で動くゲームエンジン』などが多く発表されます。サーバーを介さずクライアントサイドだけで完結する新しいRubyアプリケーションの可能性を秘めた、今のRuby界隈で最も熱い技術の一つです。",
+    "url": "https://github.com/ruby/ruby.wasm"
+  },
+  "ZJIT": {
+    "name": "ZJIT",
+    "description": "Ruby 4.1で期待される新JITコンパイラ。メソッド呼び出しのオーバーヘッドを劇的に減らします。",
+    "detail": "ZJITは、CRuby 4.1以降での正式採用を目指して開発されている新しいJIT（Just-In-Time）コンパイラです。既存のYJITの成功を背景に、更に「メソッドフレームのプッシュ」といった関数呼び出し自体のコストを削減することに特化した最適化を行っています。\n\n実装面では、レジスタ割り当てやエスケープ解析といった高度なコンパイラ技術が駆使されており、Rubyが「スクリプト言語」の枠を超えた驚異的なパフォーマンスを出すための重要なピースとなっています。",
+    "url": "https://rubykaigi.org/2026/presentations/k0kubun.html"
+  },
+  "Lrama": {
+    "name": "Lrama",
+    "description": "Ruby 3.3から採用されたパーサジェネレータ。Bison互換でRubyの複雑な文法を解析します。",
+    "detail": "Lramaは、Rubyのソースコードを解析するための「パーサ（構文解析器）」を生成するツール（パーサジェネレータ）です。長年使われてきたBisonというツールを置き換える形でRuby 3.3から正式に採用されました。\n\nRubyの文法は非常に柔軟で複雑（文脈依存）なため、標準的なツールでは対応しきれない部分が多くありました。Lramaはそれらをより「Rubyらしく、保守しやすく」扱うために日本人のRubyコミッタによって開発されており、Rubyの進化（新しいシンタックスの追加など）を支える心臓部と言えます。",
+    "url": "https://github.com/ruby/lrama"
+  },
+  "MMTk": {
+    "name": "MMTk (Memory Management Toolkit)",
+    "description": "異なる言語に対し、差し替え可能なGCの実装を提供するフレームワーク。次世代GCの研究基盤です。",
+    "detail": "MMTkは、ガベージコレクション（GC）のアルゴリズムを効率的に実装・比較するためのフレームワークです。特定の言語に依存せず、Rustで書かれた高性能なGCアルゴリズムを、RubyやJavaといった様々なランタイムに「プラグイン」のように適用できます。\n\n現在、CRubyにMMTkを統合してデフォルトのGCを置き換えたり、新しいアルゴリズムをテストしたりする研究が進んでおり、Rubyのメモリ管理を根本から高速化・効率化する可能性を秘めています。",
+    "url": "https://www.mmtk.io/"
+  },
+  "Ractor": {
+    "name": "Ractor",
+    "description": "Ruby 3.0で導入された並列実行機構。マルチコアCPUを安全かつ効率的に利用できます。",
+    "detail": "Ractor（ラクター）は、Ruby 3.0で導入された並列実行のための抽象化機構です（Ruby Actorの略）。これまでのThreadとは異なり、Ractor間でオブジェクトの共有を厳しく制限することで、GIL（GVL）の制約を受けずにマルチコアCPUの性能を最大限に引き出すことができます。\n\n並列処理における「バグの温床になりやすい共有メモリ」を排した設計で、Rubyで安全かつ大規模な並列アプリケーションを構築するための基盤として期待されています。",
+    "url": "https://docs.ruby-lang.org/ja/latest/class/Ractor.html"
+  },
+  "PicoRuby": {
+    "name": "PicoRuby",
+    "description": "リソースが極めて制限された環境向けの最小クラスのRuby。ワンチップマイコン等で動作します。",
+    "detail": "PicoRubyは、数KBから数百KB程度の極めて少ないメモリしか持たない「マイコン（ワンチップコンピュータ）」で動作するようにゼロから再設計された、最小クラスのRubyの実装です。\n\nキーボードのファームウェア（PRK Firmware）や、IoTデバイス、電子工作の制御などにRubyを使えるようにすることで、C言語などの難しい専門知識がなくてもハードウェアの制御を直感的に行える世界を目指しています。",
+    "url": "https://github.com/picoruby/picoruby"
+  },
+  "mruby": {
+    "name": "mruby",
+    "description": "組込みシステム向けに最適化された軽量Ruby。アプリへの組み込みや、IoT機器で広く利用されています。",
+    "detail": "mrubyは。ISO規格（ISO/IEC 30170:2012）に基づいた軽量なRubyの実装です。CRubyのサブセットとして、ゲームエンジンへのスクリプト言語の組み込みや、ネットワーク機器などの制御用途で世界中で使われています。\n\nまつもとゆきひろ氏自らが設計を主導しており、「Rubyの書きやすさを、あらゆる場所に」という理念を組込みの世界で実現しています。",
+    "url": "https://mruby.org/"
+  },
+  "Falcon": {
+    "name": "Falcon",
+    "description": "非同期I/Oを活用した高速なRuby用Webサーバー。1プロセスで大量の接続を処理できます。",
+    "detail": "Falconは、Rubyの `async` ライブラリを活用して構築された、現代的でスケーラブルなWebサーバーです。従来のスレッドベースやプロセスベースのサーバーとは異なり、非同期I/O（Coroutine）を用いることで、少ないリソースで数万、数十万の同時接続を効率的に処理します。\n\nShopifyなどの大規模なサービスでも採用実績があり、Railsアプリケーションなどのパフォーマンスを最大化するための有力な選択肢となっています。",
+    "url": "https://github.com/socketry/falcon"
+  },
+  "Prism": {
+    "name": "Prism",
+    "description": "メンテナンス性と移植性を重視した、Rubyの新しい公式パーサー。高速でエラーに強いのが特徴です。",
+    "detail": "Prismは、Rubyのソースコードを解析してAST（抽象構文木）を生成する、新世代のパーサーです。これまでの内部構造を刷新し、メンテナンスしやすく、エラーに強く、そして様々なツールから再利用しやすい「Rubyの新しい公式パーサー」としての地位を確立しようとしています。\n\nRuby 3.3から試験的に導入され、今後のRubyの標準的なパーサーインフラとして、ツールの開発やパフォーマンス向上に寄与することが期待されています。",
+    "url": "https://github.com/ruby/prism"
+  },
+  "Funicular": {
+    "name": "Funicular",
+    "description": "PicoRuby.WASMを基盤とした、Ruby中心のWebフロントエンドフレームワーク。",
+    "detail": "Funicularは、制御・マイコン向けのRuby実装であるPicoRubyと、ブラウザでバイナリを実行するWebAssembly(WASM)を組み合わせたWebフロントエンドフレームワークです。\n\n既存の複雑なJavaScriptエコシステムを介さず、Rubyの文法だけでブラウザ上のアプリケーション（UIやロジック）を構築することを目指しています。Rubyistが「ブラウザ」というプラットフォームをRubyらしく扱うためのツールの一つです。",
+    "url": "https://github.com/hasumikin/funicular"
+  },
+  "PSLR(1)": {
+    "name": "PSLR(1)",
+    "description": "Lramaに実装された新しい字句解析・構文解析アルゴリズム。LALR(1)を拡張したものです。",
+    "detail": "PSLR(1) (Pseudo-Scannerless Minimal LR(1)) は、RubyのパーサジェネレータであるLramaに導入された新しいアルゴリズムです。従来のLR法では困難だった「レクサ（字句解析）とパーサ（構文解析）のギャップ」を埋めるために設計されました。\n\n具体的には、パーサ側からレクサに対して「今どのトークンが有効か」を動的に伝えることで、Rubyのような複雑な文法もより正確かつシンプルに解析できるようにします。日本のRubyコミッタによって提案・実装されている最先端の解析手法です。",
+    "url": "https://rubykaigi.org/2026/presentations/ydah_.html"
+  },
+  "Uzumibi": {
+    "name": "Uzumibi",
+    "description": "Cloudflare Workersなどのエッジ環境でRubyを動かすためのアプリケーションフレームワーク。",
+    "detail": "Uzumibi（埋火）は、エッジコンピューティング環境（Cloudflare Workers, Fastly Compute等）において、軽量なRuby（mruby/edge）を効率的に動作させるためのWebフレームワークです。\n\nWebAssembly(WASM)技術を活用し、ミリ秒単位の起動速度と極めて少ないメモリ消費を両立させています。サーバーレスの文脈でRubyの表現力を最大限に活かすための意欲的なプロジェクトです。",
+    "url": "https://github.com/udzura/uzumibi"
+  },
+  "Ractor-Local GC": {
+    "name": "Ractor-Local GC",
+    "description": "Ruby 4.xで導入された、Ractorごとに独立して動作するガベージコレクション機構。",
+    "detail": "Ractor-Local GCは、Ruby 3.0で導入された並列実行機構「Ractor」を真にスケールさせるためのメモリ管理技術です。これまではガベージコレクション（GC）が発生すると全てのRactorが停止していましたが、これをRactorごとに独立させることで、他の動作を止めずにメモリを回収できるようになります。\n\nRuby 4.0以降でのマルチコア性能を劇的に引き出すための「最後のミッシングピース」とも呼ばれる重要な内部改善です。",
+    "url": "https://rubykaigi.org/2026/presentations/TonsOfFun.html"
+  }
+}

@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import Header from './components/Header';
 import ScheduleGrid from './components/ScheduleGrid';
-import SessionDetail from './components/SessionDetail';
+import SessionDetail from './components/SessionDetail.tsx';
 import sessionsData from './data/sessions.json';
 import type { Session } from './types/Session';
 
