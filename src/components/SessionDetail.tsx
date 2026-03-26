@@ -84,9 +84,12 @@ const SessionDetail = ({ session, onClose, languageMode }: SessionDetailProps) =
               {(languageMode === 'JA' && session.abstract_ja) ? session.abstract_ja : session.abstract}
             </div>
 
-            {/* JAモードで翻訳を表示している場合のみ、原文へ誘導するアコーディオン */}
+            {/* JAモードで翻訳を表示している場合のみ、原文へ誘導するアコーディオンと免責事項 */}
             {languageMode === 'JA' && session.abstract_ja && (
-              <div className="px-2">
+              <div className="px-2 space-y-3">
+                <p className="text-[10px] text-slate-500 leading-relaxed italic">
+                  ※ 本翻訳は有志によるものであり、内容の正確性や発表者の意図を完全に保証するものではありません。あらかじめご了承ください。
+                </p>
                 <button 
                   onClick={() => setShowAbstract(!showAbstract)}
                   className="flex items-center gap-2 text-[10px] font-bold text-slate-500 hover:text-slate-300 transition-colors uppercase tracking-widest"
