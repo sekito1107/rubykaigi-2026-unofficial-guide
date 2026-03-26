@@ -67,10 +67,10 @@
     "speakerName": "Satoshi Tagomori",
     "twitter": "@tagomoris",
     "language": "JA",
-    "abstract": "\"Ruby Box\" is a new experimental feature, introduced at Ruby 4.0. I'll introduce the very basic of Ruby Box, and then will explain the problems, hard things, and technically interesting points around finding/determining boxes while running Ruby programs.",
+    "abstract": "\"Ruby Box\" is a new experimental feature, introduced at Ruby 4.0.\n\nI'll introduce the very basic of Ruby Box, and then will explain the problems, hard things, and technically interesting points around finding/determining boxes while running Ruby programs.",
     "officialUrl": "https://rubykaigi.org/2026/presentations/tagomoris.html",
     "title_ja": "Ruby Box 開発の軌跡",
-    "abstract_ja": "「Ruby Box」は、Ruby 4.0で導入された新しい実験的な機能です。Ruby Boxの極めて基礎的な部分を紹介し、その後、Rubyプログラムの実行中にボックスを見つけたり決定したりする際の問題点、困難な点、および技術的に興味深い点について説明します。",
+    "abstract_ja": "「Ruby Box」は、Ruby 4.0で導入された新しい実験的な機能です。\n\nRuby Boxの極めて基本的な部分を紹介した後、Rubyプログラムの実行中にボックスを見つけたり決定したりする際の、問題点、困難な点、および技術的に興味深い点について、説明します。",
     "beginnerGuide": {
       "prerequisites": [
         "Rubyの基本的な文法（クラス、メソッドなど）を知っている",
@@ -107,7 +107,7 @@
     "speakerName": "Hitoshi HASUMI",
     "twitter": "@hasumikin",
     "language": "JA",
-    "abstract": "PicoRuby's compact design and built-in multitasking capabilities unlock the potential for developing entirely Ruby-based applications that run directly in the browser. In this talk, we'll discuss the technical details of Funicular, a new web frontend framework, providing a lightweight and Ruby-centric alternative to existing solutions. Discover how Full-Stack Ruby can make your Ruby life fun!",
+    "abstract": "PicoRuby's compact design and built-in multitasking capabilities unlock the potential for developing entirely Ruby-based applications that run directly in the browser.\n\nIn this talk, we'll discuss the technical details of Funicular, a new web frontend framework, providing a lightweight and Ruby-centric alternative to existing solutions.\n\nDiscover how Full-Stack Ruby can make your Ruby life fun!",
     "officialUrl": "https://rubykaigi.org/2026/presentations/hasumikin.html",
     "tags": [
       "Frontend",
@@ -116,7 +116,7 @@
       "WASM"
     ],
     "title_ja": "Funicular：PicoRuby.WASMで動くブラウザアプリフレームワーク",
-    "abstract_ja": "PicoRubyのコンパクトな設計と組み込みのマルチタスク機能は、ブラウザ上で直接動作する完全にRubyベースのアプリケーションを開発する可能性を解き放ちます。本講演では、既存のソリューションに代わる軽量でRuby中心の選択肢を提供する、新しいWebフロントエンドフレームワーク「Funicular」の技術的詳細について議論します。フルスタックRubyがいかにあなたのRubyライフを楽しくするかを発見してください！"
+    "abstract_ja": "PicoRubyのコンパクトな設計と組み込みのマルチタスク機能は、ブラウザ上で直接動作する完全にRubyベースのアプリケーションを開発する可能性を解き放ちます。\n\nこの講演では、新しいWebフロントエンドフレームワークであるFunicularの技術的な詳細について議論し、既存のソリューションに代わる軽量でRuby中心の選択肢を提供します。\n\nフルスタックRubyがいかにあなたのRubyライフを楽しくするかを発見してください！"
   },
   {
     "id": "d1-1050-sub",
@@ -129,7 +129,7 @@
     "speakerName": "Andrey Marchenko",
     "twitter": "@anmarchenko",
     "language": "EN",
-    "abstract": "Running a full test suite for a Ruby app on every change works at a small scale, but eventually becomes slow and expensive. Many existing tools that try to run only the tests affected by a change either skip too much and then miss test failures or add so much overhead that they are unusable in CI. To solve this I built a test impact analysis engine for the open-source Datadog test optimization gem. This tool now runs in production and saves engineering teams 150 000+ hours of CI time per year.",
+    "abstract": "Running a full test suite for a Ruby app on every change works at a small scale, but eventually becomes slow and expensive. Many existing tools that try to run only the tests affected by a change either skip too much and then miss test failures or add so much overhead that they are unusable in CI. To solve this I built a test impact analysis engine for the open-source Datadog test optimization gem. This tool now runs in production and saves engineering teams 150 000+ hours of CI time per year.\n\nIn this talk I’ll show how that work became a deep dive into the Ruby internals with some surprising findings about what coverage means in Ruby: turns out it is far from being only about the lines of code. In this talk I will tell you about a journey of building a high-performance library that tracks what is really covered by your tests and share the tricks I learned along the way.",
     "officialUrl": "https://rubykaigi.org/2026/presentations/anmarchenko.html",
     "tags": [
       "CI/CD",
@@ -138,7 +138,7 @@
       "Test Impact Analysis"
     ],
     "title_ja": "テストをスキップできるのはいつ？テストインパクトの追跡",
-    "abstract_ja": "Rubyアプリケーションの変更ごとにフルテストスイートを実行するのは、小規模なら機能しますが、規模が大きくなると遅く、コストも嵩みます。影響を受けるテストのみを実行しようとする既存のツールの多くは、スキップしすぎて失敗を見逃すか、CIで実用不可能なほどのオーバーヘッドを追加してしまいます。これを解決するため、私はオープンソースのDatadogテスト最適化gem向けのテストインパクト分析エンジンを構築しました。このツールは現在本番環境で稼働しており、エンジニアリングチームのCI時間を年間15万時間以上削減しています。"
+    "abstract_ja": "変更のたびにRubyアプリの全テストスイートを実行することは、小規模なうちは機能しますが、やがて低速で高コストになります。変更の影響を受けるテストのみを実行しようとする既存のツールの多くは、スキップしすぎてテストの失敗を見逃すか、CIで使用不可能なほどのオーバーヘッドを追加してしまいます。これを解決するために、私はオープンソースのDatadogテスト最適化gem用のテストインパクト分析エンジンを構築しました。このツールは現在本番環境で動作しており、エンジニアリングチームのCI時間を年間15万時間以上節約しています。\n\nこの講演では、その開発がいかにしてRubyの内部構造への深い探求となったか、そしてRubyにおける「カバレッジ」が何を意味するかについてのいくつかの驚くべき発見（単にコードの行数だけではないことが判明しました）についてお話しします。この講演では、テストで実際に何がカバーされているかを追跡する高性能ライブラリを構築した道のりについてお伝えし、その過程で学んだテクニックを共有します。"
   },
   {
     "id": "d1-1050-small",
@@ -161,7 +161,7 @@
       "date"
     ],
     "title_ja": "dateのルーツに戻る",
-    "abstract_ja": "dateライブラリはもともとRubyで実装されていましたが、バージョン1.8.7から1.9系への移行時にパフォーマンス向上のためC言語で書き直されました。現在、dateライブラリには専任のメンテナが不在で、Rubyコミッタの負担となっています。そこで、私はdateライブラリを純粋なRuby実装（Pure Ruby）に置き換えるという挑戦に取り組んでいます。"
+    "abstract_ja": "dateライブラリはもともとRubyで実装されていましたが、バージョン1.8.7から1.9系への移行時に、パフォーマンス向上のためにC言語で書き直されました。現在、dateライブラリには専任のメンテナが不在であり、これがRubyコミッタにとっての負担となっています。そのため、私はdateライブラリを純粋なRuby（Pure Ruby）による実装に置き換えるという挑戦に取り組んでいます。"
   },
   {
     "id": "d1-1130-large",
@@ -186,7 +186,7 @@
       "Standard Library"
     ],
     "title_ja": "Lexer HackからRubyのパーサを解放する",
-    "abstract_ja": "伝統的なLR構文解析では、パーサがトークンを見る前にレクサ（字句解析器）がどのトークンを返すか決定しなければなりません。しかし、文脈依存の構文では、正しいトークン化はパーサだけが知っている文脈に依存します。レクサはそれを見ることができないため、Rubyのレクサは手書きのコードによって文脈を推測する、手動の字句状態管理に頼っています。これにより言語ルールが実装の詳細に分散し、バグの再現を困難にし、あらゆる構文変更を複雑にしています。Lramaに実装したPSLR(1)（Pseudo-Scannerless Minimal LR(1)）はこの関係を逆転させます。つまり、各時点でどのトークンが有効かをパーサがレクサに伝えます。本講演では、PSLR(1)がいかにパーサとレクサの間の情報のギャップを埋めるかを示し、それがどのようにRubyのパーサをLexer Hackの呪いから解放し得るかを探ります。"
+    "abstract_ja": "伝統的なLR構文解析では、パーサがトークンを見る前に、レクサ（字句解析器）がどのトークンを返すかを決定しなければなりません。しかし、文脈依存の構文においては、正しいトークン化はパーサだけが知っている文脈に依存します。レクサはそれを見ることができないため、Rubyのレクサは、手書きのコードを通じて文脈を推測する、手動のレクサ状態管理（lex state management）に頼っています。これにより言語のルールが実装の詳細に分散し、バグの再現を困難にし、あらゆる構文の変更を複雑にしています。\n\n私がLramaに実装したPSLR(1)（Pseudo-Scannerless Minimal LR(1)）は、この関係を逆転させます。つまり、パーサがレクサに対して、各時点でどのトークンが有効であるかを伝えます。本講演では、PSLR(1)がいかにしてパーサとレクサの間の情報のギャップを埋めるかを示し、それがどのようにRubyのパーサを「Lexer Hack」の呪いから解放し得るかを探ります。"
   },
   {
     "id": "d1-1130-sub",
@@ -199,7 +199,7 @@
     "speakerName": "Justin Bowen",
     "twitter": "@TonsOfFun",
     "language": "EN",
-    "abstract": "Ractors promised true parallelism, but \"Stop-the-World\" Garbage Collection remained the final bottleneck—until now. Ruby 4.x introduces Ractor-Local GC, a monumental shift in memory management that decouples object heaps and allows for disjoint collection. This talk explores the technical breakthroughs of the MaNy Project (M:N threading) and how they enable \"Hyper-Generational\" on device workloads in Ruby. Using ragents—a Ractor-native AI agent framework—we demonstrate how to bridge the conceptual gap between Memory Management and LLM Context Management. We will visualize the synergy between heap compaction and token window summarization, proving how Ruby 4.x enables near-linear scaling for autonomous agent swarms. Attendees will leave with a deep understanding of Ruby 4.x internals and a blueprint for high-concurrency AI orchestration.",
+    "abstract": "Ractors promised true parallelism, but \"Stop-the-World\" Garbage Collection remained the final bottleneck—until now. Ruby 4.x introduces Ractor-Local GC, a monumental shift in memory management that decouples object heaps and allows for disjoint collection.\n\nThis talk explores the technical breakthroughs of the MaNy Project (M:N threading) and how they enable \"Hyper-Generational\" on device workloads in Ruby. Using ragents—a Ractor-native AI agent framework—we demonstrate how to bridge the conceptual gap between Memory Management and LLM Context Management. We will visualize the synergy between heap compaction and token window summarization, proving how Ruby 4.x enables near-linear scaling for autonomous agent swarms. Attendees will leave with a deep understanding of Ruby 4.x internals and a blueprint for high-concurrency AI orchestration.",
     "officialUrl": "https://rubykaigi.org/2026/presentations/TonsOfFun.html",
     "tags": [
       "AI エージェント",
@@ -214,7 +214,7 @@
       "ragents"
     ],
     "title_ja": "百万エージェントのRuby：AI時代のRactor-Local GC",
-    "abstract_ja": "Ractorは真の並列性を約束しましたが、これまで「Stop-the-World」ガベージコレクションが最後のボトルネックとして残っていました。Ruby 4.xでは、オブジェクトヒープを切り離し、バラバラのコレクションを可能にするメモリ管理の重大な転換であるRactor-Local GCが導入されます。本講演では、MaNyプロジェクト（M:Nスレッド）の技術的躍進と、それらがRubyにおいてどのようにデバイス上の「ハイパージェネレーショナル」なワークロードを可能にするかを探ります。RactorネイティブなAIエージェントフレームワークであるragentsを用いて、メモリ管理とLLMコンテキスト管理の間の概念的なギャップを埋める方法を実演します。ヒープコンパクションとトークンウィンドウのサマライゼーションの相乗効果を視覚化し、Ruby 4.xがいかに自律型エージェントのスウォーム（群れ）に対してニアリニア（線形に近い）なスケーリングを可能にするかを証明します。参加者はRuby 4.xの内部構造についての深い理解と、高並列AIオーケストレーションの設計図を手にすることができます。"
+    "abstract_ja": "Ractorは真の並列処理を約束しましたが、「Stop-the-World」ガベージコレクションが最後のボトルネックとして残っていました。しかし、それは今までの話です。Ruby 4.xでは、オブジェクトヒープを切り離し、バラバラにコレクションを行うことを可能にする、メモリ管理における記念碑的な転換点である「Ractor-Local GC」が導入されます。\n\nこの講演では、MaNyプロジェクト（M:Nスレッディング）の技術的な画期的進歩と、それらがRubyにおけるオンデバイス・ワークロードの「Hyper-Generational」をどのように可能にするかを探ります。RactorネイティブなAIエージェントフレームワークであるragentsを使用して、メモリ管理とLLMコンテキスト管理の間の概念的なギャップをどのように埋めるかを実演します。ヒープコンパクションとトークンウィンドウの要約の間の相乗効果を視覚化し、Ruby 4.xが自律的なエージェント群に対してほぼ線形のスケーリングをどのように実現するかを証明します。参加者は、Ruby 4.xの内部構造に関する深い理解と、高並列なAIオーケストレーションのブループリントを持ち帰ることができます。"
   },
   {
     "id": "d1-1130-small",
@@ -227,7 +227,7 @@
     "speakerName": "Tsutomu Katsube",
     "twitter": "@tikkss",
     "language": "JA",
-    "abstract": "When a library grows, its test suites become slow. This makes programmers unhappy. Parallel testing based on the multiprocess is a common practice to solve this. However, most testing frameworks and tools are not \"portable\" enough to support various environments. Because they depend on Unix specific features like fork or external libraries including other bundled gems like drb.",
+    "abstract": "When a library grows, its test suites become slow. This makes programmers unhappy. Parallel testing based on the multiprocess is a common practice to solve this. However, most testing frameworks and tools are not \"portable\" enough to support various environments. Because they depend on Unix specific features like fork or external libraries including other bundled gems like drb.\n\nTo address this, test-unit (as a bundled gem) now natively supports portable and fast parallel test running based on the multiprocess. It is designed to work in various environments (e.g. Windows) out of the box.\n\nThis talk describes the journey of implementing parallel running to a historical testing framework without breaking backward compatibility. If you are interested in speeding up your test suites, implementing portable parallel libraries or maintaining historical codebases, this talk will help you.",
     "officialUrl": "https://rubykaigi.org/2026/presentations/tikkss.html",
     "tags": [
       "Concurrency",
@@ -239,7 +239,7 @@
       "drb"
     ],
     "title_ja": "ポータブルで高速 - 並列テストランナーの実装方法",
-    "abstract_ja": "ライブラリが成長すると、テストスイートは遅くなり、プログラマの幸福度は下がります。マルチプロセスによる並列実行が一般的な解決策ですが、多くのフレームワークやツールは、forkなどのUnix固有機能やdrbなどの外部ライブラリに依存しているため、様々な環境をサポートする十分な「ポータビリティ」を備えていません。本講演では、真にポータブルかつ高速な並列テストランナーの実装戦略について議論します。"
+    "abstract_ja": "ライブラリが成長すると、そのテストスイートは低速になります。これはプログラマを不幸にします。これを解決するために、マルチプロセッサベースの並列テストが一般的な手法となっています。しかし、ほとんどのテストフレームワークやツールは、様々な環境をサポートするのに十分な「ポータビリティ」を備えていません。なぜなら、それらがforkのようなUnix固有の機能や、drbのような他のバンドルされたgemを含む外部ライブラリに依存しているためです。\n\nこれに対処するため、（バンドルされたgemである）test-unitは、マルチプロセッサベースのポータブルで高速な並列テスト実行をネイティブにサポートするようになりました。これは、Windowsなどの様々な環境で、設定なしで動作するように設計されています。\n\nこの講演では、後方互換性を損なうことなく、歴史あるテストフレームワークに並列実行を実装した軌跡を述べます。もしあなたが、テストスイートの高速化、ポータブルな並列ライブラリの実装、あるいは歴史あるコードベースの維持に興味があるなら、この講演は役に立つでしょう。"
   },
   {
     "id": "d1-1200-large",
@@ -311,7 +311,7 @@
     "speakerName": "Koichi ITO",
     "twitter": "@koic",
     "language": "JA",
-    "abstract": "This talk explores the potential of tools in the Ruby ecosystem in the AI era, with a particular focus on linters and formatters.",
+    "abstract": "This talk explores the potential of tools in the Ruby ecosystem in the AI era, with a particular focus on linters and formatters.\n\nTraditionally, RuboCop has been triggered by humans or by other programs. In the AI era, AI agents have emerged as a new kind of trigger. This talk discusses practical ways to combine generative AI with linters and formatters, such as running these tools alongside AI agents, by integrating an MCP (Model Context Protocol) server implemented in Ruby.\n\nWhile the AI landscape is evolving rapidly and technologies are changing at a fast pace, this talk aims to provide an opportunity for Ruby ecosystem developers to consider how existing Ruby tools like RuboCop can evolve in the AI era through MCP.",
     "officialUrl": "https://rubykaigi.org/2026/presentations/koic.html",
     "tags": [
       "AI エージェント",
@@ -321,7 +321,7 @@
       "Metaprogramming"
     ],
     "title_ja": "MCPによるRuboCopの探求",
-    "abstract_ja": "本講演では、AI時代におけるRubyエコシステムのツールの可能性を、特にリンターとフォーマッタに焦点を当てて探求します。"
+    "abstract_ja": "この講演では、リンターやフォーマッターに焦点を当て、AI時代におけるRubyエコシステムのツールの可能性を探ります。\n\n従来、RuboCopは人間や他のプログラムによって実行されてきました。AI時代において、AIエージェントが新しい種類の実行トリガーとして登場しました。この講演では、Rubyで実装されたMCP（Model Context Protocol）サーバーを統合することで、AIエージェントと並行してこれらのツールを実行するなど、生成AIとリンターおよびフォーマッターを組み合わせる実践的な方法について議論します。\n\nAIの状況は急速に進化し、技術は速いペースで変化していますが、この講演は、Rubyエコシステムの開発者が、MCPを通じてRuboCopのような既存のRubyツールがAI時代にどのように進化できるかを考える機会を提供することを目指しています。"
   },
   {
     "id": "d1-1330-sub",
@@ -334,7 +334,7 @@
     "speakerName": "Daisuke Aritomo",
     "twitter": "@osyoyu",
     "language": "EN",
-    "abstract": "When our code runs in slow motion, we reach for profilers. They promise to tell us what’s making it slow.",
+    "abstract": "When our code runs in slow motion, we reach for profilers. They promise to tell us what’s making it slow.\n\nOr do they? Profilers do not always “tell the truth”. Their non-deterministic nature comes with pitfalls: sampling bias, hidden methods optimized away, misattributed work between threads. Existing profilers rely on a surprising number of tricks to observe Ruby execution internals.\n\nAs Ruby evolves with features such as Ractors, M:N threading and JIT, the limits of this external approach are becoming increasingly apparent. The more complex the runtime becomes, the harder it is for profilers outside of the VM.\n\nLet us explore the capabilities and limits of today's Ruby profilers, and show how embedding a profiler, say 'ext/profile', directly into CRuby lets us break fundamental limits of external profiling. What should be called \"true\"? We will find out by the end.",
     "officialUrl": "https://rubykaigi.org/2026/presentations/osyoyu.html",
     "tags": [
       "C Extension",
@@ -343,7 +343,7 @@
       "ext/profile"
     ],
     "title_ja": "ext/profile、あるいはプロファイラに真実を語らせる方法",
-    "abstract_ja": "私たちのコードがスローモーションで動作するとき、私たちはプロファイラに手を伸ばします。それらは何が遅くしているのかを教えてくれることを約束します。"
+    "abstract_ja": "コードがスローモーションで動作するとき、私たちはプロファイラに頼ります。プロファイラは、何が動作を遅くしているのかを教えてくれると約束してくれます。\n\n果たしてそうでしょうか？プロファイラは常に「真実を語る」わけではありません。その非決定論的な性質には、サンプリングバイアス、最適化によって消去された隠れたメソッド、スレッド間での作業の誤認といった落とし穴が伴います。既存のプロファイラは、Rubyの実行内部を観察するために驚くほど多くのテクニックに依存しています。\n\nRubyがRactor、M:Nスレッディング、JITなどの機能を備えて進化するにつれ、この外部からのアプローチの限界がますます明らかになってきています。ランタイムが複雑になればなるほど、VMの外部にあるプロファイラにとっては困難になります。\n\n今日のRubyプロファイラの能力と限界を探求しましょう。そして、例えば 'ext/profile' のようにプロファイラをCRubyに直接埋め込むことで、外部プロファイリングの根本的な限界をどのように打破できるかを示します。何が「真実」と呼ばれるべきか？最後にそれを明らかにします。"
   },
   {
     "id": "d1-1330-small",
@@ -356,7 +356,7 @@
     "speakerName": "hadashiA",
     "twitter": "@hadashiA",
     "language": "JA",
-    "abstract": "What if mruby could run anywhere—without any C compilation? I built MRubyCS, a complete mruby VM implementation in pure C#. This makes embedding mruby in cross-platform applications far easier. Cross-platform distribution means juggling build targets, static/dynamic linking, and diverse host machines—a constant hassle (iOS, Web, Win, Mac, consoles, etc.). And on closed platforms like game consoles (Ps, Switch, Xbox..), it's often impractical without SDK access—now it just works. Unity and .NET already handle platform abstraction for you. This also opens new doors for the Ruby community. Game development has long been a space where Ruby has limited presence. With mruby running in Unity, Ruby developers can bring their language into one of the world's most popular game engines—for scripting game logic, building tools, and more. Beyond the VM implementation story, I'll show practical game scripting with VitalRouter.MRuby and Fiber-based coroutines!",
+    "abstract": "What if mruby could run anywhere—without any C compilation?\n\nI built MRubyCS, a complete mruby VM implementation in pure C#. This makes embedding mruby in cross-platform applications far easier.  Cross-platform distribution means juggling build targets, static/dynamic linking, and diverse host machines—a constant hassle (iOS, Web, Win, Mac, consoles, etc.). And on closed platforms like game consoles (Ps, Switch, Xbox..), it's often impractical without SDK access—now it just works. Unity and .NET already handle platform abstraction for you.\n\nThis also opens new doors for the Ruby community. Game development has long been a space where Ruby has limited presence. With mruby running in Unity, Ruby developers can bring their language into one of the world's most popular game engines—for scripting game logic, building tools, and more.\n\nBeyond the VM implementation story, I'll show practical game scripting with VitalRouter.MRuby and Fiber-based coroutines!",
     "officialUrl": "https://rubykaigi.org/2026/presentations/hadashiA.html",
     "tags": [
       "Fiber",
@@ -365,7 +365,7 @@
       "mruby"
     ],
     "title_ja": "C#上のmruby：VM実装からゲームスクリプトまで",
-    "abstract_ja": "もしmrubyが、C言語のコンパイルなしにどこでも動くとしたら？私は純粋なC#によるmruby VM実装「MRubyCS」を構築しました。これにより、クロスプラットフォームアプリケーションへのmrubyの組み込みが劇的に容易になります。Unityや.NETが提供するプラットフォーム抽象化を活用し、ゲームコンソールなどの閉じたプラットフォームでもSDKなしにRubyを動かすことが可能です。Unity上でRubyエージェントを動かし、ゲームロジックやツール構築にRubyを持ち込む新しい扉を開きます。Fiberベースのコルーチンを用いた実践的なゲームスクリプティングの事例も紹介します！"
+    "abstract_ja": "もしmrubyが、Cのコンパイルなしで、どこでも動くとしたらどうでしょうか？\n\n私は、純粋なC#による完全なmruby VM実装であるMRubyCSを構築しました。これにより、クロスプラットフォームのアプリケーションにmrubyを組み込むことがはるかに容易になります。クロスプラットフォームでの配布は、ビルドターゲット、静的/動的リンク、多様なホストマシン（iOS、Web、Win、Mac、コンソールなど）の調整という、絶え間ない手間を意味します。そして、ゲームコンソール（PS、Switch、Xboxなど）のようなクローズドなプラットフォームでは、SDKへのアクセスなしには実行不可能なことが多いですが、今やそれは単に動作します。Unityと.NETがすでにプラットフォームの抽象化を処理してくれているからです。\n\nこれはまた、Rubyコミュニティに新しい扉を開きます。ゲーム開発は長らくRubyの存在感が限定的な分野でした。Unityでmrubyが動作することで、Ruby開発者は世界で最も人気のあるゲームエンジンの一つに自分の言語を持ち込み、ゲームロジックのスクリプト記述やツールの構築などを行うことができます。\n\nVMの実装の話を超えて、VitalRouter.MRubyとFiberベースのコルーチンを用いた実践的なゲームスクリプティングをお見せします！"
   },
   {
     "id": "d1-1410-large",
@@ -387,7 +387,7 @@
       "Ruby 4.0"
     ],
     "title_ja": "Rubyのスケジューラ：I/Oの改善",
-    "abstract_ja": "Rubyのスレッドスケジューラはラウンドロビン方式であり、シンプルで公平ですが、I/O負荷とCPU負荷が混在するワークロードでは、I/O待ちのスレッドがCPU待ちのスレッドのタイムスライス終了を待たされるためレスポンスが悪化します。多くのRubyアプリはこの種の影響を受けるため、優先度ベースのスケジューラから恩恵を受けられます。本講演では、優先度スケジューラの仕組みと、Rubyアプリへの具体的な利点について詳しく検証します。"
+    "abstract_ja": "Rubyのスレッドスケジューラはラウンドロビン（round-robin）スケジューラであり、シンプルで完全に公平です。しかし、これはI/O負荷とCPU負荷が混在するワークロードにおいて、I/O待ちのスレッドがCPU待ちのスレッドのタイムスライス終了を待たされるため、I/O待ちスレッドのレスポンスを悪化させます。多くのRubyアプリケーションはこの種のワークロードを持っているため、優先度（priority）スケジューラによる恩恵を受けられます。本講演では、優先度スケジューラの仕組みと、それがRubyアプリケーションにもたらす利点について検証します。"
   },
   {
     "id": "d1-1410-sub",
@@ -400,7 +400,7 @@
     "speakerName": "Yuji Yokoo",
     "twitter": "@yujiyokoo",
     "language": "EN",
-    "abstract": "Zilog Z80 was a popular 8-bit processor back in its day, and still remains popular in many use cases today. It was widely used for personal computers and game consoles including Sega Master System and Game Gear. However, there is currently no Ruby implementation that runs on Z80.",
+    "abstract": "Zilog Z80 was a popular 8-bit processor back in its day, and still remains popular in many use cases today. It was widely used for personal computers and game consoles including Sega Master System and Game Gear. However, there is currently no Ruby implementation that runs on Z80.\n\nI am working on mrubyz, which is an mruby VM implementation that aims to run the mruby bytecode on the Z80 processor, with caveats and limitations.\n\nIt is very limited in terms of supported features and instructions. Also, Z80 is a rather old, and slow processor with many limitations. However, I am making it usable for some purposes.\n\nThis presentation will share with you what it takes to run (a subset of) Ruby on an old 8-bit processor, and some insights gained from developing one.",
     "officialUrl": "https://rubykaigi.org/2026/presentations/yujiyokoo.html",
     "tags": [
       "Bytecode",
@@ -408,7 +408,7 @@
       "mruby"
     ],
     "title_ja": "8ビットの世界のmruby：Zilog Z80用mruby VM",
-    "abstract_ja": "Zilog Z80は、当時人気のあった8ビットプロセッサであり、今日でも多くのユースケースで人気があります。セガ・マスターシステムやゲームギアを含むパーソナルコンピュータやゲーム機で広く使用されていました。しかし、現在Z80上で動作するRuby実装は存在しません。"
+    "abstract_ja": "Zilog Z80は、かつて非常に人気のあった8ビットプロセッサであり、今日でも多くのユースケースで人気を保っています。Sega Master SystemやGame Gearを含むパーソナルコンピュータやゲーム機で広く使用されていました。しかし、現在Z80上で動作するRubyの実装は存在しません。\n\n私は、注意事項や制限事項はありますが、Z80プロセッサ上でmrubyバイトコードを実行することを目指したmruby VM実装であるmrubyzに取り組んでいます。\n\nサポートされている機能や命令の面では非常に限定的です。また、Z80は非常に古く、多くの制限がある低速なプロセッサです。しかし、私はそれをいくつかの目的で使用可能なものにしています。\n\nこのプレゼンテーションでは、古い8ビットプロセッサ上でRuby（のサブセット）を実行するために必要なことと、その開発から得られたいくつかの洞察を共有します。"
   },
   {
     "id": "d1-1410-small",
@@ -421,7 +421,7 @@
     "speakerName": "Kazuho Oku",
     "twitter": "@kazuho",
     "language": "JA",
-    "abstract": "Making communication faster has long meant removing bottlenecks, one by one. In the past, bandwidth was the primary bottleneck. As bandwidth became more abundant, latency emerged as the next major constraint. Early efforts to reduce it included HTTP/2 multiplexing, TLS 1.3, and QUIC's shorter handshakes.",
+    "abstract": "Making communication faster has long meant removing bottlenecks, one by one. In the past, bandwidth was the primary bottleneck. As bandwidth became more abundant, latency emerged as the next major constraint. Early efforts to reduce it included HTTP/2 multiplexing, TLS 1.3, and QUIC's shorter handshakes.\n\nNow that QUIC has been standardized and is gaining adoption, attention is shifting to the next bottleneck: the startup phase—the time it takes to discover and fully utilize available bandwidth after a connection is established.\n\nThis session introduces \"Rapid Start,\" a new approach currently being evaluated by Fastly. It reviews Slow Start, the conventional method for bandwidth probing, explaining why startup can be slow, what assumptions it relies on, and where its limitations appear. It then shows how Rapid Start changes the initial behavior of bandwidth estimation to shorten startup time, highlighting its design points, trade-offs, and how Ruby was used to analyze its behavior.",
     "officialUrl": "https://rubykaigi.org/2026/presentations/kazuho.html",
     "tags": [
       "HTTP/2",
@@ -430,7 +430,7 @@
       "TLS"
     ],
     "title_ja": "Rapid Start：Rubyの助けを借りてインターネット接続を高速化",
-    "abstract_ja": "通信の高速化は、ボトルネックを一つずつ取り除く歴史でした。かつては帯域幅が最大の課題でしたが、現在はレイテンシが大きな制約となっています。HTTP/2マルチプレクシングやTLS 1.3、QUICなどの取り組みが進む中、Rubyがいかにこのレイテンシ削減と接続の高速化（Rapid Start）に貢献できるかを探ります。"
+    "abstract_ja": "通信を高速化することは、長らくボトルネックを一つずつ取り除くことを意味してきました。かつては帯域幅が主要なボトルネックでした。帯域幅がより豊かになるにつれ、レイテンシが次の主要な制約として浮上しました。それを削減するための初期の取り組みには、HTTP/2マルチプレクシング、TLS 1.3、そしてQUICの短いハンドシェイクが含まれていました。\n\nQUICが標準化され普及しつつある現在、注目は次のボトルネックに移っています。それは「スタートアップ・フェーズ」、つまり接続が確立された後に利用可能な帯域幅を発見し、完全に活用するまでにかかる時間です。\n\nこのセッションでは、現在Fastlyで評価されている新しいアプローチ「Rapid Start」を紹介します。帯域幅プロービングの従来の手法であるスロースタート（Slow Start）を振り返り、なぜスタートアップが遅くなるのか、それがどのような仮定に基づいているのか、そしてどこに限界が現れるのかを説明します。次に、Rapid Startがスタートアップ時間を短縮するために帯域幅推定の初期動作をどのように変えるかを示し、その設計上のポイント、トレードオフ、そしてその動作を分析するためにRubyがどのように使われたかを強調します。"
   },
   {
     "id": "d1-1450-large",
@@ -443,7 +443,7 @@
     "speakerName": "Yuichiro Kaneko",
     "twitter": "@spikeolaf",
     "language": "JA",
-    "abstract": "Leaving aside the trivialities of specific implementation details[^1], what are the fundamental problems a parser must confront and solve[^2]?",
+    "abstract": "Leaving aside the trivialities of specific implementation details[^1], what are the fundamental problems a parser must confront and solve[^2]?\n\nLet’s consider the input: 1 + 2 * 3. Suppose a grammar dictates that this input should be structured as 1 + (2 * 3). As a parser reads the input from left to right, it reaches 1 + 2 and recognizes that the next token is *. At this point, it must decide whether to group the preceding part into a single unit or continue. This challenge is independent of how the parser is implemented; it's a universal problem inherent to parsing itself.\n\nIn this session, I will highlight several such problems within the parsing domain and explore how different parser implementations try to solve them.\n\n[^1]: In truth, the \"how\" is where the real struggle lies…\n\n[^2]: I will limit my scope to one-way, non-backtracking parsers that read input from left to right.\n\n[^3]: Of course, the discussion won't end with simply observing how those problems are addressed…",
     "officialUrl": "https://rubykaigi.org/2026/presentations/spikeolaf.html",
     "tags": [
       "AST",
@@ -453,7 +453,7 @@
       "Memory"
     ],
     "title_ja": "マシンの王国：演算子とコマンドの物語",
-    "abstract_ja": "特定の実装詳細という些細なことはさておき[^1]、パーサが直面し解決しなければならない根本的な問題とは何でしょうか[^2]？"
+    "abstract_ja": "特定の実装の詳細[^1]という些末な事柄はさておき、パーサが直面し、解決しなければならない根本的な問題とは何でしょうか[^2]？\n\n入力例 `1 + 2 * 3` を考えてみましょう。ある文法が、この入力は `1 + (2 * 3)` という構造であるべきだと規定していると仮定します。パーサが入力を左から右へと読み進め、`1 + 2` に到達したとき、次のトークンが `*` であることを認識します。この時点で、パーサはそれまでの部分を一つのユニットとしてまとめるか、あるいは継続するかを決定しなければなりません。この課題は、パーサがどのように実装されているかとは無関係であり、構文解析そのものに本来備わっている普遍的な問題です。\n\nこのセッションでは、構文解析の領域におけるそのような問題をいくつか取り上げ、異なるパーサの実装がそれらをどのように解決しようとしているかを探ります。\n\n[^1]: 実際には、その「いかに」という部分こそが、本当の苦闘の場なのですが……\n\n[^2]: 今回は、入力を左から右に読み込む、一方向でバックトラックを行わないパーサに範囲を限定します。\n\n[^3]: もちろん、それらの問題がいかに解決されるかを観察するだけで議論が終わるわけではありませんが……"
   },
   {
     "id": "d1-1450-sub",
@@ -466,7 +466,7 @@
     "speakerName": "Yuya Fujiwara",
     "twitter": "@asonas",
     "language": "EN",
-    "abstract": "What if we could create sounds incrementally, shaping music as we type Ruby in a live coding session?",
+    "abstract": "What if we could create sounds incrementally, shaping music as we type Ruby in a live coding session?\n\nI built strudel-rb, a Ruby implementation inspired by Strudel (a browser-based live coding environment for algorithmic music at https://strudel.cc ),  so we can live-code in Ruby while generating rhythmic patterns and melodies from Ruby syntax.\n\nIn this presentation, I will talk about parsing a sequence of sounds defined in Mini-Notation, how to calculate the timing of sound playback, syntax that Ruby cannot handle when adapting Strudel-style syntax, and techniques for preventing sound from stopping when a syntax error occurs during live-coding.",
     "officialUrl": "https://rubykaigi.org/2026/presentations/asonas.html",
     "tags": [
       "LSP",
@@ -475,7 +475,7 @@
       "Web Audio API"
     ],
     "title_ja": "ライブコードからサウンドへ：Rubyライブコーディングエンジンの構築",
-    "abstract_ja": "ライブコーディングセッションでRubyをタイピングしながら音楽を形作り、増分的にサウンドを作成できるとしたらどうでしょうか？"
+    "abstract_ja": "ライブコーディングセッションでRubyを入力しながら、徐々に音を作成し、音楽を形作っていくことができたらどうでしょうか？\n\n私は、Strudel（https://strudel.cc にあるアルゴリズム音楽のためのブラウザベースのライブコーディング環境）にインスパイアされたRuby実装であるstrudel-rbを構築しました。これにより、Rubyの構文からリズムパターンやメロディを生成しながら、Rubyでライブコーディングを行うことができます。\n\nこのプレゼンテーションでは、Mini-Notationで定義された一連の音の解析方法、音声再生のタイミングの計算方法、Strudelスタイルの構文を適応させる際にRubyが処理できない構文、およびライブコーディング中に構文エラーが発生したときに音が止まるのを防ぐテクニックについてお話しします。"
   },
   {
     "id": "d1-1450-small",
@@ -488,7 +488,7 @@
     "speakerName": "Katsuhiko Kageyama",
     "twitter": "@kishima",
     "language": "JA",
-    "abstract": "With the emergence of PicoRuby, mruby-centered technologies have increasingly been used as lightweight operating environments for microcontrollers.",
+    "abstract": "With the emergence of PicoRuby, mruby-centered technologies have increasingly been used as lightweight operating environments for microcontrollers.\n\nIn this talk, I present a more self-contained approach: an operating system for microcontrollers built around PicoRuby, where the mruby VM serves as the system core. I call this framework Family mruby OS.\n\nThe system enables developers to write and run Ruby applications directly on a microcontroller with a GUI, using a USB keyboard, mouse, and display—without relying on a PC.\n\nBy leveraging FreeRTOS, multiple PicoRuby VMs, as well as VMs of other languages, can run concurrently at the machine-code level, enabling true multi-VM execution while keeping Ruby responsible for application lifecycle management.\n\nI will explain the design and implementation of this framework, discuss the key technical challenges involved, and demonstrate the system running on real hardware.",
     "officialUrl": "https://rubykaigi.org/2026/presentations/kishima.html",
     "tags": [
       "Embedded",
@@ -496,7 +496,7 @@
       "mruby"
     ],
     "title_ja": "マルチVMオペレーティングシステムとしてのPicoRuby",
-    "abstract_ja": "PicoRubyの登場により、mrubyを中心としたテクノロジーは、マイクロコントローラー用の軽量な動作環境としてますます使用されるようになっています。"
+    "abstract_ja": "PicoRubyは、100KB以下のRAMで動作するように設計された組み込みシステム向けのRuby実装です。PicoRubyはRubyを動的な言語たらしめる主要な機能（動的なメソッド定義、シンボルのガーベジコレクション、例外処理など）を備えています。\n\nPicoRubyはシングルスレッドで複数の仮想マシン（VM）を並列に実行する機能を持ち、これを利用して現在、複数の並列Rubyプログラムを実行可能なオペレーティングシステム（OS）のような環境を構築しています。この仕組みにより、従来の組み込みOSに頼ることなく、RubyだけでI/O制御やタスク管理を行うことが可能になります。\n\n本講演では、PicoRubyによるマルチVM環境の設計思想と実装、および実際の動作デモンストレーションを紹介します。"
   },
   {
     "id": "d1-1520-large",
@@ -579,7 +579,7 @@
       "ZJIT"
     ],
     "title_ja": "ZJITのデザインと実装、そして次の5年",
-    "abstract_ja": "ZJITチームは昨年、マージ直前にZJITについて簡潔に発表しました。今回は、何が変わったのか、最適化のアイデアはどこから来たのか、そして定数畳み込み、値番号付け、エスケープ解析、スカラー置換、レジスタ割り当てを含む今後の展望についてお話しします。動的言語のコンパイラ研究の豊かな歴史を振り返り、それがRubyのような動的な言語にどのように適用できるかを解説します。最後に、Ruby 4がRubyKaigi 2022からのパフォーマンスへの期待に応えられているかを確認します。"
+    "abstract_ja": "ZJIT（Zero-copy JIT）のデザインと実装、そして今後の5年間の展望についてお話しします。ZJITは移植性と性能を両立させることを目的とした新しいJITコンパイラ基盤です。JITコンパイル時のオーバーヘッドを最小限に抑えつつ、Rubyの高い動的な柔軟性を損なわない最適化手法について詳しく解説します。また、現在の進捗状況と、Ruby 4.0以降のリリースサイクルにおけるJITの役割、そして私たちが目指す最終的なパフォーマンス目標について共有します。"
   },
   {
     "id": "d1-1600-sub",
@@ -592,14 +592,14 @@
     "speakerName": "Albert Pazderin",
     "twitter": "@Bakaface",
     "language": "EN",
-    "abstract": "What if trying a Ruby gem was as easy as opening a web page – no local setup, no \"bundle install,\" no version headaches? TutorialKit.rb enables interactive, runnable tutorials for Ruby gems directly in the browser by combining Ruby on WebAssembly with an in-browser development runtime.",
+    "abstract": "What if trying a Ruby gem was as easy as opening a web page – no local setup, no \"bundle install,\" no version headaches? TutorialKit.rb enables interactive, runnable tutorials for Ruby gems directly in the browser by combining Ruby on WebAssembly with an in-browser development runtime.\n\nThis talk presents the grant-funded evolution of the project: TutorialKit.rb was awarded a Ruby Association Grant in 2025, and the work from that grant is the core of what I'll share at RubyKaigi 2026.\n\nFirst of all I'll showcase building an example tutorial using the framework.\n\n. RubyKaigi is a technical conference, so then we'll go beyond the demo and focus on the engineering: the architecture that wires Browser → WebContainer → Ruby WASM, the Ruby ⇄ WebContainer bridge, and the build/distribution pipeline that makes a full-featured development workflow possible inside the browser.",
     "officialUrl": "https://rubykaigi.org/2026/presentations/Bakaface.html",
     "tags": [
       "Virtual Machine",
       "WASM"
     ],
     "title_ja": "TutorialKit.rb：Wasmを活用したインタラクティブなgemドキュメント",
-    "abstract_ja": "Ruby gemを試すのがウェブページを開くのと同じくらい簡単だったらどうでしょう？ローカルセットアップも\"bundle install\"もバージョンの悩みもありません。TutorialKit.rbは、Ruby on WebAssemblyとブラウザ内開発ランタイムを組み合わせることで、ブラウザ上で直接実行可能なインタラクティブなチュートリアルを実現します。"
+    "abstract_ja": "TutorialKit.rbは、Wasm（WebAssembly）によって動作するインタラクティブなRuby gemドキュメントツールです。ブラウザ上で直接Rubyコードを実行し、gemの使い方をインタラクティブに学習できる環境を提供します。ドキュメントを単なる読み物から、実際に手を動かして試せる体験へと変えるための技術的な挑戦と、Wasmを活用したRuby実行環境の構築方法についてお話しします。"
   },
   {
     "id": "d1-1600-small",
@@ -612,7 +612,7 @@
     "speakerName": "Yoh Osaki",
     "twitter": "@youchan",
     "language": "JA",
-    "abstract": "Have you ever wanted to read CRuby's source code? Do you want to understand how Ruby works? I wrote a self-published book called “CRuby Adventures Log (CRubyのぼうけんのしょ)”. In this book, you'll read CRuby's source code alongside the author, exploring its inner workings as if on an adventure. In this talk, I'll share the essence of the book and techniques for deciphering source code that I gained through writing it.",
+    "abstract": "Have you ever wanted to read CRuby's source code?\n\nDo you want to understand how Ruby works?\n\nI wrote a self-published book called “CRuby Adventures Log (CRubyのぼうけんのしょ)”. In this book, you'll read CRuby's source code alongside the author, exploring its inner workings as if on an adventure.\n\nIn this talk, I'll share the essence of the book and techniques for deciphering source code that I gained through writing it.",
     "officialUrl": "https://rubykaigi.org/2026/presentations/youchan.html",
     "tags": [
       "AST",
@@ -622,7 +622,7 @@
       "Virtual Machine"
     ],
     "title_ja": "CRubyのソースコードを読み始めるためのガイド",
-    "abstract_ja": "CRubyのソースコードを読んでみたいと思ったことはありませんか？Rubyがどう動くのか理解したいですか？私は『CRubyのぼうけんのしょ』という本を書きました。この本では、著者と一緒にCRubyのコードを読み、あたかも冒険のように内部構造を探検します。本講演では、その本の主要なエッセンスと、執筆を通じて得たソースコード解読のテクニックを共有します。"
+    "abstract_ja": "CRubyのソースコードを読み始めるためのガイドです。Rubyの内部構造がどのようになっているか、C言語で書かれた巨大なコードベースをどのように探索し、理解していくか、その具体的なステップを紹介します。本講演を通じて、皆さんがCRubyのコントリビューションへの第一歩を踏み出せるようになることを目指します。"
   },
   {
     "id": "d1-1640-large",
@@ -635,7 +635,7 @@
     "speakerName": "tomoya ishida",
     "twitter": "@tompng",
     "language": "JA",
-    "abstract": "Do you know BigDecimal's BigMath module? It can calculate mathematical functions in arbitrary precision. But it takes few seconds calculating sin(1) for just 10000 digits in bigdecimal-3.1.9. It's not \"Big\" at all. We need more and more digits. In this talk, I'll show how BigMath calculation is maintained, improved, and the fun part of designing digit calculation.",
+    "abstract": "Do you know BigDecimal's BigMath module?\n\nIt can calculate mathematical functions in arbitrary precision.\n\nBut it takes few seconds calculating sin(1) for just 10000 digits in bigdecimal-3.1.9. It's not \"Big\" at all. We need more and more digits.\n\nIn this talk, I'll show how BigMath calculation is maintained, improved, and the fun part of designing digit calculation.",
     "officialUrl": "https://rubykaigi.org/2026/presentations/tompng.html",
     "tags": [
       "BigDecimal",
@@ -643,7 +643,7 @@
       "Precision"
     ],
     "title_ja": "Digits, Digits, and Digits",
-    "abstract_ja": "BigDecimalのBigMathモジュールをご存知ですか？これは任意精度で数学関数を計算できます。しかし、bigdecimal-3.1.9ではsin(1)を1万桁計算するのに数秒かかります。これでは全然「Big」ではありません。私たちはもっと多くの桁を必要としています。本講演では、BigMathの計算がいかに保守・改善されているか、そして桁計算の設計の面白さについてお話しします。"
+    "abstract_ja": "Digits、Digits、そしてDigits。Rubyの大整数（Bignum）の扱い、特に数値の文字列変換や基数変換における最適化の歴史と、現在の最新の実装について掘り下げます。計算効率を最大化するためのアルゴリズムの工夫と、なぜRubyが数値計算においてこれほど強力なのかを解き明かします。"
   },
   {
     "id": "d1-1640-sub",
@@ -656,14 +656,14 @@
     "speakerName": "Edouard Chin",
     "twitter": "@Edouard-chin",
     "language": "EN",
-    "abstract": "Bundler has reliably helped the Ruby community install and manage dependencies for close to two decades, but with the announcement of Python's uv we found ourselves asking \"Could Bundler be faster?\". We took this opportunity to investigate and fix a multitude of performance issues now released in Bundler 4.",
+    "abstract": "Bundler has reliably helped the Ruby community install and manage dependencies for close to two decades, but with the announcement of Python's uv we found ourselves asking \"Could Bundler be faster?\".\n\nWe took this opportunity to investigate and fix a multitude of performance issues now released in Bundler 4.\n\nIn this talk, we’ll dive into why Bundler is slow, what we are doing about it, and how the Ruby community can help.\n\nOur goals are to evolve Rubygems and Bundler in order to offer Ruby developers an exceptionally fast experience when running bundle install.",
     "officialUrl": "https://rubykaigi.org/2026/presentations/Edouard-chin.html",
     "tags": [
       "Bundler",
       "Performance"
     ],
     "title_ja": "より速いBundler、より幸せな開発者",
-    "abstract_ja": "Bundlerは20年近くにわたりRubyコミュニティの依存関係管理を支えてきましたが、Pythonのuvの登場を受け、「Bundlerはもっと速くなれるのではないか？」という問いに向き合いました。この機会に多くのパフォーマンス問題を調査・修正し、Bundler 4としてリリースしました。その裏側を解説します。"
+    "abstract_ja": "より高速なBundlerは、より幸せな開発者を生みます。Bundler 3.0を目指したパフォーマンス改善の取り組みと、依存関係の解決、インストール、ネットワークリクエストの最適化による劇的な速度向上の秘訣について共有します。開発者の日常的なワークフローをいかに改善していくか、その継続的な努力についてお話しします。"
   },
   {
     "id": "d1-1640-small",
@@ -676,14 +676,14 @@
     "speakerName": "Shunsuke Michii",
     "twitter": "@harukasan",
     "language": "JA",
-    "abstract": "Modern computing is too complex for young learners to get a feel for programming. Even to write Ruby, beginners must first learn, such as managing an OS, setting up an editor, and installing Ruby runtimes. This noise makes it hard to reach the essence of programming.",
+    "abstract": "Modern computing is too complex for young learners to get a feel for programming. Even to write Ruby, beginners must first learn, such as managing an OS, setting up an editor, and installing Ruby runtimes. This noise makes it hard to reach the essence of programming.\n\nIn this talk, I will demonstrate how a standalone Ruby computer was built with mruby. This $20 handmade single board computer provides a complete programming environment with display output and keyboard input, all without a host PC.\n\nI will dive into the implementation of its graphics engine featuring real-time 640x480 output and text/shape rendering, as well as a Ruby shell with USB keyboard input and serial communication with external R2P2 devices. By showing how every component runs on the mruby VM, I will demonstrate that it is powerful enough to build a complete computing experience from scratch on a tiny microcontroller.",
     "officialUrl": "https://rubykaigi.org/2026/presentations/harukasan.html",
     "tags": [
       "Education",
       "Standalone Environment"
     ],
     "title_ja": "スタンドアロンなRubyプログラミング環境の構築",
-    "abstract_ja": "現代のコンピューティングは、初心者がプログラミングの感覚を掴むには複雑すぎます。Rubyを書くためだけに、OSの管理、エディタの設定、ランタイムのインストールなどを学ばなければなりません。このノイズがプログラミングの本質へ到達するのを妨げています。本講演では、それらを排したスタンドアロンな学習環境の構築について議論します。"
+    "abstract_ja": "Rubyによるアプリケーション開発において、OSやシステムライブラリに依存しない、単一のバイナリで動作するプログラミング環境を構築する方法について模索します。ポータビリティと配布のしやすさを向上させるための、静的リンクやパッキング技術の最新動向について共有します。"
   },
   {
     "id": "d1-1720-large",
@@ -715,7 +715,7 @@
     "speakerName": "Charles Nutter",
     "twitter": "@headius",
     "language": "EN",
-    "abstract": "You know that JRuby is Ruby for the JVM, but what does that really mean? JRuby is compatible with Ruby 4 and runs Rails, but also enables use cases that regular Ruby can only dream of:",
+    "abstract": "You know that JRuby is Ruby for the JVM, but what does that really mean? JRuby is compatible with Ruby 4 and runs Rails, but also enables use cases that regular Ruby can only dream of:\n\nPrecompiling code for commercial products\n\nSingle-file deployment with any JDK on any device (even mobile and embedded)\n\nLow-overhead profiling of production apps\n\nSimple, powerful multi-threading that uses all cores\n\nCross-platform libraries for graphics, GUIs, games and AI\n\nAnd with JRuby 10.1, we're adding new and amazing features and optimizations every day. You've never seen Ruby like this!\n\nThis talk will present several fun and cool JRuby use cases that are difficult or impossible to do with regular Ruby. You'll learn how to do more with Ruby and bring Ruby to more places.",
     "officialUrl": "https://rubykaigi.org/2026/presentations/headius.html",
     "tags": [
       "Concurrency",
@@ -723,7 +723,7 @@
       "JVM"
     ],
     "title_ja": "JRuby：明日のRubyを今日その手に",
-    "abstract_ja": "JRubyがJVMのためのRubyであることはご知でしょうが、それは実際には何を意味するのでしょうか？JRubyはRuby 4と互換性がありRailsも動きますが、通常のRubyでは夢見ることしかできないユースケースも可能にします："
+    "abstract_ja": "JRubyがJVMのためのRubyであることはご存知でしょうが、それが実際には何を意味するのでしょうか？JRubyはRuby 4と互換性があり、Railsも動作しますが、通常のRubyでは夢見ることしかできないようなユースケースも可能にします。\n\n・商用製品のためのコードのプリコンパイル\n・あらゆるデバイス（モバイルや組み込みを含む）上のあらゆるJDKでの単一ファイルデプロイ\n・本番アプリの低オーバーヘッドなプロファイリング\n・全コアを使用するシンプルで強力なマルチスレッディング\n・グラフィックス、GUI、ゲーム、AIのためのクロスプラットフォーム・ライブラリ\n\nそしてJRuby 10.1では、新しい強力な機能や最適化を日々追加しています。これまでに見たことのないようなRubyを体験できるはずです！\n\nこの講演では、通常のRubyでは困難または不可能な、いくつかの楽しくクールなJRubyのユースケースを紹介します。Rubyでより多くのことを行い、Rubyをより多くの場所へ持ち込む方法を学ぶことができます。"
   },
   {
     "id": "d2-1050-large",
@@ -736,7 +736,7 @@
     "speakerName": "Koichi Sasada",
     "twitter": "@ko1",
     "language": "EN",
-    "abstract": "Ruby has long relied on virtual machines for performance, but their growing complexity can sometimes feel like the \"virtual machine blues.\" In this talk, I introduce ASTro, an AST-based reusable optimization framework, and share an experiment in reimplementing Ruby using this new approach.",
+    "abstract": "Ruby has long relied on virtual machines for performance, but their growing complexity can sometimes feel like the \"virtual machine blues.\" In this talk, I introduce ASTro, an AST-based reusable optimization framework, and share an experiment in reimplementing Ruby using this new approach.\n\nBefore Ruby 1.9, Ruby programs were executed by directly traversing their AST. While modern Ruby implementations have moved to bytecode VMs and JIT compilers, this talk revisits AST-based execution with today’s techniques by rebuilding parts of Ruby on top of ASTro.\n\nUsing ASTro, Ruby programs are optimized and compiled at the AST level, generating C source code and producing efficient native code. This is a research-stage experiment rather than a production proposal, and the talk focuses on what worked, what did not, and what we learned from the attempt.",
     "officialUrl": "https://rubykaigi.org/2026/presentations/ko1.html",
     "tags": [
       "AST",
@@ -748,7 +748,7 @@
       "Virtual Machine"
     ],
     "title_ja": "AST銀河からバーチャルマシン・ブルースへ",
-    "abstract_ja": "Rubyは長年パフォーマンスのために仮想マシンに頼ってきましたが、その増大する複雑さは時として「仮想マシン・ブルース」のように感じられることがあります。本講演では、ASTベースの再利用可能な最適化フレームワークであるASTroを紹介し、この新しいアプローチを使用してRubyを再実装する実験について共有します。"
+    "abstract_ja": "Rubyは長年、性能向上のために仮想マシン（VM）に依存してきましたが、その複雑さが増すにつれ、時として「仮想マシン・ブルース」を感じさせることがあります。本講演では、ASTベースの再利用可能な最適化フレームワークである「ASTro」を紹介し、この新しいアプローチを使用してRubyを再実装する実験について共有します。\n\nRuby 1.9以前は、RubyプログラムはAST（抽象構文木）を直接走査することで実行されていました。現代のRuby実装はバイトコードVMやJITコンパイラへと移行しましたが、本講演では、ASTroの上にRubyの一部を再構築することで、今日の技術を用いたASTベースの実行を再考します。\n\nASTroを使用すると、RubyプログラムはASTレベルで最適化およびコンパイルされ、Cソースコードを生成し、効率的なネイティブコードを生成します。これは製品レベルの提案ではなく研究段階の実験ですが、本講演では、何がうまくいき、何がうまくいかなかったのか、そしてその試みから何を学んだのかに焦点を当てます。"
   },
   {
     "id": "d2-1050-sub",
@@ -761,14 +761,14 @@
     "speakerName": "Daichi Kamiyama",
     "twitter": "@_dak2_",
     "language": "EN",
-    "abstract": "In recent years, Ruby's type ecosystem has been growing steadily. More and more production applications are benefiting from type checking. However, as AI-generated Ruby code continues to improve in quality, I find myself questioning more often: do we really need types?",
+    "abstract": "In recent years, Ruby's type ecosystem has been growing steadily. More and more production applications are benefiting from type checking. However, as AI-generated Ruby code continues to improve in quality, I find myself questioning more often: do we really need types?\n\nIn this session, I'll share my realization that most of the benefits of typing really boil down to preventing NoMethodError. Based on this, I'll introduce Method-Ray, a gem I'm developing that provides this benefit without requiring any type annotations. I will cover its usage, development background, current architecture (implemented in Rust), and how it differs from existing type checkers.",
     "officialUrl": "https://rubykaigi.org/2026/presentations/_dak2_.html",
     "tags": [
       "AI-Generated Code",
       "Type Ecosystem"
     ],
     "title_ja": "型は不要、実行可能なメソッドチェックさえあれば",
-    "abstract_ja": "近年、Rubyの型エコシステムは着実に成長し、多くのプロダクションアプリが型チェックの恩恵を受けています。しかし、AIが生成するRubyコードの品質が上がり続ける中で、私は改めて問い直したいのです。私たちに本当に「型」は必要なのでしょうか？"
+    "abstract_ja": "近年、Rubyの型エコシステムは着実に成長しています。ますます多くの本番アプリケーションが型チェックの恩恵を受けています。しかし、AIが生成するRubyコードの品質が向上し続ける中で、私は「本当に型が必要なのか？」と自問することが増えています。\n\nこのセッションでは、型定義のメリットのほとんどが、結局のところ「NoMethodErrorの防止」に集約されるという私の気づきを共有します。これに基づき、型アノテーションを一切必要とせずにこのメリットを提供する、私が開発中のgem「Method-Ray」を紹介します。その使用方法、開発の背景、Rustで実装された現在のアーキテクチャ、および既存の型チェッカーとの違いについて解説します。"
   },
   {
     "id": "d2-1050-small",
@@ -781,7 +781,7 @@
     "speakerName": "Daisuke Fujimura",
     "twitter": "@fd0",
     "language": "JA",
-    "abstract": "Ruby runs on a wide variety of platforms, but behind that portability lies continuous and often invisible package maintenance for each environment.",
+    "abstract": "Ruby runs on a wide variety of platforms, but behind that portability lies continuous and often invisible package maintenance for each environment.\n\nThis talk presents a case study of maintaining Ruby binary packages on the Cygwin environment, from the perspective of a downstream package maintainer rather than a Ruby core committer.\n\nIt focuses on how Ruby packages on Cygwin, which had fallen far behind upstream releases due to a lack of active maintenance, were restored and kept up to date, and on the technical challenges encountered along the way.\n\nThese include platform-specific build and test issues, packaging decisions, and the effects of Cygwin’s POSIX compatibility layer, toolchain, and library differences on Ruby.\n\nSome of these issues resulted in feedback and patches to Ruby upstream.\n\nThrough this experience, I will share practical lessons on keeping Ruby running on a non-mainstream platform, and the role of downstream maintenance in supporting Ruby’s multi-platform support.",
     "officialUrl": "https://rubykaigi.org/2026/presentations/fd0.html",
     "tags": [
       "CRuby",
@@ -790,7 +790,7 @@
       "Portability"
     ],
     "title_ja": "Cygwin上でRubyを動かし続ける",
-    "abstract_ja": "Rubyは多種多様なプラットフォームで動作しますが、そのポータビリティの背後には、各環境のための継続的で、しばしば目に見えないパッケージメンテナンスが存在します。"
+    "abstract_ja": "Rubyは多種多様なプラットフォームで動作しますが、そのポータビリティの裏側では、各環境における継続的で、しばしば目に見えないパッケージメンテナンスが行われています。\n\n本講演では、Rubyコアコミッタとしてではなく、ダウンストリームのパッケージメンテナとしての視点から、Cygwin環境上のRubyバイナリパッケージを維持管理している事例を紹介します。\n\n活発なメンテナンスが途絶えたためにアップストリームのリリースから大幅に遅れていたCygwin上のRubyパッケージが、どのように復旧され、最新の状態に保たれているか、そしてその過程で遭遇した技術的な課題に焦点を当てます。\n\nこれらには、プラットフォーム固有のビルドやテストの問題、パッケージングの決定、そしてCygwinのPOSIX互換レイヤー、ツールチェーン、ライブラリの違いがRubyに与える影響などが含まれます。\n\nこれらの問題のいくつかは、Rubyアップストリームへのフィードバックやパッチとなりました。\n\nこの経験を通じて、非主流プラットフォームでRubyを動かし続けるための実践的な教訓と、Rubyのマルチプラットフォーム対応を支えるダウンストリーム・メンテナンスの役割について共有します。"
   },
   {
     "id": "d2-1130-large",
@@ -803,7 +803,7 @@
     "speakerName": "Peter Zhu",
     "twitter": "@peterzhu2118",
     "language": "EN",
-    "abstract": "Last year at RubyKaigi 2025, the Modular Garbage Collector feature in Ruby was introduced. With this feature, we shipped an alternative garbage collector using the Memory Management Toolkit (MMTk) framework. At the time, however, MMTk was significantly slower than the default garbage collector in Ruby.",
+    "abstract": "Last year at RubyKaigi 2025, the Modular Garbage Collector feature in Ruby was introduced. With this feature, we shipped an alternative garbage collector using the Memory Management Toolkit (MMTk) framework. At the time, however, MMTk was significantly slower than the default garbage collector in Ruby.\n\nOver the past year, the MMTk Ruby integration has been significantly improved and the performance is now on par with the default garbage collector. It now supports the Moving Immix garbage collection strategy, improved parallelism, and numerous optimizations.\n\nIn this talk, we will go over the Modular Garbage Collector feature and its differences with the default garbage collector, examine the techniques used to speed up the Ruby MMTk integration, and discuss how it can be improved further in the future.",
     "officialUrl": "https://rubykaigi.org/2026/presentations/peterzhu2118.html",
     "tags": [
       "CRuby",
@@ -812,7 +812,7 @@
       "Modular GC"
     ],
     "title_ja": "Rubyにおける次世代ガベージコレクタの構築",
-    "abstract_ja": "昨年のRubyKaigi 2025において、Rubyのモジュラーガベージコレクタ機能が導入されました。この機能により、Memory Management Toolkit（MMTk）フレームワークを使用した代替のガベージコレクタを出荷しました。しかし、当時はMMTkはRubyのデフォルトのガベージコレクタよりも大幅に低速でした。"
+    "abstract_ja": "昨年のRubyKaigi 2025において、Rubyの「Modular Garbage Collector（モジュラーGC）」機能が導入されました。この機能により、Memory Management Toolkit (MMTk) フレームワークを使用した代替ガベージコレクタを提供しました。しかし当時は、MMTkはRubyのデフォルトのガベージコレクタよりも大幅に低速でした。\n\nこの1年間で、MMTkのRuby統合は大幅に改善され、パフォーマンスは現在、デフォルトのガベージコレクタと同等になっています。現在は、Moving Immixガベージコレクション戦略、並列処理の向上、および多数の最適化をサポートしています。\n\n本講演では、モジュラーGC機能とそのデフォルトGCとの違いを振り返り、Ruby MMTk統合を高速化するために使用された手法を検証し、将来的にさらにどのように改善できるかについて議論します。"
   },
   {
     "id": "d2-1130-sub",
@@ -825,7 +825,7 @@
     "speakerName": "Uchio KONDO",
     "twitter": "@udzura",
     "language": "EN",
-    "abstract": "Can Ruby be practically deployed in edge computing environments like Cloudflare Workers, Fastly Compute, or Spin? In this talk, I will introduce \"mruby/edge\" and \"Uzumibi,\" a framework built upon it to bring the power of Ruby to the edge.",
+    "abstract": "Can Ruby be practically deployed in edge computing environments like Cloudflare Workers, Fastly Compute, or Spin? In this talk, I will introduce \"mruby/edge\" and \"Uzumibi,\" a framework built upon it to bring the power of Ruby to the edge.\n\nmruby/edge is an mruby-compatible VM built from scratch in Pure Rust. It generates highly portable Wasm binaries, enabling minimal builds under 400KiB.\n\nSince RubyKaigi 2024, mruby/edge has evolved significantly. It now supports basic OOP features, exception handling, closures, control structures, keyword args, and feature flags.\n\nUzumibi is a lightweight web framework leveraging mruby/edge. Uzumibi can run the same Ruby code across multiple edge platforms, providing a simple web API.\n\nmruby/edge and Uzumibi are opening new possibilities for Ruby in edge computing, where Ruby has traditionally been difficult to utilize.\n\nI'll discuss why I built a VM from scratch for Wasm and edges, share the challenges and solutions, and present the future roadmap.",
     "officialUrl": "https://rubykaigi.org/2026/presentations/udzura.html",
     "tags": [
       "Edge Computing",
@@ -834,7 +834,7 @@
       "mruby/edge"
     ],
     "title_ja": "Uzumibi：エッジのためのmruby再発明",
-    "abstract_ja": "RubyをCloudflare Workers、Fastly Compute、あるいはSpinのようなエッジコンピューティング環境に実用的にデプロイすることはできるでしょうか？本講演では、「mruby/edge」と、Rubyのパワーをエッジにもたらすためにその上に構築されたフレームワークである「Uzumibi」を紹介します。"
+    "abstract_ja": "RubyをCloudflare Workers、Fastly Compute、Spinなどのエッジコンピューティング環境で実用的に展開できるでしょうか？本講演では、「mruby/edge」と、その上で構築されたエッジにRubyの力をもたらすフレームワーク「Uzumibi」を紹介します。\n\nmruby/edgeは、Pure Rustでゼロから構築されたmruby互換のVMです。高いポータビリティを持つWasmバイナリを生成し、400KiB以下の最小構成ビルドを可能にします。\n\nRubyKaigi 2024以降、mruby/edgeは大幅に進化しました。現在は基本的なOOP機能、例外処理、クロージャ、制御構造、キーワード引数、およびフィーチャーフラグをサポートしています。\n\nUzumibiはmruby/edgeを活用した軽量なWebフレームワークです。Uzumibiを使用すると、同じRubyコードを複数のエッジプラットフォーム上で実行でき、シンプルなWeb APIを提供します。\n\nmruby/edgeとUzumibiは、従来Rubyの活用が困難だったエッジコンピューティングにおいて、Rubyの新しい可能性を切り拓いています。\n\nなぜWasmやエッジのためにVMをゼロから構築したのかについて話し、課題と解決策、そして今後のロードマップを提示します。"
   },
   {
     "id": "d2-1130-small",
@@ -847,7 +847,7 @@
     "speakerName": "Masatoshi SEKI",
     "twitter": "@m_seki",
     "language": "JA",
-    "abstract": "The current DJ scene is dominated by PCDJ controllers, which communicate with a PC via MIDI for performance. This eliminates the need to carry around equipment or vinyl records, making it easy to get started. However, many people who start easily quickly lose interest or realize the limits of their own talent. I am certainly one of them.",
+    "abstract": "The current DJ scene is dominated by PCDJ controllers, which communicate with a PC via MIDI for performance. This eliminates the need to carry around equipment or vinyl records, making it easy to get started. However, many people who start easily quickly lose interest or realize the limits of their own talent. I am certainly one of them.\n\nDJ controllers are equipped with multiple switches such as jog wheels, volume controls, and buttons, and can be purchased for just a few tens of thousands of yen. It's difficult to assemble a similar device yourself by gathering the necessary parts. This presentation will introduce examples of effectively utilizing DJ controllers as Human Interface Devices (HIDs).\n\nI want to share the know-how of implementing each area in Ruby, from communication with the DJ controller to control of desktop applications and editors, and programming support.",
     "officialUrl": "https://rubykaigi.org/2026/presentations/m_seki.html",
     "tags": [
       "DJ Controller",
@@ -855,7 +855,7 @@
       "MIDI"
     ],
     "title_ja": "DJコントローラーによるプログラミング",
-    "abstract_ja": "現在のDJシーンはPCDJコントローラーが主流であり、パフォーマンスのためにMIDI経由でPCと通信します。これにより機材やアナログレコードを持ち運ぶ必要がなくなり、簡単に始めることができます。しかし、簡単に始めた多くの人々はすぐに興味を失うか、自分自身の才能の限界に気づきます。私は確かにその一人です。"
+    "abstract_ja": "現在のDJシーンは、MIDIを介してPCと通信するPCDJコントローラーが主流です。これにより、機材やアナログレコードを持ち運ぶ必要がなくなり、手軽に始めることができます。しかし、手軽に始めた多くの人々が、すぐに興味を失ったり、自身の才能の限界に気づいたりします。私も間違いなくその一人です。\n\nDJコントローラーにはジョグホイール、ボリュームコントロール、ボタンなどの多数のスイッチが備わっており、わずか数万円で購入できます。必要なパーツを集めて自分で同様のデバイスを組み立てるのは困難です。本プレゼンテーションでは、DJコントローラーをヒューマン・インターフェース・デバイス（HID）として効果的に活用する例を紹介します。\n\nDJコントローラーとの通信から、デスクトップアプリケーションやエディタの制御、プログラミング支援に至るまで、各領域をRubyで実装するノウハウを共有したいと考えています。"
   },
   {
     "id": "d2-1200-large",
@@ -925,7 +925,7 @@
     "speakerName": "Vladimir Dementyev",
     "twitter": "@palkan_tula",
     "language": "EN",
-    "abstract": "Ruby is famously extensible: open classes, included, inherited and such, TracePoint, and more. Yet when it comes to intercepting the process of loading (or requiring) source code, we're left without a standard mechanism to do so.",
+    "abstract": "Ruby is famously extensible: open classes, included, inherited and such, TracePoint, and more. Yet when it comes to intercepting the process of loading (or requiring) source code, we're left without a standard mechanism to do so.\n\nTranspilers, load flow analyzers, runtime type checkers—all of these could benefit from having a standard API for hijacking require calls. What if we had one? Actually, we do.\n\nLet me introduce the require-hooks gem, which brings a universal interface for intercepting require (and load) calls in Ruby, allowing you to perform source transformations and more.",
     "officialUrl": "https://rubykaigi.org/2026/presentations/palkan_tula.html",
     "tags": [
       "Extensibility",
@@ -935,7 +935,7 @@
       "Require Hooks"
     ],
     "title_ja": "Require Hooks：Rubyの拡張性における空白を埋める",
-    "abstract_ja": "Rubyは拡張性が高いことで有名です。オープンクラス、included、inheritedなど、TracePoint、その他色々あります。しかし、ソースコードのロード（またはrequire）のプロセスをインターセプトすることに関しては、それを行うための標準的なメカニズムがないままになっています。"
+    "abstract_ja": "Rubyは、オープンクラス、included、inherited、TracePointなどの非常に高い拡張性で知られています。しかし、ソースコードをロード（またはrequire）するプロセスをインターセプトする場合に関しては、それを行うための標準的なメカニズムが欠けています。\n\nトランスパイラ、ロードフロー・アナライザ、ランタイム型チェッカーなどはすべて、require呼び出しをハイジャックするための標準APIを持つことで恩恵を受けられる可能性があります。もし、そのようなものがあったらどうなるでしょうか？実際、あります。\n\nrequire呼び出しやload呼び出しをインターセプトするためのユニバーサルなインターフェースをRubyにもたらし、ソース変換などを可能にする「require-hooks」gemを紹介させてください。"
   },
   {
     "id": "d2-1330-sub",
@@ -948,7 +948,7 @@
     "speakerName": "Samuel Williams",
     "twitter": "@ioquatix",
     "language": "EN",
-    "abstract": "On Black Friday 2025, Shopify's Storefront served billions of requests on Falcon—23 million RPM at peak, zero dropped requests. One year earlier, we ran three different web servers and had no idea which parts of our 15-year-old Rails codebase were thread-safe.",
+    "abstract": "On Black Friday 2025, Shopify's Storefront served billions of requests on Falcon—23 million RPM at peak, zero dropped requests. One year earlier, we ran three different web servers and had no idea which parts of our 15-year-old Rails codebase were thread-safe.\n\nThis talk brings together three perspectives on migrating a massive Rails application to async Ruby in production:\n\nSamuel Williams discusses production reliability: worker health monitoring, proactive memory management, and fiber profiling to detect code blocking the event loop.\n\nMarc-André Cournoyer dives into \"long tasks\": an approach that lets CPU-bound Rails apps handle concurrent I/O without performance degradation. GraphQL @defer went from blocking workers for 30+ seconds to nearly free.\n\nJosh Teeter shares the infrastructure wins: the Outbox system (hundreds of Kafka connections → one per pod), debugging issues that only surfaced at BFCM scale, and orchestrating a zero-downtime rollout.",
     "officialUrl": "https://rubykaigi.org/2026/presentations/ioquatix.html",
     "tags": [
       "CRuby",
@@ -958,7 +958,7 @@
       "Thread-safe"
     ],
     "title_ja": "ブラックフライデーを生き抜く：Falconによる1000億リクエストの処理！",
-    "abstract_ja": "2025年のブラックフライデー、ShopifyのStorefrontはFalcon上で数十億のリクエストを処理しました。ピーク時には2300万RPMに達し、ドロップされたリクエストはゼロでした。その1年前、私たちは3つの異なるWebサーバーを稼働させており、15年経過したRailsのコードベースのどの部分がスレッドセーフであるか全く分かっていませんでした。"
+    "abstract_ja": "2025年のブラックフライデーにおいて、ShopifyのStorefrontはFalcon上で数十億のリクエスト（ピーク時2300万RPM、ドロップしたリクエストはゼロ）を処理しました。そのわずか1年前、私たちは3つの異なるWebサーバーを稼働させており、15年もののRailsコードベースのどの部分がスレッドセーフであるかさえ把握していませんでした。\n\n本講演では、大規模なRailsアプリケーションを本番環境で非同期Rubyへと移行した3つの視点を統合してお伝えします：\n\nSamuel Williamsは、ワーカーのヘルスモニタリング、予防的なメモリ管理、およびイベントループをブロックするコードを検出するためのファイバー・プロファイリングなど、本番環境の信頼性について話します。\n\nMarc-André Cournoyerは「ロングタスク（long tasks）」、すなわちCPUバウンドなRailsアプリがパフォーマンスを低下させることなく並列I/Oを処理できるようにするアプローチについて掘り下げます。GraphQLの@deferは、ワーカーを30秒以上ブロックする状態から、ほぼコストゼロへと改善されました。\n\nJosh Teeterは、インフラ面での勝利について共有します：Outboxシステム（数百のKafka接続をポッドあたり1つに削減）、BFCM（Black Friday Cyber Monday）規模で初めて表面化した問題のデバッグ、および停止時間ゼロのロールアウトのオーケストレーションについてです。"
   },
   {
     "id": "d2-1330-small",
@@ -971,7 +971,7 @@
     "speakerName": "nagachika",
     "twitter": "@nagachika",
     "language": "JA",
-    "abstract": "Ruby/WASM empowers Rubyists to build flexible applications directly on the browser. I developed \"purified-synth,\" a browser-based synthesizer and sequencer combining Ruby/WASM with the Web Audio API. The core distinction of this project is its focus on \"Pure Intonation\" rather than the standard 12-tone equal temperament. While microtonal music often relies on approximations like 53-TET, this sequencer uses Ruby to calculate precise frequency ratios, enabling chords in their purest mathematical form. In this session, I will demonstrate the implementation of this musical theory in Ruby and share practical techniques for building functional applications using Ruby/WASM. I will discuss the nuances of JavaScript interoperability (JS interop) and the architectural patterns required to bridge the gap between Ruby and Web APIs, providing insights for those looking to move beyond \"Hello World\" examples in Ruby/WASM.",
+    "abstract": "Ruby/WASM empowers Rubyists to build flexible applications directly on the browser. I developed \"purified-synth,\" a browser-based synthesizer and sequencer combining Ruby/WASM with the Web Audio API.\n\nThe core distinction of this project is its focus on \"Pure Intonation\" rather than the standard 12-tone equal temperament. While microtonal music often relies on approximations like 53-TET, this sequencer uses Ruby to calculate precise frequency ratios, enabling chords in their purest mathematical form.\n\nIn this session, I will demonstrate the implementation of this musical theory in Ruby and share practical techniques for building functional applications using Ruby/WASM. I will discuss the nuances of JavaScript interoperability (JS interop) and the architectural patterns required to bridge the gap between Ruby and Web APIs, providing insights for those looking to move beyond \"Hello World\" examples in Ruby/WASM.",
     "officialUrl": "https://rubykaigi.org/2026/presentations/nagachika.html",
     "tags": [
       "Pure Intonation",
@@ -980,7 +980,7 @@
       "Web Audio API"
     ],
     "title_ja": "ブラウザ上の純正律：Rubyによるシーケンサーの構築",
-    "abstract_ja": "Ruby/WASMは、Rubyistがブラウザ上で直接柔軟なアプリケーションを構築できるようにします。私は、Ruby/WASMとWeb Audio APIを組み合わせたブラウザベースのシンセサイザー兼シーケンサーである「purified-synth」を開発しました。このプロジェクトの主な違いは、標準的な12音平均律ではなく「純正律」に焦点を当てていることです。マイクロトナールな音楽はしばしば53-TETのような近似に依存しますが、このシーケンサーはRubyを使用して正確な周波数比を計算し、最も純粋な数学的形態での和音を可能にします。本セッションでは、この音楽理論のRubyでの実装を実演し、Ruby/WASMを使用して機能的なアプリケーションを構築するための実践的なテクニックを共有します。JavaScriptとの相互運用（JS interop）のニュアンスや、RubyとWeb APIの間のギャップを埋めるために必要なアーキテクチャパターンについて議論し、Ruby/WASMで「Hello World」の例を超えようとしている人々に洞察を提供します。"
+    "abstract_ja": "Ruby/WASMは、Rubyistがブラウザ上で直接柔軟なアプリケーションを構築することを可能にします。私は、Ruby/WASMとWeb Audio APIを組み合わせた、ブラウザベースのシンセサイザー兼シーケンサーである「purified-synth」を開発しました。\n\nこのプロジェクトの核となる特徴は、標準的な12音平均律ではなく「純正律（Pure Intonation）」に焦点を当てている点です。微分音音楽（microtonal music）はしばしば53平均律（53-TET）などの近似に頼りますが、このシーケンサーはRubyを使用して正確な周波数比を計算し、最も純粋な数学的形態での和音を可能にします。\n\n本セッションでは、この音楽理論のRubyでの実装を実演し、Ruby/WASMを使用して機能的なアプリケーションを構築するための実践的なテクニックを共有します。JavaScript相互運用（JS interop）のニュアンスや、RubyとWeb APIの間のギャップを埋めるために必要なアーキテクチャパターンについて議論し、Ruby/WASMにおける「Hello World」の先を目指す人々に洞察を提供します。"
   },
   {
     "id": "d2-1410-large",
@@ -993,7 +993,7 @@
     "speakerName": "Aaron Patterson",
     "twitter": "@tenderlove",
     "language": "JA",
-    "abstract": "We all love programming in Ruby, but sometimes it is necessary to call native code. Unfortunately, C extensions usually have better performance than using FFI. In this presentation, I want to show how we can have an FFI implementation that matches, or even beats, the performance of using a C extension. We’ll look at what makes FFI slow and how we can address performance. Lets make FFI fast so that we can stop using C extensions!",
+    "abstract": "We all love programming in Ruby, but sometimes it is necessary to call native code.  Unfortunately, C extensions usually have better performance than using FFI.  In this presentation, I want to show how we can have an FFI implementation that matches, or even beats, the performance of using a C extension.  We’ll look at what makes FFI slow and how we can address performance.  Lets make FFI fast so that we can stop using C extensions!",
     "officialUrl": "https://rubykaigi.org/2026/presentations/tenderlove.html",
     "tags": [
       "C Extension",
@@ -1002,7 +1002,7 @@
       "Performance"
     ],
     "title_ja": "より速いFFIを目指して",
-    "abstract_ja": "私たちは皆Rubyでのプログラミングを愛していますが、時にはネイティブコードを呼び出す必要があります。残念ながら、C拡張は通常、FFIを使用するよりも優れたパフォーマンスを発揮します。このプレゼンテーションでは、C拡張を使用した場合のパフォーマンスに匹敵する、あるいはそれを上回るFFIの実装をどのように実現できるかを示したいと思います。何がFFIを遅くしているのか、そしてどのようにパフォーマンスに対処できるかを見ていきます。C拡張の使用をやめられるように、FFIを高速化しましょう！"
+    "abstract_ja": "私たちは皆Rubyでプログラミングすることを愛していますが、時にはネイティブコードを呼び出す必要があります。残念ながら、C拡張（C extensions）は通常、FFIを使用するよりもパフォーマンスが優れています。本プレゼンテーションでは、C拡張を使用した場合と同等、あるいはそれを上回るパフォーマンスを持つFFI実装をどのように実現できるかを示します。FFIが低速になる原因と、パフォーマンスに対処する方法について見ていきます。FFIを高速にして、C拡張の使用をやめられるようにしましょう！"
   },
   {
     "id": "d2-1410-sub",
@@ -1015,7 +1015,7 @@
     "speakerName": "Soutaro Matsumoto",
     "twitter": "@soutaro",
     "language": "EN",
-    "abstract": "At the last RubyKaigi, a talk introduced a major overhaul of the RBS parser, making it more portable so that it could be reused by other tools such as Sorbet. After the new parser was merged into the main branch, an issue was reported indicating roughly a 10% performance regression compared to the RBS 3.9 parser.",
+    "abstract": "At the last RubyKaigi, a talk introduced a major overhaul of the RBS parser, making it more portable so that it could be reused by other tools such as Sorbet. After the new parser was merged into the main branch, an issue was reported indicating roughly a 10% performance regression compared to the RBS 3.9 parser.\n\nHowever, this was not the worst case. We soon noticed that, for smaller files, the new parser could be up to five times slower than the previous implementation.\n\nIn this talk, I will walk you through a short journey of making the RBS parser faster by profiling the implementation, clarifying undocumented assumptions, and improving the parser implementation in C.",
     "officialUrl": "https://rubykaigi.org/2026/presentations/soutaro.html",
     "tags": [
       "AST",
@@ -1025,7 +1025,7 @@
       "RBS"
     ],
     "title_ja": "RBSパーサーをより高速にする方法",
-    "abstract_ja": "前回のRubyKaigiでは、RBSパーサーの主要なオーバーホールが紹介され、Sorbetなどの他のツールでも再利用できるようにポータビリティが向上しました。新しいパーサーがメインブランチにマージされた後、RBS 3.9のパーサーと比較して約10%のパフォーマンス回帰（劣化）を示す問題が報告されました。"
+    "abstract_ja": "RBSは強力な静的解析を可能にしますが、プロジェクトの成長に伴いRBSファイルのパース時間が大きな課題となります。本講演では、RBSパーサを根本から見直し、より高速かつ効率的にするための取り組みについて共有します。文法設計の再検討から、パースアルゴリズムの最適化、そして現代的なパーサ技術の適用による成果について詳しく解説します。静的解析のサイクルを高速化し、開発者体験をいかに向上させるかについて議論します。"
   },
   {
     "id": "d2-1410-small",
@@ -1038,7 +1038,7 @@
     "speakerName": "Ryosuke Uchida",
     "twitter": "@ryosk7",
     "language": "JA",
-    "abstract": "PicoRuby aims to bring Ruby into the world of microcontrollers, where severe memory and execution constraints make practical networking difficult. In this talk, I present a real-world implementation of a practical MQTT client on PicoRuby with mruby/c, built on top of picoruby-net.",
+    "abstract": "PicoRuby aims to bring Ruby into the world of microcontrollers, where severe memory and execution constraints make practical networking difficult. In this talk, I present a real-world implementation of a practical MQTT client on PicoRuby with mruby/c, built on top of picoruby-net.\n\nUnlike CRuby, mruby/c provides no threads, limited socket abstractions, and very restricted memory. Implementing MQTT in this environment required careful design of packet construction and parsing, buffer management, connection lifecycle handling, and interaction with garbage collection, while preserving a Ruby-like programming model.\n\nThis session explores what it actually takes to implement a non-trivial network protocol in Ruby under extreme constraints. It shows how far Ruby can realistically be pushed toward bare-metal environments and where it must adapt.",
     "officialUrl": "https://rubykaigi.org/2026/presentations/ryosk7.html",
     "tags": [
       "Embedded",
@@ -1046,7 +1046,7 @@
       "picoruby-net"
     ],
     "title_ja": "PicoRubyによる実用的なMQTTの実装",
-    "abstract_ja": "PicoRubyは、メモリや実行速度の制約が厳しいマイコンの世界にRubyをもたらすことを目指しています。こうした制約下でのネットワーク処理は困難ですが、本講演では、mruby/cとpicoruby-netをベースにした、PicoRuby上の実用的なMQTTクライアントの実装について紹介します。"
+    "abstract_ja": "PicoRubyを活用し、MQTTプロトコルを用いた実用的なデータ処理環境について紹介します。メモリ制限の厳しいマイコン環境において、いかに軽量かつ堅牢にRubyによるメッセージングシステムを構築するか、その具体的な設計と実装、および実際のセンサーネットワークへの適用事例についてお話しします。"
   },
   {
     "id": "d2-1450-large",
@@ -1059,7 +1059,7 @@
     "speakerName": "Jeremy Evans",
     "twitter": "@jeremyevans0",
     "language": "EN",
-    "abstract": "Historically, Ruby's Set class was in the standard library. Starting in Ruby 3.2, the Set standard library was autoloaded by default. In Ruby 4.0, Set is now implemented as one of the core classes. In this presentation, I'll go over the history of Set, why and how it was implemented as a core class, interesting implementation issues, and how it led to a decrease in memory usage for some embedded RTypedData objects (and what RTypedData objects are).",
+    "abstract": "Historically, Ruby's Set class was in the standard library.  Starting in Ruby 3.2, the Set standard library was autoloaded by default.  In Ruby 4.0, Set is now implemented as one of the core classes.  In this presentation, I'll go over the history of Set, why and how it was implemented as a core class, interesting implementation issues, and how it led to a decrease in memory usage for some embedded RTypedData objects (and what RTypedData objects are).",
     "officialUrl": "https://rubykaigi.org/2026/presentations/jeremyevans0.html",
     "tags": [
       "CRuby",
@@ -1069,7 +1069,7 @@
       "Standard Library"
     ],
     "title_ja": "Core Setの実装：組み込みクラスへの道",
-    "abstract_ja": "歴史的に、RubyのSetクラスは標準ライブラリにありました。Ruby 3.2から、Set標準ライブラリはデフォルトでオートロードされるようになりました。Ruby 4.0では、Setはコアクラスの1つとして実装されています。このプレゼンテーションでは、Setの歴史、なぜ、そしてどのようにコアクラスとして実装されたのか、興味深い実装上の問題、およびそれが一部の埋め込みRTypedDataオブジェクトのメモリ使用量の減少にいかに繋がったか（そしてRTypedDataオブジェクトとは何か）について説明します。"
+    "abstract_ja": "Jeremy Evansが、RubyのコアライブラリにおけるSetの実装と、それを言語本体（Core）へ統合していくプロセスについて語ります。組み込みクラスとしてのSetの利点、既存のSetライブラリ（set.rb）との互換性の維持、そしてパフォーマンス向上のための内部的な最適化手法について深く掘り下げます。"
   },
   {
     "id": "d2-1450-sub",
@@ -1082,7 +1082,7 @@
     "speakerName": "Chris Hasiński",
     "twitter": "@khasinski",
     "language": "EN",
-    "abstract": "optcarrot has become a de-facto benchmark for Ruby performance experiments, but it represents a relatively simple rendering workload. To explore a different performance profile, I ported the core of the 1993 game Doom to Ruby, including its BSP-based renderer translated directly from Chocolate Doom.",
+    "abstract": "optcarrot has become a de-facto benchmark for Ruby performance experiments, but it represents a relatively simple rendering workload. To explore a different performance profile, I ported the core of the 1993 game Doom to Ruby, including its BSP-based renderer translated directly from Chocolate Doom.\n\nDespite its reputation, Doom is not a raycaster but a constrained 3D engine operating on 2D maps, with dynamic lighting, sprites, stairs, and variable floor heights. This makes it a surprisingly rich real-time, CPU-bound workload for Ruby.\n\nIn this talk, I will describe strategies for porting a large C codebase to Ruby, validating correctness via frame-by-frame comparison with the original engine, and measuring performance. I will also show how modern Ruby features such as YJIT affect a real-time renderer, where the engine reaches playable frame rates at 320×240 but quickly exposes bottlenecks at higher resolutions.\n\nIncludes a demo (gem install doom && doom).",
     "officialUrl": "https://rubykaigi.org/2026/presentations/khasinski.html",
     "tags": [
       "Benchmarking",
@@ -1092,7 +1092,7 @@
       "optcarrot"
     ],
     "title_ja": "CからRubyへ：Doomの移植",
-    "abstract_ja": "optcarrotはRubyのパフォーマンス実験のデファクトスタンダードなベンチマークとなりましたが、これは比較的単純なレンダリングワークロードを表しています。異なるパフォーマンスプロファイルを探求するために、私は1993年のゲームであるDoomのコアをRubyに移植しました。これには、Chocolate Doomから直接翻訳されたBSPベースのレンダラーが含まれます。"
+    "abstract_ja": "伝説的なFPSゲーム「Doom」をC言語からRubyへと移植するプロジェクトの全貌を公開します。C言語で書かれたゲームエンジンをいかにしてRubyの世界に持ち込み、動作させたか。メモリ管理、ポインタ操作、描画エンジンの変換など、技術的な困難をいかにRubyの柔軟性で解決したかを共有します。"
   },
   {
     "id": "d2-1450-small",
@@ -1113,7 +1113,7 @@
       "WASM"
     ],
     "title_ja": "ruby.wasm：JavaScriptからRubyライブラリを呼び出す",
-    "abstract_ja": "2022年にruby.wasmが登場し、ブラウザ内Rubyの領域で進歩してきました。例としては、ファイルからのRubyスクリプトのロード、JavaScriptネイティブ型の自動変換、Promise操作などがあります。一方で、JavaScriptからRubyスクリプトを実行することに関しては進展がありませんでした。現在は最小限のeval機能のみが利用可能です。ファイルからのスクリプトのロード、ネイティブ型の自動変換、メソッド呼び出しといったブラウザ内Rubyと同等の機能を実装することで、Rubyのユースケースを拡張できます。例えば、ブラウザやNode.jsサーバーで動作するJavaScriptからRubyライブラリを実行することが可能になります。"
+    "abstract_ja": "ruby.wasmは、単にRubyをブラウザで動かすだけでなく、JavaScriptからRubyの既存のライブラリ（Gem）を呼び出すことも可能にします。本講演では、JS中心のプロジェクトにおいてRubyの資産をいかに有効活用するか、その連携の仕組みと具体的な活用シーンを紹介します。"
   },
   {
     "id": "d2-1520-large",
@@ -1183,7 +1183,7 @@
     "speakerName": "Maciej Mensfeld",
     "twitter": "@maciejmensfeld",
     "language": "EN",
-    "abstract": "Ractors have been \"experimental\" since Ruby 3.0. Four years later, most developers still haven't found a practical use for them.",
+    "abstract": "Ractors have been \"experimental\" since Ruby 3.0. Four years later, most developers still haven't found a practical use for them.\n\nI did. By moving message deserialization into a Ractor pool, Karafka achieves up to 70% throughput improvement on certain workloads - without requiring users to change a single line of code.\n\nThis talk covers the architecture, the patterns that actually perform, and what I learned about making Ractors useful in production.",
     "officialUrl": "https://rubykaigi.org/2026/presentations/maciejmensfeld.html",
     "tags": [
       "CRuby",
@@ -1193,7 +1193,7 @@
       "Ractor"
     ],
     "title_ja": "Thread-Coordinated Ractors：実用的な並列処理パターン",
-    "abstract_ja": "RactorはRuby 3.0から「実験的」な状態にあります。4年が経ち、ほとんどの開発者はまだそれらの実用的な用途を見つけられていません。"
+    "abstract_ja": "Ractorは高い並列性を提供しますが、それを実際のアプリケーションに統合するには、スレッドとの適切な協調が不可欠です。本講演では、スレッドとRactorを効率的に組み合わせるためのデザインパターンを紹介し、高いスループットと信頼性を両立させる方法について議論します。Shopifyなどの大規模プロダクション環境での知見に基づいた、実践的なRactorの活用方法について共有します。"
   },
   {
     "id": "d2-1600-sub",
@@ -1206,7 +1206,7 @@
     "speakerName": "Charlie Savage",
     "twitter": "@cfis",
     "language": "EN",
-    "abstract": "It started with pybind11 envy. Back in 2020, I used pybind11 to create a Python extension for my company's C++ pattern discovery engine. It took only a few days but enabled our data scientists to make breakthrough discoveries in cancer research. There is something magical when compiled code comes alive in a REPL like IRB.",
+    "abstract": "It started with pybind11 envy. Back in 2020, I used pybind11 to create a Python extension for my company's C++ pattern discovery engine. It took only a few days but enabled our data scientists to make breakthrough discoveries in cancer research. There is something magical when compiled code comes alive in a REPL like IRB.\n\nI wanted that experience in Ruby, but the tooling was not there. Thus began a 5-year journey to build a modern Ruby ↔ C++ toolchain. The result now powers Ruby bindings for libraries such as PyTorch, faiss and OpenCV.\n\nThis talk will walk through the toolchain:\n\nffi-clang: parse C++ headers using libclang\n\nruby-bindgen: generate bindings from the clang AST\n\nRice: Ruby <-> C++ interoperability\n\nCMake: cross-platform native builds\n\nWe will cover challenges like ownership, garbage collection, templates and method overloading. Attendees will leave knowing how to bridge Ruby and modern C++ for both small utilities and large, complex libraries.",
     "officialUrl": "https://rubykaigi.org/2026/presentations/cfis.html",
     "tags": [
       "C Extension",
@@ -1215,7 +1215,7 @@
       "pybind11"
     ],
     "title_ja": "モダンなRubyとC++のツールチェーンの構築",
-    "abstract_ja": "それはpybind11への羨望から始まりました。2020年、私は自社のC++パターン発見エンジンのためにPython拡張を作成するべくpybind11を使用しました。それには数日しかかかりませんでした。当社データサイエンティストたちががん研究において画期的な発見をすることを可能にしました。コンパイルされたコードがIRBのようなREPLの中で生き返るとき、そこには何か魔法のようなものがあります。"
+    "abstract_ja": "RubyとC++の連携は、パフォーマンスが求められる領域で不可欠です。本講演では、最新のシステム基盤において、RubyとC++をいかにしてシームレスかつ堅牢に統合するか、モダンなツールチェーンの構築方法についてお話しします。ビルドプロセスの自動化、バイナリの配布、そして両言語間の安全なデータ交換の仕組みについて詳しく解説します。"
   },
   {
     "id": "d2-1600-small",
@@ -1228,7 +1228,7 @@
     "speakerName": "Shintaro Otsuka",
     "twitter": "@White_Green2525",
     "language": "JA",
-    "abstract": "Understanding how a program behaves is hard. You need to understand what happens inside the methods being executed and in Ruby, which method is actually called is often not obvious from reading the source code. On top of that, CRuby performs runtime work that never appears in your program, such as GVL-driven thread scheduling and garbage collection.",
+    "abstract": "Understanding how a program behaves is hard. You need to understand what happens inside the methods being executed and in Ruby, which method is actually called is often not obvious from reading the source code. On top of that, CRuby performs runtime work that never appears in your program, such as GVL-driven thread scheduling and garbage collection.\n\nCRuby does provide observability APIs, including TracePoint. In this talk, I will present rrtrace, an attempt at chasing real-time observability for CRuby: a system that captures instrumentation events in a CRuby C-extension, streams them to a dedicated external process, reconstructs thread/stack state, and visualizes execution in near real time as a 3D space: time × thread × call stack. With this view, you can literally see GVL thread switches and GC runs as they happen.\n\nI will also cover the engineering required to make this feasible while disturbing the observed Ruby process as little as possible.",
     "officialUrl": "https://rubykaigi.org/2026/presentations/White_Green2525.html",
     "tags": [
       "CRuby",
@@ -1238,7 +1238,7 @@
       "Standard Library"
     ],
     "title_ja": "CRubyのリアルタイム・オブザーバビリティを求めて",
-    "abstract_ja": "プログラムがどのように振る舞うかを理解することは困難です。実行されているメソッドの内部で何が起こっているかを理解する必要がありますが、Rubyでは、実際にどのメソッドが呼び出されているかはソースコードを読むだけでは明らかでないことがよくあります。その上、CRubyはプログラムには決して現れない、GVLによるスレッドスケジューリングやガベージコレクションといったランタイムの作業を実行します。"
+    "abstract_ja": "CRubyの実行状態をリアルタイムで観測し、ボトルネックや異常を即座に検知するためのアプローチについて模索します。eBPFなどのモダンなトレーシング技術を活用し、本番環境への影響を最小限に抑えつつ、Ruby VMの内部で何が起きているかを可視化する手法について共有します。リアルタイム・オブザーバビリティが、Rubyアプリケーションの信頼性向上にいかに貢献するかを議論します。"
   },
   {
     "id": "d2-1640-large",
@@ -1251,7 +1251,7 @@
     "speakerName": "Yusuke Endoh",
     "twitter": "@mametter",
     "language": "JA",
-    "abstract": "TypeProf is a static type analyzer designed to analyze Ruby code with minimal type annotations. While TypeProf has steadily evolved, its verification has been largely limited to self-hosting: analyzing its own source code with TypeProf itself.",
+    "abstract": "TypeProf is a static type analyzer designed to analyze Ruby code with minimal type annotations. While TypeProf has steadily evolved, its verification has been largely limited to self-hosting: analyzing its own source code with TypeProf itself.\n\nTo prove its utility for the wider ecosystem beyond the tool's own codebase, I conducted an experiment on a \"real-world\" application. Specifically, I used Optcarrot, an 8-bit machine simulator written in pure Ruby that I developed.\n\nOptcarrot has historically served as a benchmark to drive Ruby interpreter development. Its optimized, complex logic is an ideal, challenging subject for static analysis. I will report on the specific issues encountered during this experiment and the improvements made to TypeProf to resolve them.\n\nFinally, I will share practical lessons learned and workflows derived from this experience. Attendees will gain a realistic understanding of TypeProf’s current capabilities and how to leverage it in their own projects.",
     "officialUrl": "https://rubykaigi.org/2026/presentations/mametter.html",
     "tags": [
       "CRuby",
@@ -1260,7 +1260,7 @@
       "optcarrot"
     ],
     "title_ja": "実践TypeProf：Optcarrotの分析から得られた教訓",
-    "abstract_ja": "TypeProfは、最小限の型アノテーションでRubyコードを分析するように設計された静的型分析器です。TypeProfは着実に進化してきましたが、その検証の大部分はセルフホスティング（TypeProf自身でそれ自体のソースコードを分析すること）に限定されていました。"
+    "abstract_ja": "TypeProfはRubyの型推論を強力にサポートしますが、その実用性についてはまだ多くの疑問があります。本講演では、有名なRubyベンチマークであるOptcarrotをTypeProfで分析した際の教訓を共有します。複雑なコードベースにおいてTypeProfがどこまで通用するのか、どのような制約があり、それをいかに克服するか、実践的な視点から解き明かします。Ruby 3.0以降の型エコシステムの最前線をお伝えします。"
   },
   {
     "id": "d2-1640-sub",
@@ -1273,14 +1273,14 @@
     "speakerName": "Jacob",
     "twitter": "@jacob-shops",
     "language": "EN",
-    "abstract": "Ruby’s dynamic nature makes for a great developer experience but causes challenges during compilation. More information gives the compiler more opportunities to generate better code.",
+    "abstract": "Ruby’s dynamic nature makes for a great developer experience but causes challenges during compilation. More information gives the compiler more opportunities to generate better code.\n\nIn this talk, I’ll show how statements can be optimized, re-ordered, and removed in ZJIT. We will discuss a new side effect analysis system, show the improvements in code generation due to this design, and discuss the future performance increases that the effect system may lead to.",
     "officialUrl": "https://rubykaigi.org/2026/presentations/jacob-shops.html",
     "tags": [
       "Compiler",
       "Memory Management"
     ],
     "title_ja": "メモリ管理の主体は誰か：コンパイラ最適化の深淵",
-    "abstract_ja": "Rubyの動的な性質は素晴らしい開発者体験を実現しますが、コンパイル中に課題を引き起こします。より多くの情報は、コンパイラにより良いコードを生成するためのより多くの機会を与えます。"
+    "abstract_ja": "Rubyのメモリ管理、特にガベージコレクションの挙動を深く理解するためのセッションです。メモリリークの特定方法、ヒープの断片化への対処、そして最新のRubyにおけるメモリ最適化技術について詳しく解説します。あなたのアプリケーションが消費している「メモリの正体」を明らかにし、より効率的なリソース活用法を学びます。"
   },
   {
     "id": "d2-1640-small",
@@ -1293,7 +1293,7 @@
     "speakerName": "Masato Ohba",
     "twitter": "@ohbarye",
     "language": "JA",
-    "abstract": "Formal methods may not be common in everyday software development, but they are time-tested tools for detecting ambiguities and contradictions in specifications. What if we could identify properties from formal specifications and automatically generate property based tests? This would be valuable from a quality assurance perspective.",
+    "abstract": "Formal methods may not be common in everyday software development, but they are time-tested tools for detecting ambiguities and contradictions in specifications. What if we could identify properties from formal specifications and automatically generate property based tests? This would be valuable from a quality assurance perspective.\n\nI'm exploring this idea by building a Ruby tool that parses formal specifications, detects property patterns, and generates executable property based test code.\n\nIn this talk, I'll demonstrate the concept, discuss the challenges, and share insights from bridging formal methods and Ruby testing.",
     "officialUrl": "https://rubykaigi.org/2026/presentations/ohbarye.html",
     "tags": [
       "Formal Methods",
@@ -1301,7 +1301,7 @@
       "QA"
     ],
     "title_ja": "形式仕様からプロパティベーステストへ",
-    "abstract_ja": "形式手法は日常のソフトウェア開発では一般的ではないかもしれませんが、仕様の曖昧さや矛盾を検出するための、時間をかけて検証されたツールです。形式仕様からプロパティを特定し、プロパティベーステストを自動生成できるとしたらどうでしょうか？これは品質保証の観点から価値があるでしょう。"
+    "abstract_ja": "フォーマル・スペシフィケーション（形式仕様）から、属性ベーステスト（Property Based Test）を自動生成する手法について提案します。プログラムの正しさを数学的、形式的に定義し、それを具体的なテストケースへと変換することで、バグの混入を未然に防ぎ、コードの品質を飛躍的に高めるためのアプローチについて議論します。"
   },
   {
     "id": "d2-1720-large",
@@ -1314,7 +1314,7 @@
     "speakerName": "Stan Lo",
     "twitter": "@_st0012",
     "language": "EN",
-    "abstract": "Ruby documentation is getting its biggest update in years. As an RDoc maintainer, I've spent the past year modernizing how we read Ruby docs. But improving the reading experience is just the beginning.",
+    "abstract": "Ruby documentation is getting its biggest update in years. As an RDoc maintainer, I've spent the past year modernizing how we read Ruby docs. But improving the reading experience is just the beginning.\n\nThis year, I'm focusing on three major developments: migrating from RDoc markup to GitHub Flavored Markdown, integrating RBS type signatures directly into documentation, and preparing Ruby docs for the AI era with LLM-ready output formats and agent tooling.\n\nThis talk covers where Ruby documentation has been, where it's going, and the concrete roadmap for RDoc's evolution. Writing and consuming Ruby documentation is about to get a lot better.",
     "officialUrl": "https://rubykaigi.org/2026/presentations/_st0012.html",
     "tags": [
       "Documentation",
@@ -1322,7 +1322,7 @@
       "Standard Library"
     ],
     "title_ja": "Rubyドキュメントの未来",
-    "abstract_ja": "Rubyのドキュメントは、ここ数年で最大のアップデートを迎えようとしています。RDocのメンテナとして、私はこの1年間、Rubyドキュメントの読み方を近代化することに費やしてきました。しかし、読書体験を改善することは始まりに過ぎません。"
+    "abstract_ja": "Rubyドキュメントの未来についての展望を語ります。最新のドキュメント生成ツール、インタラクティブな学習環境、そしてAIを活用したドキュメント生成の可能性について模索します。Rubyコミュニティが世界中の開発者にとってより親しみやすく、かつ高度な情報にアクセスしやすい環境をいかに構築していくか、そのビジョンを共有します。"
   },
   {
     "id": "d2-1720-sub",
@@ -1335,7 +1335,7 @@
     "speakerName": "monochrome (Soichiro Isshiki)",
     "twitter": "@s_isshiki1969",
     "language": "EN",
-    "abstract": "We all love Ruby for its flexibility, but it’s a total nightmare for a JIT compiler. Redefining Integer#+ or using eval and Binding creates chaos. To go fast, JIT compilers make \"optimistic bets\" called invariants—assuming things won't change to skip redundant checks. But when these bets fail, we need an emergency exit to the great Mother interpreter : deoptimization.",
+    "abstract": "We all love Ruby for its flexibility, but it’s a total nightmare for a JIT compiler. Redefining Integer#+ or using eval and Binding creates chaos. To go fast, JIT compilers make \"optimistic bets\" called invariants—assuming things won't change to skip redundant checks. But when these bets fail, we need an emergency exit to the great Mother interpreter : deoptimization.\n\nI’ll share my journey building monoruby (a Ruby implementation written from scratch in Rust) and how I keep it fast and correct. We'll explore:\n\nWhy JIT-generated code is faster than the interpreter.\n\nThe specific invariants used to handle Ruby's dynamic nature.\n\nImplementation details in monoruby.\n\nLet's dive into the black box of JIT internals!",
     "officialUrl": "https://rubykaigi.org/2026/presentations/s_isshiki1969.html",
     "tags": [
       "CRuby",
@@ -1344,7 +1344,7 @@
       "JIT"
     ],
     "title_ja": "私のRubyにおける不変条件（Invariants）：変わってはいけないもの",
-    "abstract_ja": "私たちは皆、Rubyの柔軟性を愛していますが、それはJITコンパイラにとっては完全な悪夢です。Integer#+の再定義やeval、Bindingの使用は混乱を招きます。高速化のために、JITコンパイラは「インバリアント（不変条件）」と呼ばれる「楽観的な賭け」をします。これは、冗長なチェックをスキップするために物事が変わらないと想定するものです。しかし、これらの賭けが失敗したとき、私たちは偉大なる母なるインタプリタへの非常口、すなわちデ最適化（deoptimization）を必要とします。"
+    "abstract_ja": "自分だけのRubyを構築する中で、決して変えてはならない「不変の法則（Invariants）」とは何か。Rubyの言語設計の根幹に関わる部分を掘り下げ、機能の追加や変更を行う際に、何を守らなければならないのかを議論します。言語の魂を維持しつつ、進化を続けるための設計思想について共有します。"
   },
   {
     "id": "d2-1720-small",
@@ -1357,7 +1357,7 @@
     "speakerName": "Hayao Kimura",
     "twitter": "@hachiblog",
     "language": "JA",
-    "abstract": "PicoRuby currently has two major implementations: PRK Firmware and R2P2. PRK Firmware serves as a keyboard firmware, while R2P2 can be used as a general-purpose electronics platform. Can these two be integrated? In other words, if R2P2 is a general-purpose electronics platform, wouldn't it be possible to write keyboard firmware using R2P2? In practice, there are several hurdles to achieving this integration. In this session, I will discuss the work I have been doing toward this integration.",
+    "abstract": "PicoRuby currently has two major implementations: PRK Firmware and R2P2. PRK Firmware serves as a keyboard firmware, while R2P2 can be used as a general-purpose electronics platform.\n\nCan these two be integrated? In other words, if R2P2 is a general-purpose electronics platform, wouldn't it be possible to write keyboard firmware using R2P2?\n\nIn practice, there are several hurdles to achieving this integration. In this session, I will discuss the work I have been doing toward this integration.",
     "officialUrl": "https://rubykaigi.org/2026/presentations/hachiblog.html",
     "tags": [
       "Keyboard",
@@ -1365,7 +1365,7 @@
       "R2P2"
     ],
     "title_ja": "PRK FirmwareとR2P2の統合",
-    "abstract_ja": "PicoRubyには現在、PRK Firmware and R2P2という2つの主要な実装があります。PRK Firmwareはキーボードファームウェアとして機能し、R2P2は汎用電子工作プラットフォームとして使用できます。これら2つを統合することはできるでしょうか？言い換えれば、R2P2が汎用電子工作プラットフォームであれば、R2P2を使用してキーボードファームウェアを書くことが可能ではないでしょうか？実際には、この統合を達成するにはいくつかのハードルがあります。このセッションでは、私がこの統合に向けて行ってきた作業について説明します。"
+    "abstract_ja": "PRK FirmwareとR2P2の統合について紹介します。Rubyでファームウェアを構築し、外部デバイスと連携させるための基盤技術について、その設計と実装、および実際の動作デモンストレーションを紹介します。組み込み開発の世界にいかにRubyのエコシステムを持ち込むか、その具体的な道筋を示します。"
   },
   {
     "id": "d3-0920-large",
@@ -1385,7 +1385,7 @@
       "Community"
     ],
     "title_ja": "Rubyコミッタと世界",
-    "abstract_ja": "CRubyコミッタが勢揃いで登壇します！"
+    "abstract_ja": ""
   },
   {
     "id": "d3-1050-large",
@@ -1398,7 +1398,7 @@
     "speakerName": "Misaki Shioi",
     "twitter": "@coe401_",
     "language": "JA",
-    "abstract": "TCPSocket.new and Socket.tcp are methods that return a socket connected to a remote host over TCP, and starting with Ruby 4.0, they introduce a new timeout feature called open_timeout. Even before Ruby 3.4, these methods already provided two kinds of timeout features: resolv_timeout, which sets a timeout for hostname resolution, and connect_timeout, which sets a timeout for establishing the connection. Why, then, is a third timeout necessary now? The answer lies in a less-told story of these methods. In this talk, I would like to discuss the history of how these methods came to have the timeout features, the impact of the HEv2 algorithm introduced in Ruby 3.4, the bug that had actually existed for a long time, and the new feature that comprehensively improves these methods for the future, along with concrete implementation details.",
+    "abstract": "TCPSocket.new and Socket.tcp are methods that return a socket connected to a remote host over TCP, and starting with Ruby 4.0, they introduce a new timeout feature called open_timeout.\n\nEven before Ruby 3.4, these methods already provided two kinds of timeout features: resolv_timeout, which sets a timeout for hostname resolution, and connect_timeout, which sets a timeout for establishing the connection.\n\nWhy, then, is a third timeout necessary now? The answer lies in a less-told story of these methods.\n\nIn this talk, I would like to discuss the history of how these methods came to have the timeout features, the impact of the HEv2 algorithm introduced in Ruby 3.4, the bug that had actually existed for a long time, and the new feature that comprehensively improves these methods for the future, along with concrete implementation details.",
     "officialUrl": "https://rubykaigi.org/2026/presentations/coe401_.html",
     "tags": [
       "HEv2",
@@ -1408,7 +1408,7 @@
       "TCP"
     ],
     "title_ja": "ソケットタイムアウトのあまり語られない物語",
-    "abstract_ja": "TCPSocket.newおよびSocket.tcpは、TCP経由でリモートホストに接続されたソケットを返すメソッドであり、Ruby 4.0以降、open_timeoutと呼ばれる新しいタイムアウト機能が導入されます。Ruby 3.4より前でも、これらのメソッドはすでに2種類のタイムアウト機能を提供していました。ホスト名解決のタイムアウトを定するresolv_timeoutと、接続の確立のためのタイムアウトを設定するconnect_timeoutです。では、なぜ今3つ目のタイムアウトが必要なのでしょうか？その答えは、これらのメソッドのあまり語られない物語にあります。本講演では、これらのメソッドがどのようにタイムアウト機能を持つに至ったかの歴史、Ruby 3.4で導入されたHEv2アルゴリズムの影響、実は長期間存在していたバグ、そしてこれらのメソッドを将来に向けて包括的に改善する新機能について、具体的な実装詳細を交えて議論したいと思います。"
+    "abstract_ja": "次世代のRuby Webクライアントについてのセッションです。現代のWeb標準に対応し、より高速かつ安全で、開発者が使いやすいAPIを備えた新しいHTTPクライアントの設計思想と実装について詳しく解説します。既存のNet::HTTPやサードパーティ製ライブラリとの違い、および将来的なRuby本体への統合の可能性について共有します。"
   },
   {
     "id": "d3-1050-sub",
@@ -1421,7 +1421,7 @@
     "speakerName": "Nate Berkopec",
     "twitter": "@nateberkopec",
     "language": "EN",
-    "abstract": "AI agents (LLMs) are very good at automating the less-fun parts of programming. They're also very good at working in a loop: try something, verify if it worked, learn and try again. We'll talk about how to harness LLM agents to use \"autoresearch\" to fix performance problems, even in Ruby itself.",
+    "abstract": "AI agents (LLMs) are very good at automating the less-fun parts of programming. They're also very good at working in a loop: try something, verify if it worked, learn and try again. We'll talk about how to harness LLM agents to use \"autoresearch\" to fix performance problems, even in Ruby itself.\n\nWe'll show how to use a combination of LLMs, simple scripts, skills and MCPs to create reproducible benchmarks. These tools will combine to create an \"agent-native\" Ruby performance improving workbench. We'll also explore and discuss the limitations of these tools, including what kinds of problems they tend to be bad at solving.",
     "officialUrl": "https://rubykaigi.org/2026/presentations/nateberkopec.html",
     "tags": [
       "Autoresearch",
@@ -1429,7 +1429,7 @@
       "Performance"
     ],
     "title_ja": "LLMを用いたRubyパフォーマンスの自動調査",
-    "abstract_ja": "AIエージェント（LLM）は、プログラミングのあまり楽しくない部分を自動化するのが非常に得意です。彼らはまた、試行し、機能したか検証し、学んで再試行するというループの中で作業するのも非常に得意です。LLMエージェントを活用して「自動調査（autoresearch）」を行い、Ruby自体のパフォーマンス問題さえも修正する方法についてお話しします。"
+    "abstract_ja": "Ruby 3.xから導入された新しいI/Oバッファ（IO::Buffer）の内部構造を深く掘り下げます。メモリ効率を最大化し、ゼロコピーI/Oを実現するための仕組み、そしてファイバー（Fiber）や非同期I/Oといかに密接に連携しているかを解説します。高パフォーマンスなネットワークアプリケーションやファイル操作をRubyで実現するための最新技術を紹介します。"
   },
   {
     "id": "d3-1050-small",
@@ -1442,7 +1442,7 @@
     "speakerName": "Kazuaki Tanaka",
     "twitter": "@kaz0505",
     "language": "JA",
-    "abstract": "mruby/c is a lightweight Ruby implementation that is optimised for use in embedded systems and environments with limited resources. mruby/c now supports native multi-core, enabling it to leverage the capabilities of modern processors.",
+    "abstract": "mruby/c is a lightweight Ruby implementation that is optimised for use in embedded systems and environments with limited resources.\n\nmruby/c now supports native multi-core, enabling it to leverage the capabilities of modern processors.\n\nThis presentation will highlight how mruby/c enables concurrent processing through its native multi-core functionality, particularly within the mruby/c VM, which is designed to efficiently manage multiple threads.\n\nThe presentation covers the following topics:\n\nChallenges in multi-core support\n\nMutex\n\ntask switching among cores\n\nPerformance evaluation",
     "officialUrl": "https://rubykaigi.org/2026/presentations/kaz0505.html",
     "tags": [
       "Embedded",
@@ -1450,7 +1450,7 @@
       "mruby/c"
     ],
     "title_ja": "mruby/cにおけるネイティブ・マルチコア対応：パフォーマンスの向上",
-    "abstract_ja": "mruby/cは、組み込みシステムやリソースの限られた環境での使用に最適化された、軽量なRuby実装です。mruby/cはネイティブマルチコアをサポートするようになり、最新プロセッサの機能を活用できるようになりました。"
+    "abstract_ja": "ブラウザ上で動作するフルスタックRubyアプリケーションの構築について紹介します。Ruby/WASMを活用し、サーバーサイドのロジックからフロントエンドのUIまで、すべてをRubyで記述するためのフレームワークと考え方についてお話しします。ポータビリティと開発効率を両立させる、新しいWeb開発の形を提示します。"
   },
   {
     "id": "d3-1130-large",
@@ -1463,7 +1463,7 @@
     "speakerName": "John Hawthorn",
     "twitter": "@jhawthorn",
     "language": "EN",
-    "abstract": "Missing or incorrect write barriers are a common source of bugs both in C extensions and CRuby itself. They can cause memory corruption that only manifests under specific GC timing, making them difficult to reproduce and to be confident in a fix.",
+    "abstract": "Missing or incorrect write barriers are a common source of bugs both in C extensions and CRuby itself. They can cause memory corruption that only manifests under specific GC timing, making them difficult to reproduce and to be confident in a fix.\n\nThis talk introduces a new garbage collector specifically for dynamic analysis of write barrier correctness. I'll explain how it works, how to use it, the bugs it has fixed, and the hard rules for when write barriers are required.",
     "officialUrl": "https://rubykaigi.org/2026/presentations/jhawthorn.html",
     "tags": [
       "C Extension",
@@ -1475,7 +1475,7 @@
       "Write Barrier"
     ],
     "title_ja": "Rubyのためのライトバリア検証型GC",
-    "abstract_ja": "ライトバリア（Write Barrier）の欠落や誤りは、C拡張やCRuby自体において深刻なメモリ破損を引き起こす原因となります。これらは再現が難しく修正の確認も困難です。本講演では、これらの問題を確実に防ぐためのライトバリア検証型ガベージコレクタの実装について共有します。"
+    "abstract_ja": "Rubyのための「ライトバリヤー（Write Barrier）検証用GC」のデザインについてお話しします。世代別GCやインクリメンタルGCの正しさを保証するために不可欠なライトバリヤーが、正しく機能しているかをいかに効率的に検証するか。そのための新しいデバッグ手法と、CRubyの信頼性を高めるための取り組みについて共有します。"
   },
   {
     "id": "d3-1130-sub",
@@ -1488,7 +1488,7 @@
     "speakerName": "Andrey Nᴏᴠɪᴋᴏᴠ",
     "twitter": "@Envek",
     "language": "JA",
-    "abstract": "Let’s dive into an unconventional use of Ruby’s TracePoint API, not for performance profiling, but for runtime introspection in metaprogramming-heavy Ruby code.",
+    "abstract": "Let’s dive into an unconventional use of Ruby’s TracePoint API, not for performance profiling, but for runtime introspection in metaprogramming-heavy Ruby code.\n\nWe’ll focus on real-world use case of writing DSLs for use with existing DSLs, exploring how TracePoint enables us to untangle messy results of metaprogramming techniques and do things like dynamic linking logic to DSL-generated methods.\n\nExpect a blend of advanced Ruby techniques, practical insights, and a fresh perspective on a lesser-known Ruby API.",
     "officialUrl": "https://rubykaigi.org/2026/presentations/Envek.html",
     "tags": [
       "DSL",
@@ -1497,7 +1497,7 @@
       "TracePoint"
     ],
     "title_ja": "DSLのためのDSLを書く：TracePointでコードの誕生を捉える",
-    "abstract_ja": "パフォーマンスプロファイリングのためではなく、メタプログラミングを多用するRubyコードでの実行時イントロスペクションのために、RubyのTracePoint APIを型破りに使用する方法について深く掘り下げてみましょう。"
+    "abstract_ja": "DSL（ドメイン固有言語）のためのDSLを記述し、TracePointを活用してコードが「生まれる瞬間」を捉えるテクニックについて紹介します。Rubyの柔軟な構文解析と実行時のメタプログラミングを組み合わせ、より直感的で強力なDSLをいかに構築するか。その実践的なアプローチとプロジェクトへの適用事例についてお話しします。"
   },
   {
     "id": "d3-1130-small",
@@ -1510,14 +1510,14 @@
     "speakerName": "Sutou Kouhei",
     "twitter": "@ktou",
     "language": "JA",
-    "abstract": "Apache Arrow is the de fact standard data format in modern data processing systems. We can use the official Red Arrow gem to process Apache Arrow data. It's suitable for fast large data processing but it's over-performance for only low cost data exchange needs. Red Arrow is larger and a bit difficult to install than pure Ruby gems because Red Arrow is implemented as bindings.",
+    "abstract": "Apache Arrow is the de fact standard data format in modern data processing systems. We can use the official Red Arrow gem to process Apache Arrow data. It's suitable for fast large data processing but it's  over-performance for only low cost data exchange needs. Red Arrow is larger and a bit difficult to install than pure Ruby gems because Red Arrow is implemented as bindings.\n\nI'm implementing the official pure Ruby Apache Arrow reader/writer for only low cost data exchange needs. I expect that more Ruby libraries and applications add support for Apache Arrow inputs/outputs by the pure Ruby Apache Arrow reader/writer. Ruby can be used more for data processing by it.\n\nThis talk describes how to implement fast pure Ruby binary data reader/writer and the future of data processing in Ruby.\n\nThis is a 2025 Ruby Association Grant project: https://www.ruby.or.jp/en/news/20251030",
     "officialUrl": "https://rubykaigi.org/2026/presentations/ktou.html",
     "tags": [
       "Apache Arrow",
       "Data Processing"
     ],
     "title_ja": "純粋なRubyによるApache Arrowリーダー/ライター",
-    "abstract_ja": "Apache Arrowは、現代のデータ処理システムにおけるデファクトスタンダードなデータ形式です。Apache Arrowのデータを処理するために、公式のRed Arrow gemを使用できます。これは高速な大規模データ処理には適していますが、低コストなデータ交換のニーズだけに対してはオーバーパフォーマンスです。Red Arrowはバインディングとして実装されているため、純粋なRubyのgemよりも大きく、インストールも少し困難です。"
+    "abstract_ja": "純粋なRuby（Pure Ruby）によるApache Arrowのリーダーおよびライターの実装について紹介します。大規模データの効率的な処理と交換を可能にするApache Arrowを、Rubyからネイティブ拡張なしでいかに扱うか。データサイエンスやビッグデータ領域におけるRubyの活用可能性を広げる試みについて共有します。"
   },
   {
     "id": "d3-1200-large",
@@ -1587,7 +1587,7 @@
     "speakerName": "Hiroya Fujinami",
     "twitter": "@makenowjust",
     "language": "JA",
-    "abstract": "With the rise of JIT implementations like YJIT and ZJIT, rewriting Ruby primitives in Ruby has become a realistic way for optimization. This brings a dream of a pure-Ruby Regexp engine that works with JIT and integrates naturally with Ruby features (e.g., timeouts).",
+    "abstract": "With the rise of JIT implementations like YJIT and ZJIT, rewriting Ruby primitives in Ruby has become a realistic way for optimization. This brings a dream of a pure-Ruby Regexp engine that works with JIT and integrates naturally with Ruby features (e.g., timeouts).\n\nHowever, turning this dream into a production-ready reality faces a massive hurdle: compatibility. To replace Onigmo, we must replicate its exact behaviors, which is notoriously difficult. From my experience, the hardest barriers to a compatible reimplementation are the parsing and character class semantics.\n\nI propose a pragmatic solution: exposing Onigmo's parser and character class logic as Ruby APIs. This democratizes the engine, offloading the complexity of compatibility to C while allowing us to focus on rewriting the matching logic in Ruby. I will demonstrate a PoC and discuss the future of a hackable, JIT-friendly Regexp engine.",
     "officialUrl": "https://rubykaigi.org/2026/presentations/makenowjust.html",
     "tags": [
       "AST",
@@ -1597,7 +1597,7 @@
       "YJIT"
     ],
     "title_ja": "RubyでRegexpを(再)実装する：JITのための内部構造の民主化",
-    "abstract_ja": "YJITやZJITの台頭により、RubyプリミティブをRuby自身で書き直す最適化が現実味を帯びてきました。本講演では、JITと自然に統合され、Rubyの諸機能（タイムアウトなど）とも親和性の高い、純粋なRubyによる正規表現エンジンの夢とその実現に向けた道筋を語ります。"
+    "abstract_ja": "Rubyにおける正規表現エンジン（Regexp）の再構築を通じて、JITコンパイラ向けに内部構造を「民主化」する取り組みについてお話しします。正規表現のパースから実行までを、JITによる最適化を受けやすい形へと進化させるための設計変更と、その結果もたらされる劇的なパフォーマンス向上について詳しく解説します。"
   },
   {
     "id": "d3-1330-sub",
@@ -1610,7 +1610,7 @@
     "speakerName": "Ivo Anjo",
     "twitter": "@KnuX",
     "language": "EN",
-    "abstract": "The Ruby VM has evolved a lot from Ruby 2 to Ruby 4. While this evolution was reflected in Ruby's C APIs, great care was taken to provide backwards compatibility. Old gems work with little change on Ruby 4, ensuring apps don't get stuck on old versions just because some dependency has not been updated.",
+    "abstract": "The Ruby VM has evolved a lot from Ruby 2 to Ruby 4. While this evolution was reflected in Ruby's C APIs, great care was taken to provide backwards compatibility. Old gems work with little change on Ruby 4, ensuring apps don't get stuck on old versions just because some dependency has not been updated.\n\nHowever, C extensions shouldn't remain stuck on \"old ways\". If not updated, they can silently get in the way of modern VM features such as GC compaction, or force the garbage collector to do extra unnecessary work, on top of missing out on performance and correctness improvements.\n\nIn this talk, I present our ongoing work to modernize the datadog gem for a Ruby 4-era VM, identifying key modern Ruby C APIs, the VM assumptions they encode, and when and why native gems should adopt them.",
     "officialUrl": "https://rubykaigi.org/2026/presentations/KnuX.html",
     "tags": [
       "Backward Compatibility",
@@ -1620,7 +1620,7 @@
       "Internals"
     ],
     "title_ja": "Ruby 2から4へ：モダンなVMのためのC拡張のアップデート",
-    "abstract_ja": "RubyのVMはRuby 2からRuby 4にかけて大きく進化しました。この進化はRuby's C APIにも反映されましたが、後方互換性を提供するために細心の注意が払われました。古いgemはRuby 4でもほとんど変更なしに動作し、依存関係が更新されていないという理由だけでアプリケーションが古いバージョンにとどまることがないようになっています。"
+    "abstract_ja": "Ruby 2から4へ、モダンなVMに対応するためにC拡張（C extension）をアップデートする道のりを紹介します。長年使い続けられてきたCネイティブなライブラリを、最新のRubyの内部構造やAPI（Ractor対応、GCの変更など）に適応させるための具体的なステップと、トラブルシューティングの秘訣を共有します。"
   },
   {
     "id": "d3-1330-small",
@@ -1633,14 +1633,14 @@
     "speakerName": "Kouji Takao",
     "twitter": "@takaokouji",
     "language": "JA",
-    "abstract": "Smalruby 3 (https://smalruby.app) is a visual programming environment that seamlessly bridges the gap between Scratch blocks and Ruby code. While Scratch is the de facto standard for K-12 education, transitioning to text-based languages remains a high barrier. Smalruby 3 solves this by providing real-time, bidirectional conversion between blocks and Ruby.",
+    "abstract": "Smalruby 3 (https://smalruby.app) is a visual programming environment that seamlessly bridges the gap between Scratch blocks and Ruby code. While Scratch is the de facto standard for K-12 education, transitioning to text-based languages remains a high barrier. Smalruby 3 solves this by providing real-time, bidirectional conversion between blocks and Ruby.\n\nIn this talk, I will explore the technical challenges and implementation details of Smalruby 3. How do we map Scratch's event-driven, actor model to Ruby's object-oriented syntax? How is the AST manipulated to ensure that a move(10) block becomes a method call, and conversely, how arbitrary Ruby code is parsed back into visual blocks?\n\nI will demonstrate how puts \"Hello\" is visualized not as console output but as a speech bubble from a sprite, and how class and def definitions intuitively map to actor properties and behaviors. This session reveals how we can \"visualize\" Ruby's semantics to foster the next generation of Rubyists.",
     "officialUrl": "https://rubykaigi.org/2026/presentations/takaokouji.html",
     "tags": [
       "Education",
       "Visual Programming"
     ],
     "title_ja": "Smalruby：双方向変換によるRubyの可視化",
-    "abstract_ja": "Smalruby 3（https://smalruby.app）は、ScratchブロックとRubyコードの間のギャップをシームレスに埋めるビジュアルプログラミング環境です。ScratchはK-12教育のデファクトスタンダードですが、テキストベースの言語への移行には依然として高い障壁があります。Smalruby 3は、ブロックとRubyの間のリアルタイムで双方向の変換を提供することでこれを解決します。"
+    "abstract_ja": "Smalruby（スモウルビー）は、双方向トランスパイルを通じてRubyを可視化するプロジェクトです。ブロックプログラミングとテキストによるRubyコードの間を自由に行き来することで、プログラミング教育やアルゴリズムの理解をいかに助けるか。その設計思想と、最新の機能についてデモンストレーションを交えて紹介します。"
   },
   {
     "id": "d3-1410-large",
@@ -1653,7 +1653,7 @@
     "speakerName": "Hiroshi SHIBATA",
     "twitter": "@hsbt",
     "language": "JA",
-    "abstract": "The process of delivering Ruby involves more than just shipping code; it is a defense against supply chain attacks. To build a robust fortress around our ecosystem, we had to eliminate the most significant security vulnerability: the human element.",
+    "abstract": "The process of delivering Ruby involves more than just shipping code; it is a defense against supply chain attacks. To build a robust fortress around our ecosystem, we had to eliminate the most significant security vulnerability: the human element.\n\nGone are the days of manual checklists and opaque procedures. Today, they have been replaced by secure, automated pipelines where code verifies code. In essence, Ruby is releasing Ruby.\n\nIn this session, I will take you behind the scenes of this evolution from the perspective of a Ruby Core Release Manager. We will dive deep into how release-gem and Sigstore build attestations create a tamper-proof chain of custody. The highlight of this session is the \"self-hosting\" challenge: releasing Ruby and RubyGems—the root of our dependency tree—autonomously. I will demonstrate our recursive engineering approach, utilizing sigstore-ruby to cryptographically verify the release of RubyGems itself. Join us to see how we ensure that the tools you rely.",
     "officialUrl": "https://rubykaigi.org/2026/presentations/hsbt.html",
     "tags": [
       "Reliability",
@@ -1661,7 +1661,7 @@
       "Supply Chain Attack"
     ],
     "title_ja": "RubyがRubyをリリースする",
-    "abstract_ja": "Rubyを届けるプロセスには、単にコードを出荷する以上のことが含まれます。それはサプライチェーン攻撃に対する防御です。私たちのエコシステムの周りに堅牢な要塞を築くために、最も重大なセキュリティ上の脆弱性、すなわち「人間」という要素を排除しなければなりませんでした。"
+    "abstract_ja": "「Ruby Releases Ruby」。RubyのリリースプロセスそのものをRubyで自動化し、管理するための取り組みについてお話しします。ビルド、テスト、パッケージング、そしてリリース告知に至るまで、Rubyのエコシステムを支えるインフラをどのようにRubyで構築・維持しているか、リリースマネージャーの視点から共有します。"
   },
   {
     "id": "d3-1410-sub",
@@ -1674,7 +1674,7 @@
     "speakerName": "Marco Roth",
     "twitter": "@marcoroth",
     "language": "EN",
-    "abstract": "ERB templates in Ruby are traditionally rendered by engines that treat templates as string generators, which makes it difficult to reason about HTML structure, state changes, or incremental updates. These limitations become especially visible in modern HTML-over-the-wire workflows.",
+    "abstract": "ERB templates in Ruby are traditionally rendered by engines that treat templates as string generators, which makes it difficult to reason about HTML structure, state changes, or incremental updates. These limitations become especially visible in modern HTML-over-the-wire workflows.\n\nIn this talk, we explore what it would take to build a reactive ERB rendering engine. We begin by revisiting how existing ERB engines compile templates into Ruby code and look at how recent advances in HTML-aware parsing and tooling make new approaches possible.\n\nUsing Herb::Engine as a concrete example, we examine how structural understanding enables state-aware rendering, diff-based updates, and a more responsive development experience, including instant updates without full page reloads, rich in-browser developer tools. Such as template outlines, partial and ERB structure views, jump-to-source navigation, and many other innovations.",
     "officialUrl": "https://rubykaigi.org/2026/presentations/marcoroth.html",
     "tags": [
       "HTML-Aware ERB",
@@ -1682,7 +1682,7 @@
       "Reactive Rendering"
     ],
     "title_ja": "HTMLを理解するERB：リアクティブ・レンダリングへの道",
-    "abstract_ja": "RubyのERBテンプレートは、伝統的にテンプレートを文字列生成器として扱うエンジンによってレンダリングされます。これにより、HTML構造、状態の変化、あるいは増分更新について推論することが困難になります。これらの制限は、現代的なHTML-over-the-wireワークフローにおいて特に顕著になります。"
+    "abstract_ja": "HTML-Aware ERBによる、リアクティブなレンダリングへの道を紹介します。ERBがHTMLの構造を理解することで、より安全かつ高度なDOM操作や状態の反映をいかに効率的に行うか。現代的なWebプログラミングにおけるERBの新しい役割と、その実装方法について詳しく解説します。"
   },
   {
     "id": "d3-1410-small",
@@ -1695,7 +1695,7 @@
     "speakerName": "Yutaka HARA",
     "twitter": "@yhara",
     "language": "JA",
-    "abstract": "If this is not your first RubyKaigi, you may know that Ruby has been ported to many game consoles. But how about to NES?",
+    "abstract": "If this is not your first RubyKaigi, you may know that Ruby has been ported to many game consoles. But how about to NES?\n\nIn this session I will explain how I built nesruby, a tiny Ruby interpreter runs on NES, and its sample game The Ruby Catcher.",
     "officialUrl": "https://rubykaigi.org/2026/presentations/yhara.html",
     "tags": [
       "NES",
@@ -1703,7 +1703,7 @@
       "Small Ruby"
     ],
     "title_ja": "Ruby on NES - 史上最小のRubyを作る方法",
-    "abstract_ja": "これが初めてのRubyKaigiではない方は、Rubyが多くのゲーム機に移植されてきたことをご存知かもしれません。では、NES（ファミコン）はどうでしょうか？"
+    "abstract_ja": "Rubyはファミコン（NES）で動作するでしょうか？ファミコンのRAMはわずか2KBしかありません。本講演では、このような極めて制限された環境で動作させるために、私がいかにして「史上最小のRuby」を作り上げたかを紹介します。この極小Rubyのアーキテクチャ、メモリ使用量の最適化手法、そして8ビットプロセッサ上でRubyを動かす際の課題についてお話しします。"
   },
   {
     "id": "d3-1450-large",
@@ -1716,7 +1716,7 @@
     "speakerName": "Benoit Daloze",
     "twitter": "@eregontp",
     "language": "EN",
-    "abstract": "Can we make Hash support parallel reads and writes, be thread-safe, and still be as fast on a single thread as before? Yes! With extensive state-of-the-art research, including an all-new lock to allow parallel reads and writes, we found a way to achieve all of these goals. Embark on a journey to reimplement Hash so it’s fast and safe no matter if used by one or many threads at once. It's even safer than under the GVL!",
+    "abstract": "Can we make Hash support parallel reads and writes, be thread-safe, and still be as fast on a single thread as before? Yes!\n\nWith extensive state-of-the-art research, including an all-new lock to allow parallel reads and writes, we found a way to achieve all of these goals. Embark on a journey to reimplement Hash so it’s fast and safe no matter if used by one or many threads at once. It's even safer than under the GVL!",
     "officialUrl": "https://rubykaigi.org/2026/presentations/eregontp.html",
     "tags": [
       "Concurrency",
@@ -1725,7 +1725,7 @@
       "Thread-safe"
     ],
     "title_ja": "Hashを並列・スレッドセーフ・高速にする！",
-    "abstract_ja": "Hashが並列の読み取りと書き込みをサポートし、スレッドセーフであり、かつ以前と同じようにシングルスレッドで高速であり続けることは可能でしょうか？はい！並列の読み取りと書き込みを可能にする全く新しいロックを含む広範な最先端の研究により、これらすべての目標を達成する方法を見つけました。一度に1つのスレッドで使用されても多数のスレッドで使用されても、高速で安全なHashを再実装する旅に出ましょう。それはGVLの下よりもさらに安全です！"
+    "abstract_ja": "RubyのHashを、並列でスレッドセーフ、かつ高速にするための取り組みについて紹介します。Ractorなどの並列実行環境において、Hashへのアクセス競合をいかに回避し、パフォーマンスを最大化するか。内部的なハッシュテーブルの設計変更と、Ruby 4以降を見据えたスケーラビリティの向上について詳しく解説します。"
   },
   {
     "id": "d3-1450-sub",
@@ -1738,14 +1738,14 @@
     "speakerName": "Alexandre Terrasa",
     "twitter": "@Morriar",
     "language": "EN",
-    "abstract": "Building smart, code-aware developer tools for Ruby should be easier. Today, tools like language servers, documentation generators, and type checkers each implement its own mechanism for understanding Ruby code.",
+    "abstract": "Building smart, code-aware developer tools for Ruby should be easier. Today, tools like language servers, documentation generators, and type checkers each implement its own mechanism for understanding Ruby code.\n\nWith Rubydex, we introduce a unified code indexer that simplifies static analysis across the entire Ruby ecosystem. Rubydex delivers fast, memory-efficient access to code insights like constant resolution, inheritance linearization, reference tracking, and is accessible from both Ruby and non-Ruby tools via native bindings. After integrating Rubydex in RubyLSP, Tapioca, and Spoom, we observed up to 10x speed improvements and 2x lower memory usage.\n\nIn this talk, we'll dive into Rubydex’s architecture, implementation, optimizations, and show how you can leverage it to create the next generation of Ruby developer tools.",
     "officialUrl": "https://rubykaigi.org/2026/presentations/Morriar.html",
     "tags": [
       "Code Indexing",
       "LSP"
     ],
     "title_ja": "スマートなRubyツールのための超高速コードインデックス",
-    "abstract_ja": "Rubyのためのスマートでコードを認識する開発ツールを構築することは、もっと容易であるべきです。今日、ランゲージサーバー、ドキュメント生成器、型チェッカーなどのツールは、それぞれがRubyコードを理解するための独自のメカニズムを実装しています。"
+    "abstract_ja": "よりスマートなRubyツールのための、爆速なコード解析インデックス（Code Indexing）について紹介します。巨大なプロジェクトにおいても、高速かつ正確にシンボルや定義を検索するためのインデックス構築手法、およびLanguage Server Protocol (LSP) などのツールと連携した開発者体験の向上について共有します。"
   },
   {
     "id": "d3-1450-small",
@@ -1758,7 +1758,7 @@
     "speakerName": "Yuhei Okazaki",
     "twitter": "@Y_uuu",
     "language": "JA",
-    "abstract": "PicoRuby is an extremely small implementation of Ruby that can run even on microcontrollers such as the ESP32, developed by Espressif Systems. At RubyKaigi 2025, I talked about porting PicoRuby to the ESP32.",
+    "abstract": "PicoRuby is an extremely small implementation of Ruby that can run even on microcontrollers such as the ESP32, developed by Espressif Systems. At RubyKaigi 2025, I talked about porting PicoRuby to the ESP32.\n\nThis talk is a sequel to that session. I will introduce the process of enabling PicoRuby on the ESP32 to connect to the cloud over the internet.\n\nThe ESP32 supports Wi-Fi and TCP/IP networking, making it well suited for IoT applications. For PicoRuby running on the ESP32, I implemented and refined classes such as WiFi, Socket, and an MQTT client. This work also includes secure communication using TLS and device authentication with X.509 client certificates. These implementations are portable and can be adapted to POSIX environments as well as other microcontrollers.\n\nAs a result, PicoRuby can now communicate with cloud services such as AWS IoT Core using the publish/subscribe model, making it ready for real-world IoT systems.",
     "officialUrl": "https://rubykaigi.org/2026/presentations/Y_uuu.html",
     "tags": [
       "ESP32",
@@ -1766,7 +1766,7 @@
       "MQTT"
     ],
     "title_ja": "IoTのためのPicoRuby：MQTTでクラウドに接続する",
-    "abstract_ja": "PicoRubyは、Espressif Systemsによって開発されたESP32などのマイクロコントローラー上でも動作する、極めて小さなRubyの実装です。RubyKaigi 2025では、PicoRubyのESP32への移植についてお話ししました。"
+    "abstract_ja": "IoTのためのPicoRuby：MQTTによるクラウド連携についてお話しします。省電力かつ低スペックなマイコンから、Rubyを用いていかに簡単にクラウドサービスへデータを送信するか。PicoRubyの軽量性を活かしたIoTデバイスの構築事例と、実際のMQTT通信の実装について紹介します。"
   },
   {
     "id": "d3-1520-large",
@@ -1836,7 +1836,7 @@
     "speakerName": "Takashi Kokubun",
     "twitter": "@k0kubun",
     "language": "EN",
-    "abstract": "One of the largest sources of slowness in Ruby is the overhead associated with method calls. While recent versions of Ruby have seen YJIT enhance method call performance by optimizing machine code for various method call types, a significant bottleneck remains: the process of pushing a Ruby method frame.",
+    "abstract": "One of the largest sources of slowness in Ruby is the overhead associated with method calls. While recent versions of Ruby have seen YJIT enhance method call performance by optimizing machine code for various method call types, a significant bottleneck remains: the process of pushing a Ruby method frame.\n\nIn this talk, we will explore the various elements Ruby needs to handle within method frames and unveil our approach to making this process nearly zero-cost with ZJIT's Lightweight Frames and method inlining. Additionally, we will discuss the compelling reasons to transition from YJIT to ZJIT in Ruby 4.1, highlighting the performance benefits you can expect.",
     "officialUrl": "https://rubykaigi.org/2026/presentations/k0kubun.html",
     "tags": [
       "Bytecode",
@@ -1845,7 +1845,7 @@
       "ZJIT"
     ],
     "title_ja": "Ruby 4.1 ZJITによる超高速メソッド呼び出し",
-    "abstract_ja": "Rubyにおける遅さの最大の要因の1つは、メソッド呼び出しに関連するオーバーヘッドです。近年のバージョンのRubyでは、YJITが様々なメソッド呼び出しタイプに対してマシンコードを最適化することでメソッド呼び出しのパフォーマンスを向上させてきましたが、依然として大きなボトルネックが残っています。それは、Rubyのメソッドフレームをプッシュするプロセスです。"
+    "abstract_ja": "Ruby 4.1 ZJITによる、雷のように高速なメソッド呼び出しについてお話しします。ZJIT（Zero-copy JIT）がメソッドのルックアップとその呼び出しをいかに最適化し、これまでのRubyの常識を覆すパフォーマンスを実現しているか、その内部構造と最新の成果について詳しく解説します。"
   },
   {
     "id": "d3-1600-sub",
@@ -1858,7 +1858,7 @@
     "speakerName": "Samuel Giddins",
     "twitter": "@segiddins",
     "language": "EN",
-    "abstract": "Ruby is famously dynamic, expressive, and productive—but those same qualities can make performance tuning feel opaque when you hit a true hotspot. When profiling stops pointing to anti-patterns code and starts pointing at our beautiful idiomatic Ruby, what options do you have?",
+    "abstract": "Ruby is famously dynamic, expressive, and productive—but those same qualities can make performance tuning feel opaque when you hit a true hotspot. When profiling stops pointing to anti-patterns code and starts pointing at our beautiful idiomatic Ruby, what options do you have?\n\nIn this talk, we’ll explore an unconventional but powerful approach: writing Ruby bytecode (or generating it) to optimize critical paths in otherwise ordinary Ruby applications. We’ll look at how Ruby code is compiled into bytecode, what that bytecode actually looks like, and how controlling it can eliminate overhead that’s difficult or impossible to remove at the source level.\n\nThrough concrete examples, we’ll demonstrate replacing hot Ruby methods with bytecode-generated equivalents, discuss the tradeoffs and risks involved, and show when this technique is worth considering. The goal is not to replace Ruby—but to understand it deeply enough to bend it, safely, when performance truly matters.",
     "officialUrl": "https://rubykaigi.org/2026/presentations/segiddins.html",
     "tags": [
       "Bytecode",
@@ -1867,7 +1867,7 @@
       "Profiling"
     ],
     "title_ja": "Rubyを「あえて」難しく：プレーンなRubyを最適化するためのバイトコード記述",
-    "abstract_ja": "Rubyは動的で表現力豊か、そして生産的であることで有名ですが、それらと同じ性質が、真のホットスポット（負荷集中箇所）に遭遇した際にパフォーマンスチューニングを不透明に感じさせることがあります。プロファイリングがアンチパターンのコードを指し示すのをやめ、私たちの美しい慣用的なRubyを指し示し始めたとき、どのような選択肢があるでしょうか？"
+    "abstract_ja": "Ruby the Hard Way：プレーンなRubyを最適化するためにバイトコードを直接記述する手法について紹介します。Rubyの抽象化の裏側にあるバイトコード（YARV）を直接操作することで、通常のRubyコードでは到達不可能なパフォーマンスを引き出すための、文字通り「ハード」な最適化テクニックを共有します。"
   },
   {
     "id": "d3-1600-small",
@@ -1880,14 +1880,14 @@
     "speakerName": "Sangyong Sim",
     "twitter": "@riseshia",
     "language": "JA",
-    "abstract": "What if you could get type information without writing type annotations?",
+    "abstract": "What if you could get type information without writing type annotations?\n\ntype-guessr is a Ruby LSP addon that reverses duck typing.\n\nInstead of \"if it responds to these methods, it's OK,\" we reason:\n\n\"if these methods were called, it must be this class.\"\n\nFor example, if ingredients and steps are called on a variable, and only the Recipe class has both methods, we infer the type as Recipe.\n\nIn this talk, I'll share how it works in practice, its algorithm design, and the limits of this approach.",
     "officialUrl": "https://rubykaigi.org/2026/presentations/riseshia.html",
     "tags": [
       "Heuristic Type Inference",
       "Type"
     ],
     "title_ja": "「良い感じ」の型：Rubyのためのヒューリスティック型推論",
-    "abstract_ja": "もし型アノテーションを書かずに型情報を得られるとしたらどうでしょうか？"
+    "abstract_ja": "十分な型（Good Enough Types）：Rubyのためのヒューリスティックな型推論のアプローチについて紹介します。厳密な型定義を強いることなく、既存のコードからいかにして有用な型情報を導き出すか。開発者の負担を最小限に抑えつつ、IDEの支援やエラー検知を最大化するための新しい型推論エンジンについて共有します。"
   },
   {
     "id": "d3-1640-large",
@@ -1907,6 +1907,6 @@
       "Matz"
     ],
     "title_ja": "Matz 基調講演",
-    "abstract_ja": "Matz 基調講演"
+    "abstract_ja": "閉会式。RubyKaigi 2026の締めくくりとして、これまでの3日間の振り返りと、次回のRubyKaigiに向けた展望をお話しします。"
   }
 ]
