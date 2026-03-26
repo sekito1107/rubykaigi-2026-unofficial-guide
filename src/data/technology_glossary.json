@@ -447,7 +447,7 @@
   "Memory Management": {
     "name": "メモリ管理 (Memory Management)",
     "description": "メモリを誰にどれくらい貸し、いつ掃除するかを制御する技術。",
-    "detail": "Ruby 4.0の「Ruby Box」のように、メモリを「箱」ごとに切り分けて使うことで、一箇所のミスが全体に及ばないようにしたり、掃除（GC）の効率を劇的に上げたりする新しい管理手法が注目されています。",
+    "detail": "個々のオブジェクトがどのメモリ領域を使っているかを把握し、不要になったメモリを回収（GC）する一連の仕組み。Ruby 4.0のRactor-Local GCのように、各Ractorが独自にメモリ管理を行うことで並列実行の効率を高める技術などが研究されています。",
     "url": "https://en.wikipedia.org/wiki/Memory_management"
   },
   "MessagePack": {

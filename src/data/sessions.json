@@ -74,24 +74,24 @@
     "beginnerGuide": {
       "prerequisites": [
         "Rubyの基本的な文法（クラス、メソッドなど）を知っている",
-        "「メモリ管理」という言葉に興味がある"
+        "「名前空間」や「定数の分離」という言葉に興味がある"
       ],
       "keywords": [
         {
           "term": "Ruby Box",
-          "description": "Ruby 4.0で導入が検討されている新しいメモリ管理や分離のための仕組み。",
+          "description": "Ruby 4.0で導入された、定数やクラスの名前空間を「箱」ごとに分離（アイソレーション）する仕組み。",
           "learnUrl": "https://github.com/ruby/ruby"
         },
         {
-          "term": "メモリ分離",
-          "description": "プログラムの特定のパーツが使うメモリを他から切り離すことで、安全性や速度を高める技術。",
+          "term": "定数分離 (Constant Isolation)",
+          "description": "プログラムの特定のパーツごとに定数やクラスを閉じ込めることで、別のバージョンのライブラリを同時に使うなどの柔軟性を実現する技術。",
           "learnUrl": "https://ja.wikipedia.org/wiki/%E3%83%A1%E3%83%A2%E3%83%AA%E4%BF%9D%E8%AD%B7"
         }
       ]
     },
     "tags": [
       "CRuby",
-      "Memory Management",
+      "Isolation",
       "Ruby 4.0",
       "Ruby Box"
     ]
