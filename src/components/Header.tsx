@@ -28,7 +28,7 @@ const Header = ({
       <div className="flex justify-between items-center">
         <div className="flex flex-col">
           <h1 className="text-2xl font-black tracking-tighter font-outfit">
-            Ruby<span className="text-white">Kaigi</span> 2026 <span className="text-ruby-red">Beginner Guide</span>
+            Ruby<span className="text-white">Kaigi</span> 2026 <span className="text-ruby-red">Unofficial Guide</span>
           </h1>
           <p className="text-[10px] text-slate-500 uppercase font-black tracking-[0.2em] mt-1">
             Hakodate, Hokkaido · April 22-24
