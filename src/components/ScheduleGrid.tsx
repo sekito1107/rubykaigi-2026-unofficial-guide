@@ -40,6 +40,7 @@ export default function ScheduleGrid({
       (s.title_ja && s.title_ja.toLowerCase().includes(query)) ||
       (s.abstract_ja && s.abstract_ja.toLowerCase().includes(query)) ||
       s.speakerName.toLowerCase().includes(query) ||
+      (s.tags.some(t => t.toLowerCase().includes(query))) ||
       (s.beginnerGuide?.keywords.some(k => k.term.toLowerCase().includes(query)))
     )
   }

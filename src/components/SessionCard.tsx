@@ -43,17 +43,22 @@ export default function SessionCard({ session, isFavorite, onToggleFavorite, onO
 
       <div className="flex flex-col h-full gap-3 flex-1 text-left">
         {!isEvent && (
-          <div className="flex gap-2">
-            <span className="text-[10px] font-black tracking-widest px-1.5 py-0.5 rounded bg-white/10 text-slate-400 uppercase">
-              GENERAL
-            </span>
+          <div className="flex flex-wrap gap-1.5 min-h-[22px]">
+            {/* 技術タグ */}
+            {session.tags.slice(0, 3).map(tag => (
+              <span key={tag} className="text-[9px] font-black tracking-wider px-1.5 py-0.5 rounded bg-white/5 text-slate-400 uppercase ring-1 ring-white/5">
+                {tag}
+              </span>
+            ))}
+            
+            {/* 言語バッジ */}
             {session.language === 'EN' && (
-              <span className="text-[10px] font-black tracking-widest px-1.5 py-0.5 rounded bg-blue-500/20 text-blue-400 uppercase">
+              <span className="text-[9px] font-black tracking-widest px-1.5 py-0.5 rounded bg-blue-500/20 text-blue-400 uppercase">
                 EN
               </span>
             )}
             {session.language === 'JA' && (
-              <span className="text-[10px] font-black tracking-widest px-1.5 py-0.5 rounded bg-ruby-red/20 text-ruby-red uppercase">
+              <span className="text-[9px] font-black tracking-widest px-1.5 py-0.5 rounded bg-ruby-red/20 text-ruby-red uppercase">
                 JA
               </span>
             )}

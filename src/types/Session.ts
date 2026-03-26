@@ -23,4 +23,5 @@ export interface Session {
   beginnerGuide?: BeginnerGuide; // 初心者向けガイド（任意）
   title_ja?: string;        // 日本語タイトル（任意）
   abstract_ja?: string;     // 日本語概要（任意）
+  tags: string[];           // 技術タグ（例: ["WASM", "Parser"]）
 }

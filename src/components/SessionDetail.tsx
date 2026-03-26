@@ -44,12 +44,16 @@ const SessionDetail = ({ session, onClose, languageMode }: SessionDetailProps) =
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
           </button>
 
-          <div className="flex gap-3 mb-4">
-            <span className="text-[10px] font-black text-ruby-red bg-ruby-red/10 px-2 py-1 rounded tracking-widest uppercase">
-              Beginner's Deep Guide
-            </span>
-            <span className="text-[10px] font-bold text-slate-400 bg-white/5 px-2 py-1 rounded border border-white/5">
-              HALL {session.room} Hall · {session.startTime}
+          <div className="flex flex-wrap gap-2 mb-4">
+            {session.tags.map(tag => (
+              <span key={tag} className="text-[10px] font-black tracking-widest px-2 py-1 rounded bg-white/10 text-slate-300 uppercase ring-1 ring-white/10 shadow-sm">
+                {tag}
+              </span>
+            ))}
+            <span className={`text-[10px] font-black tracking-widest px-2 py-1 rounded uppercase shadow-sm ${
+              session.language === 'JA' ? 'bg-ruby-red/20 text-ruby-red ring-1 ring-ruby-red/20' : 'bg-blue-500/20 text-blue-400 ring-1 ring-blue-500/20'
+            }`}>
+              {session.language}
             </span>
           </div>
 
