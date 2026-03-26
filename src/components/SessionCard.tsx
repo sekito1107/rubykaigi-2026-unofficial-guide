@@ -5,10 +5,14 @@ interface SessionCardProps {
   isFavorite: boolean
   onToggleFavorite: (id: string) => void
   onOpenDetail: (id: string) => void
+  languageMode: 'EN' | 'JA'
 }
 
-export default function SessionCard({ session, isFavorite, onToggleFavorite, onOpenDetail }: SessionCardProps) {
+export default function SessionCard({ session, isFavorite, onToggleFavorite, onOpenDetail, languageMode }: SessionCardProps) {
   const isEvent = session.type === 'event'
+  
+  const displayTitle = (languageMode === 'JA' && session.title_ja) ? session.title_ja : session.title
+  const displayAbstract = (languageMode === 'JA' && session.abstract_ja) ? session.abstract_ja : session.abstract
   
   return (
     <div 
@@ -58,11 +62,11 @@ export default function SessionCard({ session, isFavorite, onToggleFavorite, onO
 
         <div className="space-y-1">
           <h3 className={`font-bold text-lg leading-tight line-clamp-2 ${isEvent ? 'text-slate-500 text-center' : 'text-slate-100'}`}>
-            {session.title}
+            {displayTitle}
           </h3>
           {!isEvent && (
             <p className="text-sm font-medium text-ruby-red line-clamp-3 leading-relaxed">
-              {session.abstract || 'RubyKaigi 2026 函館 セッション解説'}
+              {displayAbstract || 'RubyKaigi 2026 函館 セッション解説'}
             </p>
           )}
         </div>

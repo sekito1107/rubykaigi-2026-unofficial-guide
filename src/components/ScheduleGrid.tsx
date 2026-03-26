@@ -11,14 +11,37 @@ interface ScheduleGridProps {
   onToggleFavorite: (id: string) => void
   showOnlyFavorites: boolean
   onOpenDetail: (id: string) => void
+  searchQuery: string
+  languageMode: 'EN' | 'JA'
 }
 
-export default function ScheduleGrid({ selectedDay, favorites, onToggleFavorite, showOnlyFavorites, onOpenDetail }: ScheduleGridProps) {
+export default function ScheduleGrid({ 
+  selectedDay, 
+  favorites, 
+  onToggleFavorite, 
+  showOnlyFavorites, 
+  onOpenDetail,
+  searchQuery,
+  languageMode
+}: ScheduleGridProps) {
   // 1. セッションの抽出とフィルタリング
   let filteredSessions = allSessions.filter(s => s.day === selectedDay)
   
   if (showOnlyFavorites) {
     filteredSessions = filteredSessions.filter(s => favorites.includes(s.id))
+  }
+
+  // 検索フィルタ（日、英、スピーカー名、キーワードを横断検索）
+  if (searchQuery) {
+    const query = searchQuery.toLowerCase()
+    filteredSessions = filteredSessions.filter(s => 
+      s.title.toLowerCase().includes(query) ||
+      s.abstract.toLowerCase().includes(query) ||
+      (s.title_ja && s.title_ja.toLowerCase().includes(query)) ||
+      (s.abstract_ja && s.abstract_ja.toLowerCase().includes(query)) ||
+      s.speakerName.toLowerCase().includes(query) ||
+      (s.beginnerGuide?.keywords.some(k => k.term.toLowerCase().includes(query)))
+    )
   }
 
   // 2. 開始時間（startTime）でグルーピング
@@ -98,6 +121,7 @@ export default function ScheduleGrid({ selectedDay, favorites, onToggleFavorite,
                       isFavorite={favorites.includes(session.id)}
                       onToggleFavorite={onToggleFavorite}
                       onOpenDetail={onOpenDetail}
+                      languageMode={languageMode}
                     />
                   </div>
                 ) : (

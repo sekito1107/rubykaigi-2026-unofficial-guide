@@ -6,11 +6,25 @@ interface HeaderProps {
   showOnlyFavorites: boolean;
   onToggleFavoritesView: () => void;
   favoritesCount: number;
+  searchQuery: string;
+  onSearchChange: (query: string) => void;
+  languageMode: 'EN' | 'JA';
+  onLanguageChange: (lang: 'EN' | 'JA') => void;
 }
 
-const Header = ({ selectedDay, onDayChange, showOnlyFavorites, onToggleFavoritesView, favoritesCount }: HeaderProps) => {
+const Header = ({ 
+  selectedDay, 
+  onDayChange, 
+  showOnlyFavorites, 
+  onToggleFavoritesView, 
+  favoritesCount,
+  searchQuery,
+  onSearchChange,
+  languageMode,
+  onLanguageChange
+}: HeaderProps) => {
   return (
-    <header className="px-6 py-4 border-b border-white/5 flex flex-col gap-6 bg-[#0c1427] sticky top-0 z-50">
+    <header className="px-6 py-4 border-b border-white/5 flex flex-col gap-6 bg-[#0c1427]/80 backdrop-blur-xl sticky top-0 z-50">
       <div className="flex justify-between items-center">
         <div className="flex flex-col">
           <h1 className="text-2xl font-black tracking-tighter font-outfit">
@@ -21,15 +35,38 @@ const Header = ({ selectedDay, onDayChange, showOnlyFavorites, onToggleFavorites
           </p>
         </div>
 
-        <div className="flex gap-4 items-center">
+        <div className="flex gap-6 items-center">
+          {/* Language Toggle */}
+          <div className="flex bg-white/5 p-1 rounded-lg border border-white/10">
+            <button 
+              onClick={() => onLanguageChange('EN')}
+              className={`px-3 py-1.5 rounded-md text-[10px] font-black transition-all ${
+                languageMode === 'EN' ? 'bg-white/10 text-white shadow-lg' : 'text-slate-500 hover:text-slate-300'
+              }`}
+            >
+              EN
+            </button>
+            <button 
+              onClick={() => onLanguageChange('JA')}
+              className={`px-3 py-1.5 rounded-md text-[10px] font-black transition-all ${
+                languageMode === 'JA' ? 'bg-ruby-red text-white shadow-lg shadow-ruby-red/20' : 'text-slate-500 hover:text-slate-300'
+              }`}
+            >
+              JA
+            </button>
+          </div>
+
           <div className="relative">
             <input
               type="text"
+              value={searchQuery}
+              onChange={(e) => onSearchChange(e.target.value)}
               placeholder="Search title, speaker, tags..."
-              className="bg-white/5 border border-white/10 rounded-lg px-4 py-2 text-xs w-64 focus:outline-none focus:ring-1 focus:ring-ruby-red/50 transition-all pl-10 text-slate-300"
+              className="bg-white/5 border border-white/10 rounded-lg px-4 py-2 text-xs w-64 focus:outline-none focus:ring-1 focus:ring-ruby-red/50 transition-all pl-10 text-slate-300 placeholder:text-slate-600"
             />
             <svg className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-500" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
           </div>
+          
           <button 
             onClick={onToggleFavoritesView}
             className={`flex items-center gap-2 px-4 py-2 rounded-lg border text-xs font-black transition-all uppercase tracking-widest ${

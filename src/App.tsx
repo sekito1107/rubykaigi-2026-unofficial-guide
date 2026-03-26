@@ -10,6 +10,8 @@ function App() {
   const [favorites, setFavorites] = useState<string[]>([]);
   const [showOnlyFavorites, setShowOnlyFavorites] = useState(false);
   const [selectedSessionId, setSelectedSessionId] = useState<string | null>(null);
+  const [searchQuery, setSearchQuery] = useState('');
+  const [languageMode, setLanguageMode] = useState<'EN' | 'JA'>('EN');
 
   const allSessions = sessionsData as Session[];
   const selectedSession = allSessions.find(s => s.id === selectedSessionId) || null;
@@ -45,6 +47,10 @@ function App() {
         showOnlyFavorites={showOnlyFavorites}
         onToggleFavoritesView={() => setShowOnlyFavorites(prev => !prev)}
         favoritesCount={favorites.length}
+        searchQuery={searchQuery}
+        onSearchChange={setSearchQuery}
+        languageMode={languageMode}
+        onLanguageChange={setLanguageMode}
       />
       
       <main className="flex-1 pb-20">
@@ -54,6 +60,8 @@ function App() {
           onToggleFavorite={toggleFavorite}
           showOnlyFavorites={showOnlyFavorites}
           onOpenDetail={setSelectedSessionId}
+          searchQuery={searchQuery}
+          languageMode={languageMode}
         />
       </main>
 

@@ -4,11 +4,14 @@ import type { Session } from '../types/Session'
 interface SessionDetailProps {
   session: Session
   onClose: () => void
+  languageMode: 'EN' | 'JA'
 }
 
-const SessionDetail = ({ session, onClose }: SessionDetailProps) => {
+const SessionDetail = ({ session, onClose, languageMode }: SessionDetailProps) => {
   const [memo, setMemo] = useState('')
   const [showAbstract, setShowAbstract] = useState(false)
+
+  const displayTitle = (languageMode === 'JA' && session.title_ja) ? session.title_ja : session.title
 
   // メモの読み込み
   useEffect(() => {
@@ -51,7 +54,7 @@ const SessionDetail = ({ session, onClose }: SessionDetailProps) => {
           </div>
 
           <h2 className="text-3xl font-black text-white mb-2 leading-tight font-outfit">
-            {session.title}
+            {displayTitle}
           </h2>
           <p className="text-lg text-slate-400 font-medium">
             {session.speakerName}
@@ -154,8 +157,17 @@ const SessionDetail = ({ session, onClose }: SessionDetailProps) => {
             </span>
           </button>
           {showAbstract && (
-            <div className="text-xs text-slate-400 leading-relaxed pb-4 animate-in slide-in-from-top-2 duration-300">
-              {session.abstract}
+            <div className="space-y-4 pb-6 animate-in slide-in-from-top-2 duration-300">
+              {(languageMode === 'JA' && session.abstract_ja) && (
+                <div className="text-sm text-slate-200 leading-relaxed bg-white/[0.03] p-4 rounded-lg border border-white/5">
+                  <span className="block mb-2 text-[10px] text-ruby-red uppercase font-black tracking-widest">日本語訳 (Japanese Translation)</span>
+                  {session.abstract_ja}
+                </div>
+              )}
+              <div className="text-xs text-slate-500 leading-relaxed px-4 opacity-80">
+                <span className="block mb-2 text-[10px] text-slate-600 uppercase font-black tracking-widest">原文 (Original English)</span>
+                {session.abstract}
+              </div>
             </div>
           )}
         </div>
