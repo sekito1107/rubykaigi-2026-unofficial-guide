@@ -170,9 +170,14 @@ const SessionDetail = ({ session, onClose, languageMode }: SessionDetailProps) =
 
         {/* Footer Actions */}
         <div className="p-8 border-t border-white/5 bg-slate-900/30 flex justify-between items-center">
-          <span className="text-[10px] text-slate-600 uppercase font-black italic">
-            用語をクリックすると詳細解説へ移動します
-          </span>
+          <div className="flex flex-col gap-1">
+            <span className="text-[10px] text-slate-600 uppercase font-black italic">
+              用語をクリックすると詳細解説へ移動します
+            </span>
+            <p className="text-[10px] text-slate-500">
+              タイトル・概要・登壇者名は公式サイトより引用
+            </p>
+          </div>
           <a 
             href={session.officialUrl}
             target="_blank"
