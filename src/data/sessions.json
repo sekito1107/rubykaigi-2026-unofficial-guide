@@ -182,8 +182,7 @@
       "Lexer Hack",
       "Lrama",
       "PSLR(1)",
-      "Parser",
-      "Standard Library"
+      "Parser"
     ],
     "title_ja": "Lexer HackからRubyのパーサを解放する",
     "abstract_ja": "伝統的なLR構文解析では、パーサがトークンを見る前に、レクサ（字句解析器）がどのトークンを返すかを決定しなければなりません。しかし、文脈依存の構文においては、正しいトークン化はパーサだけが知っている文脈に依存します。レクサはそれを見ることができないため、Rubyのレクサは、手書きのコードを通じて文脈を推測する、手動のレクサ状態管理（lex state management）に頼っています。これにより言語のルールが実装の詳細に分散し、バグの再現を困難にし、あらゆる構文の変更を複雑にしています。私がLramaに実装したPSLR(1)（Pseudo-Scannerless Minimal LR(1)）は、この関係を逆転させます。つまり、パーサがレクサに対して、各時点でどのトークンが有効であるかを伝えます。本講演では、PSLR(1)がいかにしてパーサとレクサの間の情報のギャップを埋めるかを示し、それがどのようにRubyのパーサを「Lexer Hack」の呪いから解放し得るかを探ります。"
@@ -255,9 +254,7 @@
     "abstract": "",
     "officialUrl": "https://rubykaigi.org/2026/schedule/",
     "tags": [
-      "Data Format",
-      "Language Migration",
-      "MessagePack"
+
     ],
     "title_ja": "昼食休憩",
     "abstract_ja": ""
@@ -317,8 +314,7 @@
       "AI エージェント",
       "AST",
       "LLM",
-      "MCP",
-      "Metaprogramming"
+      "MCP"
     ],
     "title_ja": "MCPによるRuboCopの探求",
     "abstract_ja": "この講演では、リンターやフォーマッターに焦点を当て、AI時代におけるRubyエコシステムのツールの可能性を探ります。\n\n従来、RuboCopは人間や他のプログラムによって実行されてきました。AI時代において、AIエージェントが新しい種類の実行トリガーとして登場しました。この講演では、Rubyで実装されたMCP（Model Context Protocol）サーバーを統合することで、AIエージェントと並行してこれらのツールを実行するなど、生成AIとリンターおよびフォーマッターを組み合わせる実践的な方法について議論します。\n\nAIの状況は急速に進化し、技術は速いペースで変化していますが、この講演は、Rubyエコシステムの開発者が、MCPを通じてRuboCopのような既存のRubyツールがAI時代にどのように進化できるかを考える機会を提供することを目指しています。"
@@ -447,10 +443,9 @@
     "officialUrl": "https://rubykaigi.org/2026/presentations/spikeolaf.html",
     "tags": [
       "AST",
-      "GC",
       "Internals",
       "LALR(1)",
-      "Memory"
+      "Parser"
     ],
     "title_ja": "マシンの王国：演算子とコマンドの物語",
     "abstract_ja": "特定の実装の詳細[^1]という些末な事柄はさておき、パーサが直面し、解決しなければならない根本的な問題とは何でしょうか[^2]？\n\n入力例 `1 + 2 * 3` を考えてみましょう。ある文法が、この入力は `1 + (2 * 3)` という構造であるべきだと規定していると仮定します。パーサが入力を左から右へと読み進め、`1 + 2` に到達したとき、次のトークンが `*` であることを認識します。この時点で、パーサはそれまでの部分を一つのユニットとしてまとめるか、あるいは継続するかを決定しなければなりません。この課題は、パーサがどのように実装されているかとは無関係であり、構文解析そのものに本来備わっている普遍的な問題です。\n\nこのセッションでは、構文解析の領域におけるそのような問題をいくつか取り上げ、異なるパーサの実装がそれらをどのように解決しようとしているかを探ります。\n\n[^1]: 実際には、その「いかに」という部分こそが、本当の苦闘の場なのですが……\n[^2]: 今回は、入力を左から右に読み込む、一方向でバックトラックを行わないパーサに範囲を限定します。\n[^3]: もちろん、それらの問題がいかに解決されるかを観察するだけで議論が終わるわけではありませんが……"
@@ -469,9 +464,9 @@
     "abstract": "What if we could create sounds incrementally, shaping music as we type Ruby in a live coding session?\n\nI built strudel-rb, a Ruby implementation inspired by Strudel (a browser-based live coding environment for algorithmic music at https://strudel.cc ),  so we can live-code in Ruby while generating rhythmic patterns and melodies from Ruby syntax.\n\nIn this presentation, I will talk about parsing a sequence of sounds defined in Mini-Notation, how to calculate the timing of sound playback, syntax that Ruby cannot handle when adapting Strudel-style syntax, and techniques for preventing sound from stopping when a syntax error occurs during live-coding.",
     "officialUrl": "https://rubykaigi.org/2026/presentations/asonas.html",
     "tags": [
-      "LSP",
-      "Steep",
-      "Type",
+      "Live Coding",
+      "Mini-Notation",
+      "Parser",
       "Web Audio API"
     ],
     "title_ja": "ライブコードからサウンドへ：Rubyライブコーディングエンジンの構築",
@@ -595,7 +590,6 @@
     "abstract": "What if trying a Ruby gem was as easy as opening a web page – no local setup, no \"bundle install,\" no version headaches? TutorialKit.rb enables interactive, runnable tutorials for Ruby gems directly in the browser by combining Ruby on WebAssembly with an in-browser development runtime.\n\nThis talk presents the grant-funded evolution of the project: TutorialKit.rb was awarded a Ruby Association Grant in 2025, and the work from that grant is the core of what I'll share at RubyKaigi 2026.\n\nFirst of all I'll showcase building an example tutorial using the framework.\n\n. RubyKaigi is a technical conference, so then we'll go beyond the demo and focus on the engineering: the architecture that wires Browser → WebContainer → Ruby WASM, the Ruby ⇄ WebContainer bridge, and the build/distribution pipeline that makes a full-featured development workflow possible inside the browser.",
     "officialUrl": "https://rubykaigi.org/2026/presentations/Bakaface.html",
     "tags": [
-      "Virtual Machine",
       "WASM"
     ],
     "title_ja": "TutorialKit.rb：Wasmを活用したインタラクティブなgemドキュメント",
@@ -680,7 +674,9 @@
     "officialUrl": "https://rubykaigi.org/2026/presentations/harukasan.html",
     "tags": [
       "Education",
-      "Standalone Environment"
+      "Embedded",
+      "Standalone Environment",
+      "mruby"
     ],
     "title_ja": "スタンドアロンなRubyプログラミング環境の構築",
     "abstract_ja": "現代のコンピューティングは、若い学習者がプログラミングの感覚を掴むには複雑すぎます。Ruby を書くためでさえ、初心者はまずOSの管理やエディタのセットアップ、Ruby ランタイムのインストールなどを学ばなければなりません。このノイズが、プログラミングの本質に到達することを困難にしています。\n\n本講演では、mruby を使用していかにしてスタンドアロンな Ruby コンピュータが構築されたかを実演します。この20ドルの手作りシングルボードコンピュータは、ホストPCを一切必要とせず、ディスプレイ出力とキーボード入力を備えた完全なプログラミング環境を提供します。\n\nリアルタイムな 640x480 出力とテキスト/図形レンダリングを特徴とするグラフィックスエンジン、USBキーボード入力を備えた Ruby シェル、外部 R2P2 デバイスとのシリアル通信の実装について深く掘り下げます。すべてのコンポーネントがいかに mruby VM 上で動作するかを示すことで、小さなマイコン上でゼロから完全なコンピューティング体験を構築するために、mruby が十分に強力であることを証明します。"
@@ -765,6 +761,7 @@
     "officialUrl": "https://rubykaigi.org/2026/presentations/_dak2_.html",
     "tags": [
       "AI-Generated Code",
+      "Rust",
       "Type Ecosystem"
     ],
     "title_ja": "型は不要、実行可能なメソッドチェックさえあれば",
@@ -807,8 +804,9 @@
     "officialUrl": "https://rubykaigi.org/2026/presentations/peterzhu2118.html",
     "tags": [
       "CRuby",
+      "GC",
       "MMTk",
-      "Memory",
+      "Memory Management",
       "Modular GC"
     ],
     "title_ja": "Rubyにおける次世代ガベージコレクタの構築",
@@ -829,8 +827,8 @@
     "officialUrl": "https://rubykaigi.org/2026/presentations/udzura.html",
     "tags": [
       "Edge Computing",
-      "IoT",
       "Uzumibi",
+      "WASM",
       "mruby/edge"
     ],
     "title_ja": "Uzumibi：エッジのためのmruby再発明",
@@ -1018,10 +1016,9 @@
     "abstract": "At the last RubyKaigi, a talk introduced a major overhaul of the RBS parser, making it more portable so that it could be reused by other tools such as Sorbet. After the new parser was merged into the main branch, an issue was reported indicating roughly a 10% performance regression compared to the RBS 3.9 parser.\n\nHowever, this was not the worst case. We soon noticed that, for smaller files, the new parser could be up to five times slower than the previous implementation.\n\nIn this talk, I will walk you through a short journey of making the RBS parser faster by profiling the implementation, clarifying undocumented assumptions, and improving the parser implementation in C.",
     "officialUrl": "https://rubykaigi.org/2026/presentations/soutaro.html",
     "tags": [
-      "AST",
-      "LALR(1)",
-      "Lrama",
-      "Prism",
+      "C Extension",
+      "Performance",
+      "Profiling",
       "RBS"
     ],
     "title_ja": "RBSパーサーをより高速にする方法",
@@ -1188,7 +1185,7 @@
     "tags": [
       "CRuby",
       "Concurrency",
-      "M:N Threading",
+      "Karafka",
       "Patterns",
       "Ractor"
     ],
@@ -1235,7 +1232,7 @@
       "GVL",
       "Internals",
       "Observability",
-      "Standard Library"
+      "TracePoint"
     ],
     "title_ja": "CRubyのリアルタイム・オブザーバビリティを求めて",
     "abstract_ja": "プログラムがいかに振る舞うかを理解するのは困難です。実行されているメソッドの内部で何が起きているかを理解する必要がありますが、Rubyにおいて、実際にどのメソッドが呼び出されているかはソースコードを読んだだけでは明らかでないことがよくあります。その上に、CRubyはGVL主導のスレッドスケジューリングやガベージコレクションなど、プログラムには決して現れないランタイムの作業を実行します。\n\nCRubyはTracePointを含むオブザーバビリティAPIを提供しています。本講演では、CRubyのリアルタイム・オブザーバビリティを追求する試みであるrrtraceを紹介します。これは、CRubyのC拡張でインスツルメンテーション・イベントをキャプチャし、専用の外部プロセスにストリームし、スレッド/スタック状態を再構築し、実行を「時間 × スレッド × コールスタック」の3次元空間としてニアリアルタイムに可視化するシステムです。このビューを使用すると、GVLによるスレッドスイッチやGCの実行を、まさに起きている瞬間に見ることができます。\n\nまた、観測対象のRubyプロセスへの妨害を最小限に抑えつつ、これを実現するために必要なエンジニアリングについても説明します。"
@@ -1338,10 +1335,11 @@
     "abstract": "We all love Ruby for its flexibility, but it’s a total nightmare for a JIT compiler. Redefining Integer#+ or using eval and Binding creates chaos. To go fast, JIT compilers make \"optimistic bets\" called invariants—assuming things won't change to skip redundant checks. But when these bets fail, we need an emergency exit to the great Mother interpreter : deoptimization.\n\nI’ll share my journey building monoruby (a Ruby implementation written from scratch in Rust) and how I keep it fast and correct. We'll explore:\n\nWhy JIT-generated code is faster than the interpreter.\n\nThe specific invariants used to handle Ruby's dynamic nature.\n\nImplementation details in monoruby.\n\nLet's dive into the black box of JIT internals!",
     "officialUrl": "https://rubykaigi.org/2026/presentations/s_isshiki1969.html",
     "tags": [
-      "CRuby",
       "Deoptimization",
       "Invariants",
-      "JIT"
+      "JIT",
+      "Rust",
+      "monoruby"
     ],
     "title_ja": "私のRubyにおける不変条件（Invariants）：変わってはいけないもの",
     "abstract_ja": "私たちは皆、柔軟性のためにRubyを愛していますが、それはJITコンパイラにとっては完全な悪夢です。Integer#+の再定義や、eval、Bindingの使用は混乱を引き起こします。高速化のために、JITコンパイラは「不変条件（invariants）」と呼ばれる楽観的な賭けを行います。これは冗長なチェックをスキップするために、事態が変わらないと仮定するものです。しかし、これらの賭けが外れたとき、偉大なる母なるインタプリタへの緊急脱出、すなわち逆最適化（deoptimization）が必要になります。\n\n私はmonoruby（Rustでゼロから書かれたRuby実装）を構築した道のりと、いかにしてそれを高速かつ正確に保っているかを共有します。以下の内容を探求します：\n\n・なぜJIT生成コードはインタプリタよりも速いのか\n・Rubyの動的な性質を扱うために使用される特定の不変条件\n・monorubyにおける実装の詳細\n\nJIT内部のブラックボックスに飛び込みましょう！"
@@ -1403,6 +1401,7 @@
     "tags": [
       "HEv2",
       "Hostname Resolution",
+      "Ruby 4.0",
       "Socket",
       "Standard Library",
       "TCP"
@@ -1840,6 +1839,7 @@
     "officialUrl": "https://rubykaigi.org/2026/presentations/k0kubun.html",
     "tags": [
       "Bytecode",
+      "CRuby",
       "JIT",
       "YJIT",
       "ZJIT"

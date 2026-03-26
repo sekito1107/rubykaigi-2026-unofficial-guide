@@ -19,16 +19,11 @@
   },
   "ASTro": {
     "name": "ASTro",
-    "description": "AST（抽象構文木）ベースの再利用可能な最適化フレームワーク。",
-    "detail": "ASTroは、Rubyのソースコードを解析した後に得られるASTを直接最適化し、再利用可能な形で提供するためのフレームワークです。これまでの重厚なVM（仮想マシン）に頼らない、新しいRubyの高速化アプローチとして注目されています。",
-    "url": "https://rubykaigi.org/2026/presentations/tenderlove.html"
-  },
-  "AWP": {
-    "name": "AWP",
-    "description": "非同期処理や並行実行のための性能計測指標。",
-    "detail": "AWPは、アプリケーションの並行処理能力や非同期タスクの効率性を評価するための指標の一つです。Ruby 4.xのMaNyプロジェクトなど、高い並行性を実現するための議論の中で、その有効性を検証するために用いられることがあります。",
+    "description": "AST（抽象構文木）を直接操作・最適化するフレームワークの総称。",
+    "detail": "ASTroは、RubyプログラムのAST（抽象構文木）を解析・最適化し、C言語ソースコードを生成してネイティブコードを得るアプローチを探る研究段階の試みです。VMバイトコードを介さずに、ASTから直接高度に最適化されたコードを導くというアイデアに基づいています。",
     "url": "https://github.com/ruby/ruby"
   },
+
   "Apache Arrow": {
     "name": "Apache Arrow",
     "description": "大量データを高速に処理するためのメモリフォーマット標準。異なる言語間でのデータ共有に使われます。",
@@ -68,7 +63,7 @@
   "C API": {
     "name": "C API",
     "description": "CRubyが内部的に提供している、C拡張からRubyオブジェクトを操作するための関数群。",
-    "detail": "C APIは、CRubyの内部構造に直接アクセスして操作するためのインターフェースです。C拡張はこのAPIを使うことで、Rubyのオブジェクトを作ったり、メソッドを呼び出したりします。Ruby 3.4以降では、このAPIをより整理し、他言語や将来のRubyとの互換性を高めるための「クリーンアップ」が進められています。",
+    "detail": "C APIは、CRubyの内部構造に直接アクセスして操作するためのインターフェースです。C拡張はこのAPIを使うことで、Rubyのオブジェクトを作ったり、メソッドを呼び出したりします。Ruby 4.0時代に向けて、古いAPIから新しいAPIへの移行が推奨されており、GCコンパクションなどのモダンなVM機能を妨げない書き方が重要になっています。",
     "url": "https://github.com/ruby/ruby/blob/master/include/ruby/ruby.h"
   },
   "C Extension": {
@@ -187,9 +182,9 @@
   },
   "ext/profile": {
     "name": "ext/profile",
-    "description": "Rubyに標準で備わっている、メソッドごとの実行時間を計測するプロファイラ。",
-    "detail": "Ruby内部に古くから存在するプロファイリング機能です。プログラムのどのメソッドが多くの時間を費やしているかを把握するために使われますが、現在はより高機能で低コストな stackprof などが推奨されることも多いです。",
-    "url": "https://github.com/ruby/ruby/tree/master/ext/profile_trainer"
+    "description": "CRuby VMに内蔵するプロファイラの構想。外部からの観測では得られない情報を取得できます。",
+    "detail": "ext/profileは、プロファイラをVMの外側から計測せず、CRubyのC拡張として内部に組み込む設計思想です。VM内部のイベント（GVLのスレッドスイッチ、GCの発火など）を包含する包括的なプロファイリング情報を得ることを目指しています。外部プロファイラには、サンプリングバイアスや最適化で除去されたメソッドといった固有の限界があります。",
+    "url": "https://github.com/ruby/ruby"
   },
   "FFI": {
     "name": "FFI (Foreign Function Interface)",
@@ -199,8 +194,8 @@
   },
   "Falcon": {
     "name": "Falcon",
-    "description": "非同期I/Oを活用した高速なRuby用Webサーバー。1プロセスで大量の接続を処理できます。",
-    "detail": "Falconは、Rubyの「async」ライブラリを基盤とした、新しい世代のWebサーバーです。従来のスレッドモデルとは異なり、非同期通信（コルーチン）を駆使することで、少ないリソースで数万、数十万の同時接続を効率的に処理できます。大規模なウェブサービスでの採用も進んでいます。",
+    "description": "Rubyのasyncライブラリを基盤とした、Fiberベースの非同期Webサーバー。",
+    "detail": "Falconは、socketryコミュニティが開発するRuby向けの非同期Webサーバーです。スレッドではなくFiber（コルーチン）を使ってI/O待機処理を行うため、少ないメモリで多くの接続を扱うことができます。HTTP/1、HTTP/2、WebSocketに対応しています。",
     "url": "https://github.com/socketry/falcon"
   },
   "Fiber": {
@@ -266,7 +261,7 @@
   "Hash": {
     "name": "Hash (ハッシュ)",
     "description": "キーと値のペアを保存する、Rubyで非常に多用されるデータ構造。",
-    "detail": "Hash（ハッシュ）は、名前に関連付けてデータを保存する仕組みです。Ruby内部では非常に高速に動作するように設計されています。Ruby 3.4以降では、このHashのメモリ効率をさらに高めたり、スレッド間での共有をより速くするなどの絶え間ない改善が続いています。",
+    "detail": "Hash（ハッシュ）は、名前に関連付けてデータを保存する仕組みです。Ruby内部では非常に高速に動作するように設計されています。TruffleRuby（GraalVM）では、並列読み書きに対応したスレッドセーフなHash実装が実現されており、CRubyでも同様の改善を目指す研究発表がRubyKaigi 2026で行われています。",
     "url": "https://docs.ruby-lang.org/ja/latest/class/Hash.html"
   },
   "Heuristic Type Inference": {
@@ -403,8 +398,8 @@
   },
   "M:N Threading": {
     "name": "M:N スレッド (M:N Threading)",
-    "description": "多数のRubyスレッドを、少数のOSスレッドで賢く回して並列性能を高める技術。",
-    "detail": "Ruby 4.0の「MaNy」プロジェクトで進められている技術です。OSに頼りすぎず、Ruby自身がスレッドを管理することで、数万、数十万といった膨大なスレッドを効率的に動かすことができ、超大規模なサーバーアプリケーションが可能になります。",
+    "description": "多数のOSスレッドに、それより少数のユーザースレッドを対応付けるスレッドモデル。",
+    "detail": "M:Nスレッディングは、M個のユーザースペーススレッドをN個のOSスレッドにマッピングするハイブリッド方式です。1:1方式（ユーザースレッドごとに1つのOSスレッド）のオーバーヘッドを削減しつつ、複数のコアを活用した並列実行が可能です。Rubyでは「MaNy」プロジェクトとして実装が進められてきました。",
     "url": "https://en.wikipedia.org/wiki/Thread_(computing)#M:N_(hybrid_threading)"
   },
   "MCP": {
@@ -422,7 +417,7 @@
   "MMTk": {
     "name": "MMTk (Memory Management Toolkit)",
     "description": "異なる言語に対し、差し替え可能なGCの実装を提供するフレームワーク。",
-    "detail": "ガベージコレクション（メモリ掃除）のアルゴリズムを、どの言語でも使える「部品」として提供するRust製のツールキットです。CRubyにMMTkを統合して、世界最新の高性能な掃除機（GC）でRubyを高速化する研究が進んでいます。",
+    "detail": "ガベージコレクション（メモリ掃除）のアルゴリズムを、どの言語でも使える「部品」として提供するRust製のツールキットです。CRubyにMMTkを統合して、世界最新の高性能な掃除機（GC）でRubyを高速化する研究が進められています。",
     "url": "https://www.mmtk.io/"
   },
   "MQTT": {
@@ -655,8 +650,8 @@
   },
   "Formal Methods": {
     "name": "形式手法 (Formal Methods)",
-    "description": "数学的な理論に基づいて、ソフトウェアの正しさ（バグがないこと）を厳密に証明する手法。",
-    "detail": "「テスト」だけでは見逃してしまうような複雑なパターンのバグも、数式を使って論理的に「ありえない」ことを証明します。Ruby 4.0の不変条件の保証などに役立てられています。",
+    "description": "数学的な理論に基づいて、ソフトウェアの正しさを厳密に証明する手法。",
+    "detail": "テストだけでは見逃しがちな複雑なバグも、数式を使って論理的に「ありえない」ことを証明します。日常のソフトウェア開発では一般的ではありませんが、安全性や信頼性が求められる重要なシステムの設計検証に活用されています。",
     "url": "https://en.wikipedia.org/wiki/Formal_methods"
   },
   "Observability": {
@@ -668,7 +663,7 @@
   "Precision": {
     "name": "精度 (Precision)",
     "description": "数値計算において、いかに正確に（細かい桁まで）値を扱えるかという度合い。",
-    "detail": "コンピュータの浮動小数点数には計算の誤差がつきものですが、金融計算などでは高い精度が求められます。Ruby 4.0の `Numeric` クラスの改善では、この精度の扱いやすさも見直されています。",
+    "detail": "コンピュータの浮動小数点数には計算誤差がつきものです。金融計算や科学技術計算など、誤差を許容できない場面では BigDecimal のような任意精度数値型が必要になります。精度の高さと実行速度はトレードオフの関係にあります。",
     "url": "https://en.wikipedia.org/wiki/Precision_(computer_science)"
   },
   "QA": {
@@ -703,8 +698,8 @@
   },
   "Ruby 4.0": {
     "name": "Ruby 4.0",
-    "description": "「真の並列実行」と「堅牢な隔離」をテーマに、さらなる進化を目指すRubyの次期メジャーバージョン。",
-    "detail": "M:Nスレッド、Ruby Box、Ractor-Local GCなどの新機能により、現代のマルチコア環境と大規模開発の両方において圧倒的なパフォーマンスと信頼性を発揮することを目指しています。",
+    "description": "2025年末にリリースされたRubyの現行メジャーバージョン。",
+    "detail": "Ruby Box（定数・クラスの隔離機能）、Ractor-Local GC（Ractor単位の個別GC）、Setのコアクラスへの昇格など、多数の新機能が導入されました。",
     "url": "https://github.com/ruby/ruby"
   },
   "Security": {
@@ -745,9 +740,9 @@
   },
   "Uzumibi": {
     "name": "Uzumibi",
-    "description": "複数の技術や環境を統合し、より高度な動作を実現するための実験的なプロジェクト・名称。",
-    "detail": "RubyKaigiのセッションなどで言及される、新しいアイデアや実装のプロトタイプに付けられることが多い名称です。最先端のハックや実験の「旗印」のような役割を果たします。",
-    "url": "https://rubykaigi.org/2026/presentations"
+    "description": "mruby/edgeを基盤とした、エッジコンピューティング向けの軽量Webフレームワーク。",
+    "detail": "Uzumibiは、mruby/edgeの上に構築された軽量Webフレームワークです。Cloudflare Workers、Fastly Compute、Spinなど複数のエッジプラットフォームで同じRubyコードを実行でき、シンプルなWeb APIを提供することを目指しています。",
+    "url": "https://github.com/udzura/uzumibi"
   },
   "Web Audio": {
     "name": "Web Audio API",
@@ -781,9 +776,9 @@
   },
   "mruby/edge": {
     "name": "mruby/edge",
-    "description": "mrubyの最新の開発成果や、実験的な機能を取り入れた最先端（エッジ）の実装。",
-    "detail": "将来のmrubyに搭載される予定の新機能や、極限の最適化を先取りして試したいハッカーたちのための環境です。",
-    "url": "https://github.com/mruby/mruby"
+    "description": "Pure Rustでゼロから構築されたmruby互提のVM。エッジコンピューティング向けに高ポータビリティなWasmバイナリを生成します。",
+    "detail": "mruby/edgeは、Cloudflare Workers、Fastly Computeなどのエッジ環境でRubyを実用的に実行するために開発されたmruby互提のVMです。Pure Rustで実装され、400KiB以下の最小構成ビルドが可能で、OOP、例外処理、クロージャ、キーワード引数などをサポートしています。",
+    "url": "https://github.com/udzura/mruby-edge"
   },
   "optcarrot": {
     "name": "optcarrot",

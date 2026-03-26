@@ -44,7 +44,7 @@ const Header = ({
                 languageMode === 'EN' ? 'bg-white/10 text-white shadow-lg' : 'text-slate-500 hover:text-slate-300'
               }`}
             >
-              EN
+              原文 (EN)
             </button>
             <button 
               onClick={() => onLanguageChange('JA')}
@@ -52,7 +52,7 @@ const Header = ({
                 languageMode === 'JA' ? 'bg-ruby-red text-white shadow-lg shadow-ruby-red/20' : 'text-slate-500 hover:text-slate-300'
               }`}
             >
-              JA
+              日本語訳 (JA)
             </button>
           </div>
 
