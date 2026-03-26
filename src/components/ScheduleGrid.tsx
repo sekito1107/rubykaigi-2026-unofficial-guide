@@ -10,9 +10,10 @@ interface ScheduleGridProps {
   favorites: string[]
   onToggleFavorite: (id: string) => void
   showOnlyFavorites: boolean
+  onOpenDetail: (id: string) => void
 }
 
-export default function ScheduleGrid({ selectedDay, favorites, onToggleFavorite, showOnlyFavorites }: ScheduleGridProps) {
+export default function ScheduleGrid({ selectedDay, favorites, onToggleFavorite, showOnlyFavorites, onOpenDetail }: ScheduleGridProps) {
   // 1. セッションの抽出とフィルタリング
   let filteredSessions = allSessions.filter(s => s.day === selectedDay)
   
@@ -96,6 +97,7 @@ export default function ScheduleGrid({ selectedDay, favorites, onToggleFavorite,
                       session={session} 
                       isFavorite={favorites.includes(session.id)}
                       onToggleFavorite={onToggleFavorite}
+                      onOpenDetail={onOpenDetail}
                     />
                   </div>
                 ) : (

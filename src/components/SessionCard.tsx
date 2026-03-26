@@ -4,16 +4,20 @@ interface SessionCardProps {
   session: Session
   isFavorite: boolean
   onToggleFavorite: (id: string) => void
+  onOpenDetail: (id: string) => void
 }
 
-export default function SessionCard({ session, isFavorite, onToggleFavorite }: SessionCardProps) {
+export default function SessionCard({ session, isFavorite, onToggleFavorite, onOpenDetail }: SessionCardProps) {
   const isEvent = session.type === 'event'
   
   return (
-    <div className={`relative p-5 rounded-lg border border-white/5 transition-all duration-300 group h-full min-h-[220px] flex flex-col overflow-hidden ${
-      isEvent ? 'bg-transparent border-dashed border-white/10' : 
-      isFavorite ? 'bg-amber-400/[0.03] border-white/10' : 'bg-white/5 hover:bg-white/10'
-    }`}>
+    <div 
+      onClick={() => !isEvent && onOpenDetail(session.id)}
+      className={`relative p-5 rounded-lg border border-white/5 transition-all duration-300 group h-full min-h-[220px] flex flex-col overflow-hidden ${
+        isEvent ? 'bg-transparent border-dashed border-white/10' : 
+        'cursor-pointer ' + (isFavorite ? 'bg-amber-400/[0.03] border-white/10' : 'bg-white/5 hover:bg-white/10')
+      }`}
+    >
       {/* お気に入り時の左側の黄色いライン */}
       {isFavorite && (
         <div className="absolute left-0 top-0 bottom-0 w-1 bg-amber-400 shadow-[0_0_15px_rgba(251,191,36,0.4)]" />
@@ -21,7 +25,10 @@ export default function SessionCard({ session, isFavorite, onToggleFavorite }: S
       {/* お気に入りボタン */}
       {!isEvent && (
         <button 
-          onClick={() => onToggleFavorite(session.id)}
+          onClick={(e) => {
+            e.stopPropagation();
+            onToggleFavorite(session.id);
+          }}
           className={`absolute top-4 right-4 transition-all z-10 hover:scale-125 hover:rotate-12 ${
             isFavorite ? 'text-amber-400' : 'text-white/20 hover:text-white/50'
           }`}

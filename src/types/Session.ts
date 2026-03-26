@@ -1,3 +1,12 @@
+export interface BeginnerGuide {
+  keywords: {
+    term: string;
+    description: string;
+    learnUrl: string;
+  }[];
+  prerequisites: string[];
+}
+
 export interface Session {
   id: string;               // データの識別子
   type: 'session' | 'event'; // 'event' は Door Open など
@@ -11,4 +20,5 @@ export interface Session {
   language: string;         // "JA" | "EN"
   abstract: string;         // 概要
   officialUrl: string;      // 公式サイトへの詳細リンク
+  beginnerGuide?: BeginnerGuide; // 初心者向けガイド（任意）
 }

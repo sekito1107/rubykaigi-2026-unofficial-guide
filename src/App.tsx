@@ -1,11 +1,18 @@
 import { useState, useEffect } from 'react';
 import Header from './components/Header';
 import ScheduleGrid from './components/ScheduleGrid';
+import SessionDetail from './components/SessionDetail';
+import sessionsData from './data/sessions.json';
+import type { Session } from './types/Session';
 
 function App() {
   const [selectedDay, setSelectedDay] = useState(1);
   const [favorites, setFavorites] = useState<string[]>([]);
   const [showOnlyFavorites, setShowOnlyFavorites] = useState(false);
+  const [selectedSessionId, setSelectedSessionId] = useState<string | null>(null);
+
+  const allSessions = sessionsData as Session[];
+  const selectedSession = allSessions.find(s => s.id === selectedSessionId) || null;
 
   // 初期読み込み: LocalStorage からお気に入りを復元
   useEffect(() => {
@@ -46,8 +53,17 @@ function App() {
           favorites={favorites}
           onToggleFavorite={toggleFavorite}
           showOnlyFavorites={showOnlyFavorites}
+          onOpenDetail={setSelectedSessionId}
         />
       </main>
+
+      {/* 詳細モーダル */}
+      {selectedSession && (
+        <SessionDetail 
+          session={selectedSession} 
+          onClose={() => setSelectedSessionId(null)}
+        />
+      )}
     </div>
   );
 }
