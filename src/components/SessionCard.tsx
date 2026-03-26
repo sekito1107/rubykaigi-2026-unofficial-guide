@@ -48,6 +48,11 @@ export default function SessionCard({ session, isFavorite, onToggleFavorite, onO
                 EN
               </span>
             )}
+            {session.language === 'JA' && (
+              <span className="text-[10px] font-black tracking-widest px-1.5 py-0.5 rounded bg-ruby-red/20 text-ruby-red uppercase">
+                JA
+              </span>
+            )}
           </div>
         )}
 
