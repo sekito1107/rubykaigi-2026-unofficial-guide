@@ -35,6 +35,15 @@ function App() {
     localStorage.setItem('rubykaigi_favorites', JSON.stringify(favorites));
   }, [favorites]);
 
+  // モーダル表示時に背景のスクロールを禁止
+  useEffect(() => {
+    if (selectedSessionId || showDisclaimer) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+  }, [selectedSessionId, showDisclaimer]);
+
   const toggleFavorite = (id: string) => {
     setFavorites(prev => 
       prev.includes(id) ? prev.filter(fid => fid !== id) : [...prev, id]
