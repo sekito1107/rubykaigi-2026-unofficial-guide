@@ -70,6 +70,7 @@ function App() {
         <SessionDetail 
           session={selectedSession} 
           onClose={() => setSelectedSessionId(null)}
+          languageMode={languageMode}
         />
       )}
     </div>
