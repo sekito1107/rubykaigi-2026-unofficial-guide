@@ -23,7 +23,6 @@
     "detail": "ASTroは、RubyプログラムのAST（抽象構文木）を解析・最適化し、C言語ソースコードを生成してネイティブコードを得るアプローチを探る研究段階の試みです。VMバイトコードを介さずに、ASTから直接高度に最適化されたコードを導くというアイデアに基づいています。",
     "url": "https://github.com/ruby/ruby"
   },
-
   "Apache Arrow": {
     "name": "Apache Arrow",
     "description": "大量データを高速に処理するためのメモリフォーマット標準。異なる言語間でのデータ共有に使われます。",
@@ -151,7 +150,7 @@
     "url": "https://github.com/ruby/date"
   },
   "Deoptimization": {
-    "name": "デ最適化 (Deoptimization)",
+    "name": "逆最適化 (Deoptimization)",
     "description": "JITコンパイラが行った最適化の前提が崩れた際に、安全なインタプリタ実行へ切り戻す仕組み。",
     "detail": "JITコンパイラは速度向上のため、実行時の状況を楽観的に仮定して高速な機械語を生成します（例：このメソッドは再定義されない）。しかし、実際にその仮定が破られた場合、その高速なコードは正しくなくなります。デ最適化は、その瞬間に安全な元の低速な実行（インタプリタ）に戻す、不可欠な安全装置です。",
     "url": "https://en.wikipedia.org/wiki/Inline_caching#Deoptimization"
@@ -995,5 +994,155 @@
     "description": "YJITの次を見据えた、極限の関数最適化を狙う次世代のJITコンパイラ。",
     "detail": "メソッドの呼び出しコストさえもゼロに近づけるため、高度なコンパイラ理論をRubyに持ち込もうとする意欲的な試みです。Ruby 4.1以降で、これまでの限界を超えるパフォーマンスを目指して開発が進められています。",
     "url": "https://rubykaigi.org/2026/presentations/k0kubun.html"
+  },
+  "Isolation": {
+    "name": "アイソレーション (Isolation)",
+    "description": "プログラムの異なる部分が互いに干渉しないよう、定数・クラス・データを独立した「箱」の中に閉じ込める設計原則。",
+    "detail": "ソフトウェア設計における重要な概念で、特定のスコープ内で定義されたものが外部から勝手に変更・参照できないようにします。RubyのRuby Boxでは、プログラム内に複数の「箱（Box）」を定義し、定数やクラスをそれぞれの箱の中にアイソレートできます。異なるバージョンのライブラリを同じプロセス内で安全に共存させるなどのユースケースが可能になります。",
+    "url": "https://en.wikipedia.org/wiki/Isolation_(database_systems)"
+  },
+  "Live Coding": {
+    "name": "ライブコーディング (Live Coding)",
+    "description": "プログラムを実行中にリアルタイムでコードを書き換え、その結果（音楽・映像など）を即座に観客に届けるパフォーマンス手法。",
+    "detail": "プログラミングをパフォーマンスアートとして実践するスタイルです。音楽の分野では、コードを書きながらリアルタイムでビートやメロディを生成するアルゴリズム音楽（Algorave）として広まっています。エラーや修正のプロセス自体も観客に公開されます。",
+    "url": "https://en.wikipedia.org/wiki/Live_coding"
+  },
+  "Mini-Notation": {
+    "name": "ミニ記法 (Mini-Notation)",
+    "description": "TidalCyclesやStrudelで使われる、リズムパターンを短い文字列で表現するための小型の記法。",
+    "detail": "例えば `\"bd sd hh\"` のように書くだけでリズムパターンを表現できます。ライブコーディングの場面で、複雑なリズムを素早く記述するために設計された専用の文法です。",
+    "url": "https://strudel.cc/learn/mini-notation/"
+  },
+  "Rust": {
+    "name": "Rust",
+    "description": "Mozillaが開発した、メモリ安全性と高パフォーマンスを両立するシステムプログラミング言語。",
+    "detail": "CやC++と同レベルの速度でありながら、独自の所有権システムによりメモリ安全性をコンパイル時に保証します。ガベージコレクションなしでメモリ安全を実現できるため、VMや高性能ツールの実装言語として人気が高まっています。Rubyエコシステムでも、型チェッカーやRubyのサブセット実装にRustが活用されています。",
+    "url": "https://www.rust-lang.org/ja"
+  },
+  "Karafka": {
+    "name": "Karafka",
+    "description": "Ruby/Rails向けのApache Kafkaコンシューマーフレームワーク。",
+    "detail": "Apache KafkaとRubyアプリケーションを繋ぐライブラリです。Kafkaのトピックからメッセージを受信しRubyのコードで処理するフレームワークを提供します。高スループットな非同期メッセージ処理を必要とする大規模なRailsアプリで広く使われています。",
+    "url": "https://karafka.io/"
+  },
+  "monoruby": {
+    "name": "monoruby",
+    "description": "Rustでゼロから書かれたRubyの実験的なJIT実装。",
+    "detail": "Ruby互換を目指しながら、Rustの安全性と近代的なコンパイラ技術を用い、JITコンパイラの研究・実験プラットフォームとして開発されています。",
+    "url": "https://github.com/sisshiki1969/monoruby"
+  },
+  "FreeRTOS": {
+    "name": "FreeRTOS",
+    "description": "マイコン向けの小型リアルタイムOS（RTOS）。複数のタスクを擬似的に並列実行するスケジューリング機能を提供する。",
+    "detail": "Amazon Web Servicesが管理するオープンソースのリアルタイムOSです。数十KB程度のメモリしかないマイコンでも動作可能で、複数の処理を切り替えながら動かすタスクスケジューラを提供します。PicoRubyはFreeRTOS上で複数のVMを同時に実行できます。",
+    "url": "https://www.freertos.org/"
+  },
+  "C#": {
+    "name": "C# (シーシャープ)",
+    "description": "Microsoftが開発した、.NETプラットフォーム向けのオブジェクト指向プログラミング言語。",
+    "detail": "Javaに影響を受けたオブジェクト指向言語で、クロスプラットフォーム開発に広く使われています。Unityゲームエンジンのスクリプト言語としても採用されており、ゲーム開発者には馴染み深い言語です。",
+    "url": "https://learn.microsoft.com/ja-jp/dotnet/csharp/"
+  },
+  "Unity": {
+    "name": "Unity",
+    "description": "ゲームやインタラクティブコンテンツの開発に広く使われるクロスプラットフォームのゲームエンジン。",
+    "detail": "2Dや3Dゲームをモバイル、PC、コンソール、Webなどほぼあらゆるプラットフォームにデプロイできます。スクリプト言語にC#を採用しており、mrubyをUnity上で動かすことでRuby開発者がゲーム開発に参入できるようになります。",
+    "url": "https://unity.com/ja"
+  },
+  "X.509": {
+    "name": "X.509 証明書",
+    "description": "デジタル証明書の標準規格。TLS通信でサーバーやクライアントの身元を証明するために使われる。",
+    "detail": "HTTPSなどのTLS通信において、通信相手が本物であることを証明するためのデジタル証明書の規格です。公開鍵暗号を利用し、認証局（CA）が署名することで信頼性を保証します。IoTデバイスがX.509クライアント証明書を持つことで、クラウドサービスへの安全な認証接続が可能になります。",
+    "url": "https://ja.wikipedia.org/wiki/X.509"
+  },
+  "Wi-Fi": {
+    "name": "Wi-Fi (ワイファイ)",
+    "description": "IEEE 802.11規格に基づく無線LAN技術。ルーターなどを介してインターネットに無線接続する。",
+    "detail": "日常的に使われている無線インターネット接続の技術です。ESP32のようなIoTマイコンに内蔵されており、PicoRubyはESP32のWi-Fi機能を制御するクラスを実装してクラウドサービスへの接続を可能にしています。",
+    "url": "https://ja.wikipedia.org/wiki/Wi-Fi"
+  },
+  "TCP/IP": {
+    "name": "TCP/IP",
+    "description": "インターネット通信の基盤となるプロトコル群。データを分割して送り、相手に確実に届ける仕組みを定義する。",
+    "detail": "TCP（Transmission Control Protocol）とIP（Internet Protocol）を中心とするプロトコル群の総称です。インターネット上のほぼすべての通信はこの仕組みの上に成り立っています。ESP32などのIoTマイコンでもTCP/IPスタックを実装することでインターネット通信が可能になります。",
+    "url": "https://ja.wikipedia.org/wiki/TCP/IP"
+  },
+  "Cloudflare Workers": {
+    "name": "Cloudflare Workers",
+    "description": "Cloudflareが提供するエッジコンピューティングプラットフォーム。世界中のネットワークエッジでコードを実行できる。",
+    "detail": "サーバーを持たずにコードをユーザーの近くで実行できるサーバーレスプラットフォームです。WebAssembly（WASM）をサポートしており、mruby/edge + UzumibiのようなRubyのWASMバイナリを動かすことができます。",
+    "url": "https://workers.cloudflare.com/"
+  },
+  "Scratch": {
+    "name": "Scratch (スクラッチ)",
+    "description": "MITメディアラボが開発した子ども向けのビジュアルプログラミング環境。ブロックをつなげてプログラムを作る。",
+    "detail": "コードをキーボードで入力せず、カラフルなブロックをドラッグ＆ドロップでつなげてプログラムを作るツールです。世界中の初等・中等教育機関（K-12）で使われており、プログラミング教育の事実上の標準です。SmalrubyはScratchのブロックとRubyのコードを双方向変換することで、Scratchユーザーがテキストプログラミングへ移行しやすくします。",
+    "url": "https://scratch.mit.edu/"
+  },
+  "Transpiler": {
+    "name": "トランスパイラ (Transpiler)",
+    "description": "あるプログラミング言語のコードを、別の言語のコードに変換するツール。コンパイラの一種。",
+    "detail": "コードを機械語ではなく、別のソースコードに変換します。SmalrubyはScratchのビジュアルブロックをテキストのRubyコードに変換するトランスパイラの役割を持ちます。TypeScriptをJavaScriptに変換するtscなども有名なトランスパイラです。",
+    "url": "https://en.wikipedia.org/wiki/Source-to-source_compiler"
+  },
+  "Kafka": {
+    "name": "Apache Kafka (カフカ)",
+    "description": "大規模なリアルタイムデータストリームの処理に特化した、分散メッセージキューシステム。",
+    "detail": "LinkedInが開発しApacheに寄贈されたオープンソースの分散ストリーミングプラットフォームです。「パブリッシュ/サブスクライブ」モデルを採用し、1秒間に数百万件のメッセージを処理できます。マイクロサービス間のデータ連携やイベントログ収集に広く使われています。RubyからはKarafkaを使って利用します。",
+    "url": "https://kafka.apache.org/"
+  },
+  "GraphQL": {
+    "name": "GraphQL",
+    "description": "Facebookが開発したAPI用のクエリ言語。必要なデータだけを1回のリクエストで取得できる。",
+    "detail": "REST APIの代替として広まったAPI設計の仕組みです。クライアントが必要なデータの形を自分で指定してリクエストすると、サーバーはその形通りにデータを返します。Shopifyなど大規模なRailsアプリでも採用されており、Rubyでは `graphql-ruby` gemで実装します。",
+    "url": "https://graphql.org/"
+  },
+  "Onigmo": {
+    "name": "Onigmo (鬼雲)",
+    "description": "CRubyが正規表現（Regexp）の処理エンジンとして内部で使用しているCライブラリ。",
+    "detail": "Onigurumaの後継として開発された正規表現ライブラリです。CRubyの `=~` や `match` などの正規表現操作はすべてOnigmoが担っています。複数のエンコーディングに対応した高機能な正規表現エンジンで、Rubyの豊かな正規表現機能を支えています。",
+    "url": "https://github.com/k-takata/Onigmo"
+  },
+  "Mutex": {
+    "name": "ミューテックス (Mutex)",
+    "description": "複数のスレッドが共有リソースに同時アクセスするのを防ぐための排他制御の仕組み。",
+    "detail": "mutual exclusion（相互排他）の略です。1つのスレッドしか特定のコードブロック（クリティカルセクション）を実行できないよう鍵をかける機構です。マルチスレッドプログラムでデータの整合性を保つための基本的な道具で、Rubyでは `Mutex.new` で生成して使います。",
+    "url": "https://docs.ruby-lang.org/ja/latest/class/Mutex.html"
+  },
+  "Sigstore": {
+    "name": "Sigstore",
+    "description": "ソフトウェアのアーティファクト（gem, コンテナなど）に対して改ざん不可能な署名を付与するオープンソースのセキュリティツール群。",
+    "detail": "ソフトウェアのサプライチェーン攻撃を防ぐために、コードの作成者・作成時刻・内容が改ざんされていないことを暗号学的に証明します。CRubyはSigstoreを活用してリリース物の署名と検証を自動化しています。",
+    "url": "https://www.sigstore.dev/"
+  },
+  "CMake": {
+    "name": "CMake",
+    "description": "クロスプラットフォームなビルドシステムのジェネレータ。様々なOS向けのビルド設定を統一的に管理する。",
+    "detail": "C/C++プロジェクトのビルド設定を記述すると、Windows向けのVisual StudioプロジェクトやLinux向けのMakefileなど、その環境に合ったビルドファイルを生成します。RubyのC++ツールチェーンではCMakeを使ってクロスプラットフォームなネイティブビルドを実現しています。",
+    "url": "https://cmake.org/"
+  },
+  "RubyGems": {
+    "name": "RubyGems",
+    "description": "Rubyのパッケージ管理システム。Rubyのライブラリ（gem）を配布・インストール・管理するための仕組み。",
+    "detail": "`gem install` コマンドで使うRubyのパッケージ管理システムです。BundlerやRubyの多くのツールの基盤で、rubygems.orgには何万ものgemが登録されています。CRubyのリリースではRubyGems自体も安全な署名付きパイプラインでリリースされます。",
+    "url": "https://rubygems.org/"
+  },
+  "Duck Typing": {
+    "name": "ダックタイピング (Duck Typing)",
+    "description": "「アヒルのように歩き、アヒルのように鳴くならアヒルだ」という考え方。オブジェクトの型ではなく持っているメソッドで判断するRubyの動的型付けスタイル。",
+    "detail": "Rubyでは `is_a?` でクラスを確認するより、`respond_to?` でそのメソッドを持っているかを確認する方が好まれます。型宣言をせずにコードが書けるRubyの柔軟性を支える設計思想です。型推論の研究では「どのメソッドが呼ばれているか」から型を逆算するアプローチを可能にします。",
+    "url": "https://ja.wikipedia.org/wiki/%E3%83%80%E3%83%83%E3%82%AF%E3%83%BB%E3%82%BF%E3%82%A4%E3%83%94%E3%83%B3%E3%82%B0"
+  },
+  "Coverage": {
+    "name": "カバレッジ (Coverage)",
+    "description": "テストがプログラムのどの割合のコードを実行したかを表す指標。",
+    "detail": "一般的には「コードの何行が実行されたか」として計算されますが、Rubyにおけるカバレッジはブランチ（条件分岐）やメソッド呼び出しなどより詳細な情報も含みます。「このテストはこのファイルのコードを実行するか？」というTest Impact Analysisの判断基準としても使われます。",
+    "url": "https://docs.ruby-lang.org/ja/latest/library/coverage.html"
+  },
+  "Coroutine": {
+    "name": "コルーチン (Coroutine)",
+    "description": "一時停止・再開が可能な関数の仕組み。非同期処理や協調的マルチタスクを実現する基礎概念。",
+    "detail": "通常の関数は呼ばれてから終了するまで一直線に実行されますが、コルーチンは途中で一時停止し（yield）、後で再開できます。RubyのFiberはコルーチンの実装です。ゲームのアニメーション制御や非同期I/O処理など「待ちながら他の処理を進める」場面で力を発揮します。",
+    "url": "https://en.wikipedia.org/wiki/Coroutine"
   }
 }

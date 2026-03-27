@@ -12,9 +12,7 @@
     "language": "JA",
     "abstract": "",
     "officialUrl": "https://rubykaigi.org/2026/schedule/",
-    "tags": [
-
-    ],
+    "tags": [],
     "title_ja": "開場",
     "abstract_ja": ""
   },
@@ -31,9 +29,7 @@
     "language": "JA",
     "abstract": "",
     "officialUrl": "https://rubykaigi.org/2026/schedule/",
-    "tags": [
-
-    ],
+    "tags": [],
     "title_ja": "開場",
     "abstract_ja": ""
   },
@@ -50,9 +46,7 @@
     "language": "JA",
     "abstract": "",
     "officialUrl": "https://rubykaigi.org/2026/schedule/",
-    "tags": [
-
-    ],
+    "tags": [],
     "title_ja": "開場",
     "abstract_ja": ""
   },
@@ -133,6 +127,7 @@
     "officialUrl": "https://rubykaigi.org/2026/presentations/anmarchenko.html",
     "tags": [
       "CI/CD",
+      "Coverage",
       "Datadog",
       "Regression Testing",
       "Test Impact Analysis"
@@ -253,9 +248,7 @@
     "language": "JA",
     "abstract": "",
     "officialUrl": "https://rubykaigi.org/2026/schedule/",
-    "tags": [
-
-    ],
+    "tags": [],
     "title_ja": "昼食休憩",
     "abstract_ja": ""
   },
@@ -272,9 +265,7 @@
     "language": "JA",
     "abstract": "",
     "officialUrl": "https://rubykaigi.org/2026/schedule/",
-    "tags": [
-
-    ],
+    "tags": [],
     "title_ja": "昼食休憩",
     "abstract_ja": ""
   },
@@ -291,9 +282,7 @@
     "language": "JA",
     "abstract": "",
     "officialUrl": "https://rubykaigi.org/2026/schedule/",
-    "tags": [
-
-    ],
+    "tags": [],
     "title_ja": "昼食休憩",
     "abstract_ja": ""
   },
@@ -335,7 +324,10 @@
     "tags": [
       "C Extension",
       "Internals",
+      "JIT",
+      "M:N Threading",
       "Profiling",
+      "Ractor",
       "ext/profile"
     ],
     "title_ja": "ext/profile、あるいはプロファイラに真実を語らせる方法",
@@ -355,7 +347,10 @@
     "abstract": "What if mruby could run anywhere—without any C compilation?\n\nI built MRubyCS, a complete mruby VM implementation in pure C#. This makes embedding mruby in cross-platform applications far easier.  Cross-platform distribution means juggling build targets, static/dynamic linking, and diverse host machines—a constant hassle (iOS, Web, Win, Mac, consoles, etc.). And on closed platforms like game consoles (Ps, Switch, Xbox..), it's often impractical without SDK access—now it just works. Unity and .NET already handle platform abstraction for you.\n\nThis also opens new doors for the Ruby community. Game development has long been a space where Ruby has limited presence. With mruby running in Unity, Ruby developers can bring their language into one of the world's most popular game engines—for scripting game logic, building tools, and more.\n\nBeyond the VM implementation story, I'll show practical game scripting with VitalRouter.MRuby and Fiber-based coroutines!",
     "officialUrl": "https://rubykaigi.org/2026/presentations/hadashiA.html",
     "tags": [
+      "C#",
+      "Coroutine",
       "Fiber",
+      "Unity",
       "Virtual Machine",
       "WASM",
       "mruby"
@@ -380,7 +375,8 @@
       "CRuby",
       "Concurrency",
       "Language Design",
-      "Ruby 4.0"
+      "Ruby 4.0",
+      "Scheduling"
     ],
     "title_ja": "Rubyのスケジューラ：I/Oの改善",
     "abstract_ja": "Rubyのスレッドスケジューラはラウンドロビン（round-robin）スケジューラであり、シンプルで完全に公平です。しかし、これはI/O負荷とCPU負荷が混在するワークロードにおいて、I/O待ちのスレッドがCPU待ちのスレッドのタイムスライス終了を待たされるため、I/O待ちスレッドのレスポンスを悪化させます。多くのRubyアプリケーションはこの種のワークロードを持っているため、優先度（priority）スケジューラによる恩恵を受けられます。本講演では、優先度スケジューラの仕組みと、それがRubyアプリケーションにもたらす利点について検証します。"
@@ -487,7 +483,9 @@
     "officialUrl": "https://rubykaigi.org/2026/presentations/kishima.html",
     "tags": [
       "Embedded",
+      "FreeRTOS",
       "Performance",
+      "PicoRuby",
       "mruby"
     ],
     "title_ja": "マルチVMオペレーティングシステムとしてのPicoRuby",
@@ -506,9 +504,7 @@
     "language": "JA",
     "abstract": "",
     "officialUrl": "https://rubykaigi.org/2026/schedule/",
-    "tags": [
-
-    ],
+    "tags": [],
     "title_ja": "午後休憩",
     "abstract_ja": ""
   },
@@ -525,9 +521,7 @@
     "language": "JA",
     "abstract": "",
     "officialUrl": "https://rubykaigi.org/2026/schedule/",
-    "tags": [
-
-    ],
+    "tags": [],
     "title_ja": "午後休憩",
     "abstract_ja": ""
   },
@@ -544,9 +538,7 @@
     "language": "JA",
     "abstract": "",
     "officialUrl": "https://rubykaigi.org/2026/schedule/",
-    "tags": [
-
-    ],
+    "tags": [],
     "title_ja": "午後休憩",
     "abstract_ja": ""
   },
@@ -694,9 +686,7 @@
     "language": "JA",
     "abstract": "",
     "officialUrl": "https://rubykaigi.org/2026/presentations/lt/",
-    "tags": [
-
-    ],
+    "tags": [],
     "title_ja": "ライトニングトーク",
     "abstract_ja": ""
   },
@@ -826,7 +816,9 @@
     "abstract": "Can Ruby be practically deployed in edge computing environments like Cloudflare Workers, Fastly Compute, or Spin? In this talk, I will introduce \"mruby/edge\" and \"Uzumibi,\" a framework built upon it to bring the power of Ruby to the edge.\n\nmruby/edge is an mruby-compatible VM built from scratch in Pure Rust. It generates highly portable Wasm binaries, enabling minimal builds under 400KiB.\n\nSince RubyKaigi 2024, mruby/edge has evolved significantly. It now supports basic OOP features, exception handling, closures, control structures, keyword args, and feature flags.\n\nUzumibi is a lightweight web framework leveraging mruby/edge. Uzumibi can run the same Ruby code across multiple edge platforms, providing a simple web API.\n\nmruby/edge and Uzumibi are opening new possibilities for Ruby in edge computing, where Ruby has traditionally been difficult to utilize.\n\nI'll discuss why I built a VM from scratch for Wasm and edges, share the challenges and solutions, and present the future roadmap.",
     "officialUrl": "https://rubykaigi.org/2026/presentations/udzura.html",
     "tags": [
+      "Cloudflare Workers",
       "Edge Computing",
+      "Rust",
       "Uzumibi",
       "WASM",
       "mruby/edge"
@@ -868,9 +860,7 @@
     "language": "JA",
     "abstract": "",
     "officialUrl": "https://rubykaigi.org/2026/schedule/",
-    "tags": [
-
-    ],
+    "tags": [],
     "title_ja": "昼食休憩",
     "abstract_ja": ""
   },
@@ -887,9 +877,7 @@
     "language": "JA",
     "abstract": "",
     "officialUrl": "https://rubykaigi.org/2026/schedule/",
-    "tags": [
-
-    ],
+    "tags": [],
     "title_ja": "昼食休憩",
     "abstract_ja": ""
   },
@@ -906,9 +894,7 @@
     "language": "JA",
     "abstract": "",
     "officialUrl": "https://rubykaigi.org/2026/schedule/",
-    "tags": [
-
-    ],
+    "tags": [],
     "title_ja": "昼食休憩",
     "abstract_ja": ""
   },
@@ -952,6 +938,9 @@
       "CRuby",
       "Concurrency",
       "Falcon",
+      "Fiber",
+      "GraphQL",
+      "Kafka",
       "Rails",
       "Thread-safe"
     ],
@@ -1040,6 +1029,8 @@
     "tags": [
       "Embedded",
       "MQTT",
+      "PicoRuby",
+      "mruby/c",
       "picoruby-net"
     ],
     "title_ja": "PicoRubyによる実用的なMQTTの実装",
@@ -1086,6 +1077,7 @@
       "C Extension",
       "CRuby",
       "Doom",
+      "YJIT",
       "optcarrot"
     ],
     "title_ja": "CからRubyへ：Doomの移植",
@@ -1125,9 +1117,7 @@
     "language": "JA",
     "abstract": "",
     "officialUrl": "https://rubykaigi.org/2026/schedule/",
-    "tags": [
-
-    ],
+    "tags": [],
     "title_ja": "午後休憩",
     "abstract_ja": ""
   },
@@ -1144,9 +1134,7 @@
     "language": "JA",
     "abstract": "",
     "officialUrl": "https://rubykaigi.org/2026/schedule/",
-    "tags": [
-
-    ],
+    "tags": [],
     "title_ja": "午後休憩",
     "abstract_ja": ""
   },
@@ -1163,9 +1151,7 @@
     "language": "JA",
     "abstract": "",
     "officialUrl": "https://rubykaigi.org/2026/schedule/",
-    "tags": [
-
-    ],
+    "tags": [],
     "title_ja": "午後休憩",
     "abstract_ja": ""
   },
@@ -1208,6 +1194,7 @@
     "tags": [
       "C Extension",
       "C++ Toolchain",
+      "CMake",
       "REPL",
       "pybind11"
     ],
@@ -1274,7 +1261,8 @@
     "officialUrl": "https://rubykaigi.org/2026/presentations/jacob-shops.html",
     "tags": [
       "Compiler",
-      "Memory Management"
+      "Memory Management",
+      "ZJIT"
     ],
     "title_ja": "メモリ管理の主体は誰か：コンパイラ最適化の深淵",
     "abstract_ja": "Rubyの動的な性質は優れた開発者体験をもたらしますが、コンパイルにおいては課題となります。より多くの情報は、コンパイラにより良いコードを生成するためのより多くの機会を与えます。\n\n本講演では、ZJITにおいてどのようにステートメントが最適化され、並べ替えられ、削除されるかを示します。新しい副作用分析（side effect analysis）システムについて議論し、この設計によるコード生成の改善を示し、エフェクトシステム（effect system）がもたらすであろう将来のパフォーマンス向上について議論します。"
@@ -1315,6 +1303,8 @@
     "officialUrl": "https://rubykaigi.org/2026/presentations/_st0012.html",
     "tags": [
       "Documentation",
+      "LLM",
+      "RBS",
       "RDoc",
       "Standard Library"
     ],
@@ -1360,6 +1350,7 @@
     "tags": [
       "Keyboard",
       "PRK Firmware",
+      "PicoRuby",
       "R2P2"
     ],
     "title_ja": "PRK FirmwareとR2P2の統合",
@@ -1446,6 +1437,7 @@
     "tags": [
       "Embedded",
       "Multi-Core",
+      "Mutex",
       "mruby/c"
     ],
     "title_ja": "mruby/cにおけるネイティブ・マルチコア対応：パフォーマンスの向上",
@@ -1531,9 +1523,7 @@
     "language": "JA",
     "abstract": "",
     "officialUrl": "https://rubykaigi.org/2026/schedule/",
-    "tags": [
-
-    ],
+    "tags": [],
     "title_ja": "昼食休憩",
     "abstract_ja": ""
   },
@@ -1550,9 +1540,7 @@
     "language": "JA",
     "abstract": "",
     "officialUrl": "https://rubykaigi.org/2026/schedule/",
-    "tags": [
-
-    ],
+    "tags": [],
     "title_ja": "昼食休憩",
     "abstract_ja": ""
   },
@@ -1569,9 +1557,7 @@
     "language": "JA",
     "abstract": "",
     "officialUrl": "https://rubykaigi.org/2026/schedule/",
-    "tags": [
-
-    ],
+    "tags": [],
     "title_ja": "昼食休憩",
     "abstract_ja": ""
   },
@@ -1591,6 +1577,7 @@
     "tags": [
       "AST",
       "JIT",
+      "Onigmo",
       "Pure Ruby",
       "Regexp",
       "YJIT"
@@ -1635,7 +1622,10 @@
     "abstract": "Smalruby 3 (https://smalruby.app) is a visual programming environment that seamlessly bridges the gap between Scratch blocks and Ruby code. While Scratch is the de facto standard for K-12 education, transitioning to text-based languages remains a high barrier. Smalruby 3 solves this by providing real-time, bidirectional conversion between blocks and Ruby.\n\nIn this talk, I will explore the technical challenges and implementation details of Smalruby 3. How do we map Scratch's event-driven, actor model to Ruby's object-oriented syntax? How is the AST manipulated to ensure that a move(10) block becomes a method call, and conversely, how arbitrary Ruby code is parsed back into visual blocks?\n\nI will demonstrate how puts \"Hello\" is visualized not as console output but as a speech bubble from a sprite, and how class and def definitions intuitively map to actor properties and behaviors. This session reveals how we can \"visualize\" Ruby's semantics to foster the next generation of Rubyists.",
     "officialUrl": "https://rubykaigi.org/2026/presentations/takaokouji.html",
     "tags": [
+      "AST",
       "Education",
+      "Scratch",
+      "Transpiler",
       "Visual Programming"
     ],
     "title_ja": "Smalruby：双方向変換によるRubyの可視化",
@@ -1656,7 +1646,9 @@
     "officialUrl": "https://rubykaigi.org/2026/presentations/hsbt.html",
     "tags": [
       "Reliability",
+      "RubyGems",
       "Security",
+      "Sigstore",
       "Supply Chain Attack"
     ],
     "title_ja": "RubyがRubyをリリースする",
@@ -1762,7 +1754,12 @@
     "tags": [
       "ESP32",
       "IoT",
-      "MQTT"
+      "MQTT",
+      "PicoRuby",
+      "TCP/IP",
+      "TLS",
+      "Wi-Fi",
+      "X.509"
     ],
     "title_ja": "IoTのためのPicoRuby：MQTTでクラウドに接続する",
     "abstract_ja": "PicoRuby は、Espressif Systems が開発した ESP32 のようなマイコン上でも動作可能な、きわめて小さな Ruby 実装です。RubyKaigi 2025 で、私は PicoRuby を ESP32 に移植することについてお話ししました。\n\n本講演はそのセッションの続編です。ESP32 上の PicoRuby がインターネット経由でクラウドに接続できるようにするプロセスを紹介します。\n\nESP32 は Wi-Fi と TCP/IP ネットワークをサポートしており、IoT アプリケーションに適しています。ESP32 上で動作する PicoRuby のために、WiFi や Socket、MQTT クライアントといったクラスを実装し、洗練させました。この作業には、TLS を使用した安全な通信や X.509 クライアント証明書によるデバイス認証も含まれます。これらの実装はポータブルであり、POSIX 環境や他のマイコンにも適応可能です。\n\n結果として、PicoRuby はパブリッシュ/サブスクライブ・モデルを使用して AWS IoT Core などのクラウドサービスと通信できるようになり、リアルワールドの IoT システムで利用できる準備が整いました。"
@@ -1780,9 +1777,7 @@
     "language": "JA",
     "abstract": "",
     "officialUrl": "https://rubykaigi.org/2026/schedule/",
-    "tags": [
-
-    ],
+    "tags": [],
     "title_ja": "午後休憩",
     "abstract_ja": ""
   },
@@ -1799,9 +1794,7 @@
     "language": "JA",
     "abstract": "",
     "officialUrl": "https://rubykaigi.org/2026/schedule/",
-    "tags": [
-
-    ],
+    "tags": [],
     "title_ja": "午後休憩",
     "abstract_ja": ""
   },
@@ -1818,9 +1811,7 @@
     "language": "JA",
     "abstract": "",
     "officialUrl": "https://rubykaigi.org/2026/schedule/",
-    "tags": [
-
-    ],
+    "tags": [],
     "title_ja": "午後休憩",
     "abstract_ja": ""
   },
@@ -1883,7 +1874,9 @@
     "abstract": "What if you could get type information without writing type annotations?\n\ntype-guessr is a Ruby LSP addon that reverses duck typing.\n\nInstead of \"if it responds to these methods, it's OK,\" we reason:\n\n\"if these methods were called, it must be this class.\"\n\nFor example, if ingredients and steps are called on a variable, and only the Recipe class has both methods, we infer the type as Recipe.\n\nIn this talk, I'll share how it works in practice, its algorithm design, and the limits of this approach.",
     "officialUrl": "https://rubykaigi.org/2026/presentations/riseshia.html",
     "tags": [
+      "Duck Typing",
       "Heuristic Type Inference",
+      "LSP",
       "Type"
     ],
     "title_ja": "「良い感じ」の型：Rubyのためのヒューリスティック型推論",
