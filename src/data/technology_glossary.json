@@ -212,7 +212,7 @@
   "Frontend": {
     "name": "フロントエンド (Frontend)",
     "description": "ウェブアプリケーションのユーザーが直接触れる部分の開発。",
-    "detail": "フロントエンド（Frontend）は、ブラウザ上で動く画面や操作感のことです。伝統的にはJavaScriptが主役ですが、Ruby/WASMなどの技術により、PicoRubyやFunicularのように「Rubyだけでフロントエンドを作る」という新しいが始まっています。",
+    "detail": "フロントエンド（Frontend）は、ブラウザ上で動く画面や操作感のことです。伝統的にはJavaScriptが主役ですが、Ruby/WASMなどの技術により、PicoRubyやFunicularのように「Rubyだけでフロントエンドを作る」という新しい試みが始まっています。",
     "url": "https://en.wikipedia.org/wiki/Front-end_web_development"
   },
   "Funicular": {
@@ -356,7 +356,7 @@
   "LALR(1)": {
     "name": "LALR(1)",
     "description": "構文解析の有力なアルゴリズム。Lramaなどの最新パーサー理論の基礎となります。",
-    "detail": "プログラミング言語の「文法」をコンピュータが正しく理解するための数学的手法です。Rubyの新しいパーサージェネレータ Lrama が、Rubyの複雑怪奇な文法をいかにスマートに裁くか、という議論の中で頻繁に登場するな理論です。",
+    "detail": "プログラミング言語の「文法」をコンピュータが正しく理解するための数学的手法です。Rubyの新しいパーサージェネレータ Lrama が、Rubyの複雑怪奇な文法をいかにスマートに裁くか、という議論の中で頻繁に登場する重要な理論です。",
     "url": "https://en.wikipedia.org/wiki/LALR_parser"
   },
   "LSP": {
@@ -488,7 +488,7 @@
   "Optimization": {
     "name": "最適化 (Optimization)",
     "description": "プログラムの内容を工夫して、より速く、より少ないメモリで動くようにすること。",
-    "detail": "「無駄を省き、性能を最大化する」こと。JITコンパイラによる自動最適化もあれば、プログラマがアルゴリズムを見直す手動の最適化もあります。RubyKaigiのセッションの多くは、この最適化がいかに知的で刺激的なであるかを教えてくれます。",
+    "detail": "「無駄を省き、性能を最大化する」こと。JITコンパイラによる自動最適化もあれば、プログラマがアルゴリズムを見直す手動の最適化もあります。RubyKaigiのセッションの多くは、この最適化がいかに知的で刺激的であるかを教えてくれます。",
     "url": "https://en.wikipedia.org/wiki/Optimization_(computer_science)"
   },
   "POSIX": {
@@ -602,7 +602,7 @@
   "R2P2": {
     "name": "R2P2 (PicoRuby Platform)",
     "description": "PicoRubyを搭載した、汎用的な電子工作・教育用デバイスのプラットフォーム。",
-    "detail": "Rubyでマイコンを動かすための「共通のひな形」です。これを使うことで、様々なマイコンボード上でRubyコードを共有でき、初心者でも簡単にプログラミングと電子工作の融合体験を。",
+    "detail": "Rubyでマイコンを動かすための「共通のひな形」です。これを使うことで、様々なマイコンボード上でRubyコードを共有でき、初心者でも簡単にプログラミングと電子工作の融合体験を提供します。",
     "url": "https://github.com/picoruby/picoruby"
   },
   "Bundler": {
@@ -632,7 +632,7 @@
   "Documentation": {
     "name": "ドキュメンテーション (Documentation)",
     "description": "プログラムの使い方、設計、仕様などをまとめた説明文書のこと。",
-    "detail": "優れたコードには優れたドキュメントがです。Rubyには RDoc や YARD などのツールがあり、ソースコードから美しいドキュメントを生成する文化があります。",
+    "detail": "優れたコードには優れたドキュメントが不可欠です。Rubyには RDoc や YARD などのツールがあり、ソースコードから美しいドキュメントを生成する文化があります。",
     "url": "https://en.wikipedia.org/wiki/Software_documentation"
   },
   "Doom": {
@@ -842,7 +842,7 @@
   "Reliability": {
     "name": "信頼性 (Reliability)",
     "description": "システムが予期せぬ入力や負荷に対しても、正しく動き続けるための能力。",
-    "detail": "「絶対に落とせない」大規模なサービスでは、速度よりもこの信頼性がになります。Ruby 4.xの Ruby Box による隔離や、検証型GCなど、Rubyをより信頼できる堅牢なインフラにするためのが続いています。",
+    "detail": "「絶対に落とせない」大規模なサービスでは、速度よりもこの信頼性がになります。Ruby 4.xの Ruby Box による隔離や、検証型GCなど、Rubyをより信頼できる堅牢なインフラにするための開発が続いています。",
     "url": "https://en.wikipedia.org/wiki/Reliability_(computer_networking)"
   },
   "Require Hooks": {
