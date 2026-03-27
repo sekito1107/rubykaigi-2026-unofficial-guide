@@ -70,7 +70,7 @@ export default function SessionCard({ session, isFavorite, onToggleFavorite, onO
             {displayTitle}
           </h3>
           {!isEvent && (
-            <p className="text-sm font-medium text-ruby-red line-clamp-3 leading-relaxed">
+            <p className="text-sm font-medium text-slate-400 line-clamp-3 leading-relaxed">
               {displayAbstract || 'RubyKaigi 2026 函館 セッション解説'}
             </p>
           )}
@@ -78,8 +78,8 @@ export default function SessionCard({ session, isFavorite, onToggleFavorite, onO
 
         {!isEvent && (
           <div className="mt-auto pt-2 border-t border-white/5">
-            <span className="text-sm text-slate-400">
-              by <span className="text-slate-200 font-medium">{session.speakerName}</span>
+            <span className="text-sm text-slate-500">
+              by <span className="text-ruby-red font-bold">{session.speakerName}</span>
             </span>
           </div>
         )}

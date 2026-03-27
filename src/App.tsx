@@ -62,6 +62,7 @@ function App() {
         onSearchChange={setSearchQuery}
         languageMode={languageMode}
         onLanguageChange={setLanguageMode}
+        onShowDisclaimer={() => setShowDisclaimer(true)}
       />
       
       <main className="flex-1 pb-20">
