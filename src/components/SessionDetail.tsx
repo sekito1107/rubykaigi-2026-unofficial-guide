@@ -41,12 +41,12 @@ const SessionDetail = ({ session, onClose, languageMode }: SessionDetailProps) =
         onClick={(e) => e.stopPropagation()}
       >
         {/* Header Section */}
-        <div className="p-8 border-b border-white/5 relative bg-gradient-to-b from-white/5 to-transparent">
+        <div className="p-6 md:p-8 border-b border-white/5 relative bg-gradient-to-b from-white/5 to-transparent">
           <button 
             onClick={onClose}
-            className="absolute top-6 right-6 w-10 h-10 rounded-full bg-white/5 hover:bg-white/10 border border-white/10 flex items-center justify-center text-slate-400 hover:text-white transition-all"
+            className="absolute top-4 right-4 md:top-6 md:right-6 w-8 h-8 md:w-10 md:h-10 rounded-full bg-white/5 hover:bg-white/10 border border-white/10 flex items-center justify-center text-slate-400 hover:text-white transition-all"
           >
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4 md:w-5 md:h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
           </button>
 
           <div className="flex flex-wrap gap-2 mb-4">
@@ -62,16 +62,16 @@ const SessionDetail = ({ session, onClose, languageMode }: SessionDetailProps) =
             </span>
           </div>
 
-          <h2 className="text-3xl font-black text-white mb-2 leading-tight font-outfit">
+          <h2 className="text-xl md:text-3xl font-black text-white mb-2 leading-tight font-outfit pr-6 md:pr-0">
             {displayTitle}
           </h2>
-          <p className="text-lg text-slate-400 font-medium">
+          <p className="text-base md:text-lg text-slate-400 font-medium">
             {session.speakerName}
           </p>
         </div>
 
         {/* Scrollable Content Area */}
-        <div className="flex-1 overflow-y-auto p-8 space-y-8 custom-scrollbar">
+        <div className="flex-1 overflow-y-auto p-5 md:p-8 space-y-6 md:space-y-8 custom-scrollbar">
           
           {/* 概要 (Abstract) - Always visible at top */}
           <section className="space-y-4">
@@ -172,7 +172,7 @@ const SessionDetail = ({ session, onClose, languageMode }: SessionDetailProps) =
 
 
         {/* Footer Actions */}
-        <div className="p-8 border-t border-white/5 bg-slate-900/30 flex justify-between items-center">
+        <div className="p-5 md:p-8 border-t border-white/5 bg-slate-900/30 flex flex-col md:flex-row justify-between items-start md:items-center gap-4 md:gap-0">
           <div className="flex flex-col gap-1">
             <span className="text-[10px] text-slate-600 uppercase font-black italic">
               用語をクリックすると詳細解説へ移動します
@@ -185,7 +185,7 @@ const SessionDetail = ({ session, onClose, languageMode }: SessionDetailProps) =
             href={session.officialUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-ruby-red hover:bg-ruby-dark text-white px-6 py-3 rounded-lg text-sm font-bold flex items-center gap-2 transition-all shadow-lg shadow-ruby-red/20 active:scale-95"
+            className="w-full md:w-auto justify-center bg-ruby-red hover:bg-ruby-dark text-white px-6 py-3 rounded-lg text-sm font-bold flex items-center gap-2 transition-all shadow-lg shadow-ruby-red/20 active:scale-95"
           >
             公式サイトで詳細を見る
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>

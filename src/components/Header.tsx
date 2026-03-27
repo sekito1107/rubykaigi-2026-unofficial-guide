@@ -26,19 +26,19 @@ const Header = ({
   onShowDisclaimer
 }: HeaderProps) => {
   return (
-    <header className="px-6 py-4 border-b border-white/5 flex flex-col gap-6 bg-[#0c1427]/80 backdrop-blur-xl sticky top-0 z-50">
-      <div className="flex justify-between items-center">
+    <header className="px-4 md:px-6 py-4 border-b border-white/5 flex flex-col gap-4 md:gap-6 bg-[#0c1427]/80 backdrop-blur-xl sticky top-0 z-50">
+      <div className="flex flex-col md:flex-row md:justify-between md:items-center gap-4">
         <div className="flex flex-col">
-          <h1 className="text-2xl font-black tracking-tighter font-outfit">
+          <h1 className="text-xl md:text-2xl font-black tracking-tighter font-outfit">
             Ruby<span className="text-white">Kaigi</span> 2026 <span className="text-ruby-red">Unofficial Guide</span>
           </h1>
-          <p className="text-[10px] text-slate-500 uppercase font-black tracking-[0.2em] mt-1">
+          <p className="text-[9px] md:text-[10px] text-slate-500 uppercase font-black tracking-[0.2em] mt-1">
             Hakodate, Hokkaido · April 22-24
           </p>
         </div>
 
-        <div className="flex flex-col items-end gap-2">
-          <div className="flex gap-6 items-center">
+        <div className="flex flex-col md:items-end gap-3 w-full md:w-auto">
+          <div className="flex flex-wrap md:flex-nowrap gap-3 md:gap-6 items-center w-full">
             {/* Language Toggle */}
             <div className="flex bg-white/5 p-1 rounded-lg border border-white/10">
               <button 
@@ -59,13 +59,13 @@ const Header = ({
               </button>
             </div>
 
-            <div className="relative">
+            <div className="relative flex-1 md:flex-none">
               <input
                 type="text"
                 value={searchQuery}
                 onChange={(e) => onSearchChange(e.target.value)}
                 placeholder="Search title, speaker, tags..."
-                className="bg-white/5 border border-white/10 rounded-lg px-4 py-2 text-xs w-64 focus:outline-none focus:ring-1 focus:ring-ruby-red/50 transition-all pl-10 text-slate-300 placeholder:text-slate-600"
+                className="bg-white/5 border border-white/10 rounded-lg px-4 py-2 text-xs w-full md:w-64 focus:outline-none focus:ring-1 focus:ring-ruby-red/50 transition-all pl-10 text-slate-300 placeholder:text-slate-600"
               />
               <svg className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-500" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
             </div>
@@ -85,7 +85,7 @@ const Header = ({
             </button>
           </div>
 
-          <div className="flex items-center gap-2 mr-1">
+          <div className="flex flex-wrap items-center gap-2 mr-1">
             <p className="text-[9px] text-slate-500 font-medium tracking-tight">
               ※当アプリは非公式であり、運営団体とは一切関係ありません
             </p>
@@ -99,13 +99,13 @@ const Header = ({
         </div>
       </div>
 
-      <div className="flex items-center gap-8">
+      <div className="flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-8 overflow-x-auto pb-2 sm:pb-0">
         <DayTabs 
           selectedDay={selectedDay} 
           onDayChange={onDayChange} 
         />
-        <div className="h-4 w-px bg-white/10" />
-        <span className="text-xs font-black text-slate-500 uppercase tracking-widest">
+        <div className="h-4 w-px bg-white/10 hidden sm:block" />
+        <span className="text-[10px] sm:text-xs font-black text-slate-500 uppercase tracking-widest whitespace-nowrap">
           {selectedDay === 1 ? 'April 22 (Wed)' : selectedDay === 2 ? 'April 23 (Thu)' : 'April 24 (Fri)'}
         </span>
       </div>

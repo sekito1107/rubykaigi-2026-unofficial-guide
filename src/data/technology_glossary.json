@@ -21,7 +21,7 @@
     "name": "ASTro",
     "description": "AST（抽象構文木）を解析し、C言語ソースコードを生成してネイティブ実行を行う特定の最適化プロジェクト。",
     "detail": "ASTroは、RubyプログラムのAST（抽象構文木）を解析し、C言語ソースコードを生成してネイティブ実行を行うフレームワークです。",
-    "url": "https://github.com/ruby/ruby"
+    "url": "https://rubykaigi.org/2026/presentations/ko1.html"
   },
   "Apache Arrow": {
     "name": "Apache Arrow",
@@ -397,7 +397,7 @@
   },
   "M:N Threading": {
     "name": "M:N スレッド (M:N Threading)",
-    "description": "多数のOSスレッドに、それより少数のユーザースレッドを対応付けるスレッドモデル。",
+    "description": "多数のユーザースレッドを、それより少数のOSスレッドに対応付けるスレッドモデル。",
     "detail": "M:Nスレッディングは、M個のユーザースペーススレッドをN個のOSスレッドにマッピングするハイブリッド方式です。1:1方式（ユーザースレッドごとに1つのOSスレッド）のオーバーヘッドを削減しつつ、複数のコアを活用した並列実行が可能です。Rubyでは「MaNy」プロジェクトとして実装が進められてきました。",
     "url": "https://en.wikipedia.org/wiki/Thread_(computing)#M:N_(hybrid_threading)"
   },
@@ -799,7 +799,7 @@
   },
   "Ractor": {
     "name": "Ractor (ラクター)",
-    "description": "Ruby 3.0で導入された並列実行のための仕組み. マルチコアを安全にフル活用できます。",
+    "description": "Ruby 3.0で導入された並列実行のための仕組み。 マルチコアを安全にフル活用できます。",
     "detail": "これまでのスレッドとは違い、データ（オブジェクト）の共有を厳しく制限することで、「不適切な同時書き込み」によるバグを根源から防ぐ設計です。GVLの制約を受けずに、複数のプロセッサで同時に計算を行うことができます。",
     "url": "https://docs.ruby-lang.org/ja/latest/class/Ractor.html"
   },

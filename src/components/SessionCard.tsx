@@ -17,7 +17,7 @@ export default function SessionCard({ session, isFavorite, onToggleFavorite, onO
   return (
     <div 
       onClick={() => !isEvent && onOpenDetail(session.id)}
-      className={`relative p-5 rounded-lg border border-white/5 transition-all duration-300 group h-full min-h-[220px] flex flex-col overflow-hidden ${
+      className={`relative p-4 md:p-5 rounded-lg border border-white/5 transition-all duration-300 group h-full min-h-[160px] md:min-h-[220px] flex flex-col overflow-hidden ${
         isEvent ? 'bg-transparent border-dashed border-white/10' : 
         'cursor-pointer ' + (isFavorite ? 'bg-amber-400/[0.03] border-white/10' : 'bg-white/5 hover:bg-white/10')
       }`}
@@ -66,11 +66,11 @@ export default function SessionCard({ session, isFavorite, onToggleFavorite, onO
         )}
 
         <div className="space-y-1">
-          <h3 className={`font-bold text-lg leading-tight line-clamp-2 ${isEvent ? 'text-slate-500 text-center' : 'text-slate-100'}`}>
+          <h3 className={`font-bold text-base md:text-lg leading-tight line-clamp-2 ${isEvent ? 'text-slate-500 text-center' : 'text-slate-100'}`}>
             {displayTitle}
           </h3>
           {!isEvent && (
-            <p className="text-sm font-medium text-slate-400 line-clamp-3 leading-relaxed">
+            <p className="text-xs md:text-sm font-medium text-slate-400 line-clamp-3 leading-relaxed">
               {displayAbstract || 'RubyKaigi 2026 函館 セッション解説'}
             </p>
           )}
@@ -78,7 +78,7 @@ export default function SessionCard({ session, isFavorite, onToggleFavorite, onO
 
         {!isEvent && (
           <div className="mt-auto pt-2 border-t border-white/5">
-            <span className="text-sm text-slate-500">
+            <span className="text-xs md:text-sm text-slate-500">
               by <span className="text-ruby-red font-bold">{session.speakerName}</span>
             </span>
           </div>
