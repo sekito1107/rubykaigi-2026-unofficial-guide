@@ -20,13 +20,13 @@
   "ASTro": {
     "name": "ASTro",
     "description": "AST（抽象構文木）を直接操作・最適化するフレームワークの総称。",
-    "detail": "ASTroは、RubyプログラムのAST（抽象構文木）を解析・最適化し、C言語ソースコードを生成してネイティブコードを得るアプローチを探る研究段階の試みです。VMバイトコードを介さずに、ASTから直接高度に最適化されたコードを導くというアイデアに基づいています。",
+    "detail": "ASTroは、RubyプログラムのAST（抽象構文木）を解析し、C言語ソースコードを生成してネイティブ実行を行うフレームワークです。",
     "url": "https://github.com/ruby/ruby"
   },
   "Apache Arrow": {
     "name": "Apache Arrow",
     "description": "大量データを高速に処理するためのメモリフォーマット標準。異なる言語間でのデータ共有に使われます。",
-    "detail": "Apache Arrowは、インメモリの列指向データフォーマット仕様です。データをメモリ上でどのように配置するかを統一することで、Ruby、Python、Javaといった異なるプログラミング言語間で、コピーの手間をかけずに高速にデータをやり取りできます。データサイエンスや大規模データ処理の分野でRubyを活用するための重要な要素です。",
+    "detail": "Apache Arrowは、インメモリの列指向データフォーマット仕様です。データをメモリ上でどのように配置するかを統一することで、Ruby、Python、Javaといった異なるプログラミング言語間で、コピーの手間をかけずに高速にデータをやり取りできます。データサイエンスや大規模データ処理の分野でRubyを活用するためのな要素です。",
     "url": "https://arrow.apache.org/"
   },
   "Backward Compatibility": {
@@ -38,7 +38,7 @@
   "Benchmarking": {
     "name": "ベンチマーク (Benchmarking)",
     "description": "標準的なプログラムを用いて、システムの性能を数値化して測定すること。",
-    "detail": "ベンチマーク（Benchmarking）は、システムの実行速度やメモリ効率などを、標準的な条件下で測定・比較する作業です。RubyのJITコンパイラの性能向上を証明するために使われる「optcarrot」などがその代表例です。パフォーマンス改善において、感覚ではなく「客観的な数値」を出すための不可欠な工程です。",
+    "detail": "ベンチマーク（Benchmarking）は、システムの実行速度やメモリ効率などを、標準的な条件下で測定・比較する作業です。RubyのJITコンパイラの性能向上を証明するために使われる「optcarrot」などがその代表例です。パフォーマンス改善において、感覚ではなく「客観的な数値」を出すためのな工程です。",
     "url": "https://en.wikipedia.org/wiki/Benchmark_(computing)"
   },
   "BigDecimal": {
@@ -104,13 +104,13 @@
   "Concurrency": {
     "name": "並行性 (Concurrency)",
     "description": "複数のタスクを切り替えて効率的に進める設計上の概念。",
-    "detail": "並行性 (Concurrency) は、物理的に同時に動く（Parallelism）とは異なり、複数の処理を論理的に切り替えながら進める「段取り」の概念です。Rubyでは Thread、Fiber、Ractor などがこれを提供し、ウェブサーバーなどが大量のリクエストを効率よく捌くための重要なキーワードとなります。",
+    "detail": "並行性 (Concurrency) は、物理的に同時に動く（Parallelism）とは異なり、複数の処理を論理的に切り替えながら進める「段取り」の概念です。Rubyでは Thread、Fiber、Ractor などがこれを提供し、ウェブサーバーなどが大量のリクエストを効率よく捌くためのなキーワードとなります。",
     "url": "https://en.wikipedia.org/wiki/Concurrency_(computer_science)"
   },
   "Cygwin": {
     "name": "Cygwin",
     "description": "Windows上でLinux/Unix互換の実行環境を提供するソフトウェア。Unix系のツールをWindowsで動かせます。",
-    "detail": "CygwinはWindows上でLinuxやUnix向けのソフトウェアをそのままビルド・実行できる互換レイヤーです。POSIX API（Unixの標準API）を実装するDLLを提供することで、gccやbashなどUnix向けのツールをWindows上で動作させることができます。Unixを前提としたRubyのソースコードをWindowsで動かすための重要な手段の一つです。",
+    "detail": "CygwinはWindows上でLinuxやUnix向けのソフトウェアをそのままビルド・実行できる互換レイヤーです。POSIX API（Unixの標準API）を実装するDLLを提供することで、gccやbashなどUnix向けのツールをWindows上で動作させることができます。Unixを前提としたRubyのソースコードをWindowsで動かすためのな手段の一つです。",
     "url": "https://www.cygwin.com/"
   },
   "DJ Controller": {
@@ -122,7 +122,7 @@
   "DSL": {
     "name": "DSL (ドメイン特化言語)",
     "description": "特定の目的（領域）に特化した、表現力豊かなプログラム記述方法。",
-    "detail": "DSL (Domain Specific Language) は、Rubyの自由な文法を駆使して、特定の問題（テスト、DB定義、文書作成など）をあたかも専用言語のように記述する手法です。RubyはDSLを作るのが得意な言語とされており、RSpecやRakeなどの著名なツールでその威力が発揮されています。",
+    "detail": "DSL (Domain Specific Language) は、Rubyの自由な文法を駆使して、特定の問題（テスト、DB定義、文書作成など）をあたかも専用言語のように記述する手法です。RubyはDSLを作るのが得意な言語とされており、RSpecやRakeなどの著名なツールでそのが発揮されています。",
     "url": "https://en.wikipedia.org/wiki/Domain-specific_language"
   },
   "Data Format": {
@@ -140,13 +140,13 @@
   "Datadog": {
     "name": "Datadog",
     "description": "アプリケーションのパフォーマンス監視やメトリクス収集を行うクラウドサービス。",
-    "detail": "Datadogは、インフラやアプリケーションの状態を詳細に可視化（監視）するためのプラットフォームです。Ruby向けの優秀な計測用gemを提供しており、テストの実行時間を最適化する「テストインパクト分析」などの高度な機能をRubyアプリケーションへ導入する際にも活躍しています。",
+    "detail": "Datadogは、インフラやアプリケーションの状態を詳細に可視化（監視）するためのプラットフォームです。Ruby向けの計測用gemを提供しており、テストの実行時間を最適化する「テストインパクト分析」などの高度な機能をRubyアプリケーションへ導入する際にもしています。",
     "url": "https://www.datadoghq.com/"
   },
   "Date": {
     "name": "date (標準ライブラリ)",
     "description": "日付や時刻を扱うための、Rubyの標準ライブラリです。カレンダー計算やDateクラスを提供します。",
-    "detail": "dateは、日付（Date）や日時（DateTime）を扱うためのRuby標準ライブラリです。カレンダー計算を正確に行うことができ、かつてはC言語で実装されていましたが、将来的な保守性などを考慮してRuby自身で再実装（Pure Ruby化）する取り組みも進められています。",
+    "detail": "dateは、日付（Date）や日時（DateTime）を扱うためのRuby標準ライブラリです。カレンダー計算を正確に行うことができ、かつてはC言語で実装されていましたが、的な保守性などを考慮してRuby自身で再実装（Pure Ruby化）する取り組みも進められています。",
     "url": "https://github.com/ruby/date"
   },
   "Deoptimization": {
@@ -176,13 +176,13 @@
   "Extensibility": {
     "name": "拡張性 (Extensibility)",
     "description": "システムを根本から変えることなく、新しい機能を追加できる柔軟性の高さ。",
-    "detail": "Rubyの設計思想の一つです。オープンクラスやメタプログラミングといった動的な機能を提供しており、プログラマは言語そのものの挙動を自由に変えたり、新しい機能を付け加えたりすることができます。Railsなどのフレームワークも、この拡張性を利用しています。",
+    "detail": "Rubyのの一つです。オープンクラスやメタプログラミングといった動的な機能を提供しており、プログラマは言語そのものの挙動を自由に変えたり、新しい機能を付け加えたりすることができます。Railsなどのフレームワークも、この拡張性を利用しています。",
     "url": "https://en.wikipedia.org/wiki/Extensibility"
   },
   "ext/profile": {
     "name": "ext/profile",
     "description": "CRuby VMに内蔵するプロファイラの構想。外部からの観測では得られない情報を取得できます。",
-    "detail": "ext/profileは、プロファイラをVMの外側から計測せず、CRubyのC拡張として内部に組み込む設計です。VM内部のイベント（GVLのスレッドスイッチ、GCの発火など）を含むプロファイリング情報を得ることを目的としています。",
+    "detail": "ext/profileは、CRubyの内部に実装されるプロファイラです。VM内部のイベント情報を取得し、プロファイリングデータを出力します。",
     "url": "https://github.com/ruby/ruby"
   },
   "FFI": {
@@ -212,13 +212,13 @@
   "Frontend": {
     "name": "フロントエンド (Frontend)",
     "description": "ウェブアプリケーションのユーザーが直接触れる部分の開発。",
-    "detail": "フロントエンド（Frontend）は、ブラウザ上で動く画面や操作感のことです。伝統的にはJavaScriptが主役ですが、Ruby/WASMなどの技術により、PicoRubyやFunicularのように「Rubyだけでフロントエンドを作る」という新しい挑戦が始まっています。",
+    "detail": "フロントエンド（Frontend）は、ブラウザ上で動く画面や操作感のことです。伝統的にはJavaScriptが主役ですが、Ruby/WASMなどの技術により、PicoRubyやFunicularのように「Rubyだけでフロントエンドを作る」という新しいが始まっています。",
     "url": "https://en.wikipedia.org/wiki/Front-end_web_development"
   },
   "Funicular": {
     "name": "Funicular",
     "description": "PicoRuby.WASMで動くブラウザアプリフレームワーク。",
-    "detail": "Funicular（フニキュラー）は、PicoRuby.WASMを基盤としてWebブラウザ上で動作するフロントエンドフレームワークです。Rubyのみを使用してWebアプリケーションのUIとビジネスロジックを構成することを可能にすることを目的に開発されています。",
+    "detail": "Funicular（フニキュラー）は、PicoRuby.WASMを基盤としてWebブラウザ上で動作するフロントエンドフレームワークです。",
     "url": "https://github.com/hasumikin/funicular"
   },
   "GC": {
@@ -248,7 +248,7 @@
   "HTML-over-the-wire": {
     "name": "HTML-over-the-wire",
     "description": "サーバーで生成したHTMLを直接送って画面を更新する手法。Hotwireなどが有名です。",
-    "detail": "JSONなどのデータではなく、サーバーで作った「HTMLの部品」を通信で送り、ブラウザの画面の一部を書き換える手法です。RailsのHotwire（Turbo/Stimulus）が提唱しているスタイルで、JavaScriptを書きすぎずに、動きの速い洗練された画面を作ることができます。",
+    "detail": "JSONなどのデータではなく、サーバーで作った「HTMLの部品」を通信で送り、ブラウザの画面の一部を書き換える手法です。RailsのHotwire（Turbo/Stimulus）が提唱しているスタイルで、JavaScriptを書きすぎずに、動きの速い画面を作ることができます。",
     "url": "https://hotwired.dev/"
   },
   "Hardware": {
@@ -260,13 +260,13 @@
   "Hash": {
     "name": "Hash (ハッシュ)",
     "description": "キーと値のペアを保存する、Rubyで非常に多用されるデータ構造。",
-    "detail": "Hash（ハッシュ）は、名前に関連付けてデータを保存する仕組みです。Ruby内部では非常に高速に動作するように設計されています。TruffleRuby（GraalVM）では、並列読み書きに対応したスレッドセーフなHash実装が実現されており、CRubyでも同様の改善を目指す研究発表がRubyKaigi 2026で行われています。",
+    "detail": "Hash（ハッシュ）は、キーと値のペアを保存するデータ構造です。RubyKaigi 2026では、並列読み書きをサポートするスレッドセーフなHashの再実装手法が扱われます。",
     "url": "https://docs.ruby-lang.org/ja/latest/class/Hash.html"
   },
   "Heuristic Type Inference": {
     "name": "ヒューリスティック型推論",
     "description": "経験則に基づいて、「おそらくこのデータは文字だろう」と推測する賢い型解析の手法。",
-    "detail": "完全に厳密な証明をする代わりに、「通常はこう使われるはずだ」という統計や経験則を取り入れて型を推測する手法です。Rubyのように自由な言語において、実用的な速さでコードの書き間違いをAIやツールが指摘できるようになるための知恵として注目されています。",
+    "detail": "完全に厳密な証明をする代わりに、「通常はこう使われるはずだ」という統計や経験則を取り入れて型を推測する手法です。Rubyのように自由な言語において、実用的な速さでコードの書き間違いをAIやツールが指摘できるようになるための知恵としてされています。",
     "url": "https://en.wikipedia.org/wiki/Type_inference"
   },
   "Hostname Resolution": {
@@ -284,7 +284,7 @@
   "HTTP/2": {
     "name": "HTTP/2",
     "description": "通信の多重化により、一つの接続で複数のリクエストを同時に処理できる高速プロトコル。",
-    "detail": "ウェブページを速く読み込むための通信の決まり事です。古いHTTP/1.1では一つずつ順番にデータを送っていましたが、HTTP/2は「並列」に複数の画像や文字を送れるため、特に現代の複雑なウェブサイトの表示が非常に速くなります。",
+    "detail": "ウェブページを速く読み込むための通信の決まり事です。古いHTTP/1.1では一つずつ順番にデータを送っていましたが、HTTP/2は「並列」に複数の画像や文字を送れるため、特に複雑なウェブサイトの表示が非常に速くなります。",
     "url": "https://en.wikipedia.org/wiki/HTTP/2"
   },
   "HTTP/3 (QUIC)": {
@@ -349,32 +349,32 @@
   },
   "Keynote": {
     "name": "基調講演 (Keynote)",
-    "description": "カンファレンスの冒頭などに行われる、Rubyの方向性やビジョンを示す主要な発表。",
-    "detail": "開発者のまつもとゆきひろ氏（Matz）などが登壇し、Rubyの進化やコミュニティの将来像といった大きな方針を発表します。",
+    "description": "カンファレンスの冒頭などに行われる、Rubyの方向性やを示す主要な発表。",
+    "detail": "カンファレンスにおける主要な講演セッションを指します。",
     "url": "https://en.wikipedia.org/wiki/Keynote"
   },
   "LALR(1)": {
     "name": "LALR(1)",
     "description": "構文解析の有力なアルゴリズム。Lramaなどの最新パーサー理論の基礎となります。",
-    "detail": "プログラミング言語の「文法」をコンピュータが正しく理解するための数学的手法です。Rubyの新しいパーサージェネレータ Lrama が、Rubyの複雑怪奇な文法をいかにスマートに裁くか、という議論の中で頻繁に登場する重要な理論です。",
+    "detail": "プログラミング言語の「文法」をコンピュータが正しく理解するための数学的手法です。Rubyの新しいパーサージェネレータ Lrama が、Rubyの複雑怪奇な文法をいかにスマートに裁くか、という議論の中で頻繁に登場するな理論です。",
     "url": "https://en.wikipedia.org/wiki/LALR_parser"
   },
   "LSP": {
     "name": "LSP (Language Server Protocol)",
     "description": "エディタ（VS Code等）に、「コード補完」や「定義ジャンプ」などの賢い機能を提供する仕組み。",
-    "detail": "エディタと、言語を解析するツールを繋ぐ共通の言葉（プロトコル）です。Ruby LSP や Steep などがこれを実装しており、Rubyを実機で動かさなくても、エディタ上で「この変数の型は何か」「このメソッドはどこで書かれているか」を即座に教えてくれる、現代のプログラミングに欠かせないインフラです。",
+    "detail": "エディタと、言語を解析するツールを繋ぐ共通の言葉（プロトコル）です。Ruby LSP や Steep などがこれを実装しており、Rubyを実機で動かさなくても、エディタ上で「この変数の型は何か」「このメソッドはどこで書かれているか」を即座に教えてくれる、プログラミングに欠かせないインフラです。",
     "url": "https://microsoft.github.io/language-server-protocol/"
   },
   "Lrama": {
     "name": "Lrama (LALR Parser Generator)",
     "description": "Ruby 3.3から採用されたパーサジェネレータ。Bison互換でRubyの複雑な文法を解析します。",
-    "detail": "Lramaは、日本のコミッタによって開発されたRuby専用のパーサジェネレータです。長年使われてきた Bison を置き換え、Rubyの新機能をより追加しやすく、保守しやすくするためにゼロから作られました。Rubyの「心臓部」を支える国産の重要なツールです。",
+    "detail": "Lramaは、日本のコミッタによって開発されたRuby専用のパーサジェネレータです。長年使われてきた Bison を置き換え、Rubyの新機能をより追加しやすく、保守しやすくするためにゼロから作られました。Rubyの「」を支える国産のなツールです。",
     "url": "https://github.com/ruby/lrama"
   },
   "Language Design": {
     "name": "言語デザイン (Language Design)",
     "description": "文法や機能を、「いかに読みやすく美しくするか」を設計するアートであり技術。",
-    "detail": "Rubyは「プログラマの使いやすさ」を重視した設計がなされています。直感的な記述を実現するために、どのような新しい文法を追加し、どのような古い仕様を変更するかといった議論が行われています。",
+    "detail": "プログラムの記述方法や言語仕様の設計を指します。Rubyでは新しい文法の追加、既存仕様の変更が継続的に行われています。",
     "url": "https://en.wikipedia.org/wiki/Programming_language_design"
   },
   "Language Migration": {
@@ -422,7 +422,7 @@
   "MQTT": {
     "name": "MQTT",
     "description": "IoTデバイスなど、不安定なネット環境でも情報を確実に送るための軽量プロトコル。",
-    "detail": "非常に少ないデータ量で通信できる「メッセージの宅配便」のような仕組みです。家中のセンサー情報をRubyを動かしているサーバーに集めたり、逆にRubyから指示を送ってマイコンを動かしたりする際に重宝されます。",
+    "detail": "非常に少ないデータ量で通信できる「メッセージの宅配便」のような仕組みです。家中のセンサー情報をRubyを動かしているサーバーに集めたり、逆にRubyから指示を送ってマイコンを動かしたりする際にされます。",
     "url": "https://mqtt.org/"
   },
   "Matz": {
@@ -452,13 +452,13 @@
   "MessagePack": {
     "name": "MessagePack",
     "description": "JSONよりも速くてコンパクトなデータ転送形式。日本人が開発しました。",
-    "detail": "データの中身をJSONのように扱えますが、バイナリ形式なのでコンピュータにとって処理が非常に軽く、データサイズも小さくなります。大規模なシステムでデータを交換する際の「スピードアップ」の代名詞的存在です。",
+    "detail": "データの中身をJSONのように扱えますが、バイナリ形式なのでコンピュータにとって処理が非常に軽く、データサイズも小さくなります。大規模なシステムでデータを交換する際の「スピードアップ」の的存在です。",
     "url": "https://msgpack.org/"
   },
   "Metaprogramming": {
     "name": "メタプログラミング",
     "description": "プログラム自体がプログラムの構造を動的に書き換える機能。",
-    "detail": "実行中に新しいメソッドを定義したり、既存の動作を書き換えたりする技術です。Railsはこの機能を活用することで、簡潔な記述で多くの機能を実行できる仕組みを実現しています。",
+    "detail": "プログラム実行中に、動的にメソッドの定義やクラスの構造を変更する機能を指します。",
     "url": "https://en.wikipedia.org/wiki/Metaprogramming"
   },
   "Modular GC": {
@@ -469,7 +469,7 @@
   },
   "Multi-Core": {
     "name": "マルチコア (Multi-Core)",
-    "description": "一つのCPUに複数の「頭脳（コア）」がある、現代のプロセッサの構成。",
+    "description": "一つのCPUに複数の「頭脳（コア）」がある、プロセッサの構成。",
     "detail": "今のスマホやPCはほぼ全てマルチコアです。Rubyは歴史的に「一人のプログラミが一度に一つの脳しか使えない（GVL）」という制約がありましたが、RactorやMaNyプロジェクトによって、複数のコアをRubyからフル活用できるようになっています。",
     "url": "https://en.wikipedia.org/wiki/Multi-core_processor"
   },
@@ -482,13 +482,13 @@
   "Open Class": {
     "name": "オープンクラス (Open Class)",
     "description": "既存のクラスを再オープンして、メソッドの追加や変更を自由に行えるRubyの特徴。",
-    "detail": "既存のクラスを再定義して、メソッドの追加や変更を行える機能です。自由度が高い反面、広範囲に影響を及ぼす可能性があるため、注意して使用される機能です。",
+    "detail": "定義済みのクラスに対し、メソッドの追加や既存メソッドの再定義を動的に行う機能です。",
     "url": "https://en.wikipedia.org/wiki/Monkey_patch"
   },
   "Optimization": {
     "name": "最適化 (Optimization)",
     "description": "プログラムの内容を工夫して、より速く、より少ないメモリで動くようにすること。",
-    "detail": "「無駄を省き、性能を最大化する」こと。JITコンパイラによる自動最適化もあれば、プログラマがアルゴリズムを見直す手動の最適化もあります。RubyKaigiのセッションの多くは、この最適化がいかに知的で刺激的な挑戦であるかを教えてくれます。",
+    "detail": "「無駄を省き、性能を最大化する」こと。JITコンパイラによる自動最適化もあれば、プログラマがアルゴリズムを見直す手動の最適化もあります。RubyKaigiのセッションの多くは、この最適化がいかに知的で刺激的なであるかを教えてくれます。",
     "url": "https://en.wikipedia.org/wiki/Optimization_(computer_science)"
   },
   "POSIX": {
@@ -554,13 +554,13 @@
   "Portability": {
     "name": "ポータビリティ (Portability / 移植性)",
     "description": "特定の環境に縛られず、様々なOSやハードウェアで同じように動作する性質。",
-    "detail": "「自分のPCでは動くが、サーバーやWindowsでは動かない」といった問題を最小限にすること。RubyはPOSIX準拠のコードを核にしつつ、より幅広い環境（WASM、マイコン、Windows等）で安定して動くための「ポータブル」な設計を目指しています。",
+    "detail": "WASM、マイコン、各種OSなどの異なる環境において、同一のソースコードを動作させる性質を指します。",
     "url": "https://en.wikipedia.org/wiki/Software_portability"
   },
   "Prism": {
     "name": "Prism",
     "description": "メンテナンス性と移植性を重視した、Rubyの新しい公式パーサー。",
-    "detail": "Shopifyが中心となって開発した、Rubyの最新パーサー（構文解析器）です。これまでの複雑な実装を整理し、高速かつ「壊れにくい」構造になりました。将来的にRubyの全てのツールがこのPrismを土台にすることで、開発体験がより快適になります。",
+    "detail": "Shopifyが中心となって開発した、Rubyの最新パーサー（構文解析器）です。これまでの複雑な実装を整理し、高速かつ「壊れにくい」構造になりました。的にRubyの全てのツールがこのPrismを土台にすることで、開発体験がより快適になります。",
     "url": "https://github.com/ruby/prism"
   },
   "Profiling": {
@@ -578,7 +578,7 @@
   "Pure Intonation": {
     "name": "純正律 (Pure Intonation)",
     "description": "周波数の単純な整数比に基づいた、最も美しく響く音楽の調律法。",
-    "detail": "一般的には平均律ではなく、数学的に「ハモる」響きを追求した音楽の仕組みです。RubyKaigiでは、Rubyコードを使ってこの純正律を計算し、シンセサイザーなどで美しい音響を生成するライブコーディングなどが披露されます。",
+    "detail": "一般的には平均律ではなく、数学的に「ハモる」響きをした音楽の仕組みです。RubyKaigiでは、Rubyコードを使ってこの純正律を計算し、シンセサイザーなどで美しい音響を生成するライブコーディングなどが披露されます。",
     "url": "https://en.wikipedia.org/wiki/Just_intonation"
   },
   "Pure Ruby": {
@@ -590,7 +590,7 @@
   "pybind11": {
     "name": "pybind11",
     "description": "C++で書かれたプログラムを、Pythonなどから簡単に呼び出すためのツール。Ruby版も研究されています。",
-    "detail": "C++とスクリプト言語を繋ぐ「架け橋」となるライブラリです。これをRubyでも活用し、C++で書かれた巨大なエンジン（AI、3Dグラフィックス等）を、Rubyの書きやすさで操れるようにする試みが注目されています。",
+    "detail": "pybind11は、C++の関数やクラスをスクリプト言語から利用可能にするライブラリです。Rubyにおいては、ffmpeg-clangやRice等を用いたC++ツールチェーンの構築事例が存在します。",
     "url": "https://github.com/pybind/pybind11"
   },
   "QUIC (HTTP/3)": {
@@ -602,7 +602,7 @@
   "R2P2": {
     "name": "R2P2 (PicoRuby Platform)",
     "description": "PicoRubyを搭載した、汎用的な電子工作・教育用デバイスのプラットフォーム。",
-    "detail": "Rubyでマイコンを動かすための「共通のひな形」です。これを使うことで、様々なマイコンボード上でRubyコードを共有でき、初心者でも簡単にプログラミングと電子工作の融合体験を楽しめます。",
+    "detail": "Rubyでマイコンを動かすための「共通のひな形」です。これを使うことで、様々なマイコンボード上でRubyコードを共有でき、初心者でも簡単にプログラミングと電子工作の融合体験を。",
     "url": "https://github.com/picoruby/picoruby"
   },
   "Bundler": {
@@ -632,7 +632,7 @@
   "Documentation": {
     "name": "ドキュメンテーション (Documentation)",
     "description": "プログラムの使い方、設計、仕様などをまとめた説明文書のこと。",
-    "detail": "優れたコードには優れたドキュメントが不可欠です。Rubyには RDoc や YARD などのツールがあり、ソースコードから美しいドキュメントを生成する文化があります。",
+    "detail": "優れたコードには優れたドキュメントがです。Rubyには RDoc や YARD などのツールがあり、ソースコードから美しいドキュメントを生成する文化があります。",
     "url": "https://en.wikipedia.org/wiki/Software_documentation"
   },
   "Doom": {
@@ -650,13 +650,13 @@
   "Formal Methods": {
     "name": "形式手法 (Formal Methods)",
     "description": "数学的な理論に基づいて、ソフトウェアの正しさを厳密に証明する手法。",
-    "detail": "テストだけでは見逃しがちな複雑なバグも、数式を使って論理的に「ありえない」ことを証明します。日常のソフトウェア開発では一般的ではありませんが、安全性や信頼性が求められる重要なシステムの設計検証に活用されています。",
+    "detail": "テストだけでは見逃しがちな複雑なバグも、数式を使って論理的に「ありえない」ことを証明します。日常のソフトウェア開発では一般的ではありませんが、安全性や信頼性が求められるなシステムの設計検証に活用されています。",
     "url": "https://en.wikipedia.org/wiki/Formal_methods"
   },
   "Observability": {
     "name": "可観測性 (Observability)",
     "description": "システムの内部で何が起きているかを、外部から出力（ログ、メトリクス等）を通して理解すること。",
-    "detail": "「単なる監視（Monitoring）」を超え、複雑なシステムがなぜその挙動になったのかを深掘りできる能力を指します。Rubyアプリの安定稼働には欠かせない現代の運用コンセプトです。",
+    "detail": "「単なる監視（Monitoring）」を超え、複雑なシステムがなぜその挙動になったのかを深掘りできる能力を指します。Rubyアプリの安定稼働には欠かせない運用コンセプトです。",
     "url": "https://en.wikipedia.org/wiki/Observability"
   },
   "Precision": {
@@ -674,7 +674,7 @@
   "QUIC": {
     "name": "QUIC",
     "description": "UDPをベースにした、HTTP/3の基盤となる次世代の超高速通信プロトコル。",
-    "detail": "TCPの制約を解消し、接続の高速化と安定性を目的とした通信プロトコルです。Ruby 3.4以降のネットワーク関連の改善における重要な要素となっています。",
+    "detail": "TCPの制約を解消し、接続の高速化と安定性通信プロトコルです。Ruby 3.4以降のネットワーク関連の改善におけるな要素となっています。",
     "url": "https://en.wikipedia.org/wiki/QUIC"
   },
   "RBS": {
@@ -710,7 +710,7 @@
   "Standalone Environment": {
     "name": "スタンドアロン環境 (Standalone Environment)",
     "description": "OSや外部のライブラリに頼らず、それ単体で動作を完結させることができる実行環境。",
-    "detail": "サーバーレス環境やWASM、非常に小さなチップの中など、限られた資源でRubyを動かすための「身軽さ」を追求した技術の結晶です。",
+    "detail": "サーバーレス環境やWASM、非常に小さなチップの中など、限られた資源でRubyを動かすための「身軽さ」をした技術の結晶です。",
     "url": "https://en.wikipedia.org/wiki/Standalone_software"
   },
   "Steep": {
@@ -740,13 +740,13 @@
   "Uzumibi": {
     "name": "Uzumibi",
     "description": "mruby/edgeを基盤とした、エッジコンピューティング向けの軽量Webフレームワーク。",
-    "detail": "Uzumibiは、mruby/edgeの上に構築された軽量Webフレームワークです。Cloudflare Workers、Fastly Compute、Spinなど複数のエッジプラットフォームで同じRubyコードを実行でき、シンプルなWeb APIを提供することを目指しています。",
+    "detail": "Uzumibiは、mruby/edgeを基盤とするWebフレームワークです。Cloudflare Workers、Fastly Compute、Spin等のWebAssembly実行環境上で動作します。",
     "url": "https://github.com/udzura/uzumibi"
   },
   "Web Audio": {
     "name": "Web Audio API",
     "description": "ブラウザ上で音楽の生成、音声加工、音響解析などを行うための標準API。",
-    "detail": "Ruby/WASMを使って、ブラウザの音響処理をRubyコードで制御します。シンセサイザーアプリの作成や、プログラムの動きを音で表現する（可聴化）といった面白い試みが可能になります。",
+    "detail": "WebAudioは、Webブラウザ上で音声の生成・加工・解析を行うAPIです。Ruby/WASMを用いることで、Rubyコードからの制御が可能です。",
     "url": "https://developer.mozilla.org/ja/docs/Web/API/Web_Audio_API"
   },
   "date": {
@@ -782,13 +782,13 @@
   "optcarrot": {
     "name": "optcarrot",
     "description": "Rubyの性能を極限まで引き出すために書かれた、フルRuby製のファミコンエミュレータ。",
-    "detail": "単なるエミュレータではなく、Rubyの速度を測るベンチマークとして世界的に有名です。これがどれだけ速く動くかが、Rubyのその年の進化を証明する代名詞となっています。",
+    "detail": "単なるエミュレータではなく、Rubyの速度を測るベンチマークとして世界的に有名です。これがどれだけ速く動くかが、Rubyのその年の進化を証明するとなっています。",
     "url": "https://github.com/mametter/optcarrot"
   },
   "picoruby-net": {
     "name": "picoruby-net",
     "description": "PicoRubyでネットワーク通信を行うための、軽量でポータブルな通信ライブラリ。",
-    "detail": "マイコンなどの非常に限られた環境から、インターネットやローカルネットワークに接続するための窓口を提供します。IoTハックの扉をRubyで開くための重要なパーツです。",
+    "detail": "マイコンなどの非常に限られた環境から、インターネットやローカルネットワークに接続するための窓口を提供します。IoTハックの扉をRubyで開くためのなパーツです。",
     "url": "https://github.com/picoruby/picoruby"
   },
   "ragents": {
@@ -824,7 +824,7 @@
   "Rails": {
     "name": "Ruby on Rails",
     "description": "Rubyで書かれた、世界で最も人気のあるWebアプリケーションフレームワーク。",
-    "detail": "「設定より規約（CoC）」の設計思想により、少ないコード記述で高品質なWebアプリケーションを効率的に構築することが可能です。RubyKaigiでは、このRailsをさらに速く動かすためのRuby本体の進化についても多く語られます。",
+    "detail": "「設定より規約（CoC）」のにより、少ないコード記述でWebアプリケーションを効率的に構築することが可能です。RubyKaigiでは、このRailsをさらに速く動かすためのRuby本体の進化についても多く語られます。",
     "url": "https://rubyonrails.org/"
   },
   "Reactive Rendering": {
@@ -842,7 +842,7 @@
   "Reliability": {
     "name": "信頼性 (Reliability)",
     "description": "システムが予期せぬ入力や負荷に対しても、正しく動き続けるための能力。",
-    "detail": "「絶対に落とせない」大規模なサービスでは、速度よりもこの信頼性が重要になります。Ruby 4.xの Ruby Box による隔離や、検証型GCなど、Rubyをより信頼できる堅牢なインフラにするための挑戦が続いています。",
+    "detail": "「絶対に落とせない」大規模なサービスでは、速度よりもこの信頼性がになります。Ruby 4.xの Ruby Box による隔離や、検証型GCなど、Rubyをより信頼できる堅牢なインフラにするためのが続いています。",
     "url": "https://en.wikipedia.org/wiki/Reliability_(computer_networking)"
   },
   "Require Hooks": {
@@ -896,7 +896,7 @@
   "Small Ruby": {
     "name": "Small Ruby (小さなRuby)",
     "description": "フットプリント（占有メモリ）を極限まで削り、組み込み用途などに特化したRubyの総稱。",
-    "detail": "mruby、PicoRuby、SmallRubyなど、フルセットのRubyが重すぎる環境でも快適に動くように工夫された実装です。IoTや組み込み、チップの中などで活躍します。",
+    "detail": "mruby、PicoRuby、SmallRubyなど、フルセットのRubyが重すぎる環境でも快適に動くように工夫された実装です。IoTや組み込み、チップの中などでします。",
     "url": "https://mruby.org/"
   },
   "Socket": {
@@ -932,7 +932,7 @@
   "TLS": {
     "name": "TLS",
     "description": "インターネット通信を暗号化して盗聴や改ざんを防ぐ、セキュリティの標準プロトコル。",
-    "detail": "HTTPSの「S（セキュア）」の正体です。RubyはOpenSSLなどと連携して、このTLS通信を簡単・安全に行えるようにしており、プライバシーを守る現代のネット社会の土台を支えています。",
+    "detail": "HTTPSの「S（セキュア）」の正体です。RubyはOpenSSLなどと連携して、このTLS通信を簡単・安全に行えるようにしており、プライバシーを守るネット社会の土台を支えています。",
     "url": "https://en.wikipedia.org/wiki/Transport_Layer_Security"
   },
   "TracePoint": {
@@ -980,19 +980,19 @@
   "Write Barrier": {
     "name": "ライトバリア (Write Barrier)",
     "description": "メモリ掃除（GC）の最中に、データの書き換えを検知して正しく管理するための仕組み。",
-    "detail": "掃除中の場所で勝手に物を置かれた時に、「あ、そこに物が増えたよ」と掃除屋（GC）に教える役割です。これが正しく動かないとメモリが壊れてしまう、地味ながら非常に重要な守護神のようなコードです。",
+    "detail": "掃除中の場所で勝手に物を置かれた時に、「あ、そこに物が増えたよ」と掃除屋（GC）に教える役割です。これが正しく動かないとメモリが壊れてしまう、地味ながら非常にな守護神のようなコードです。",
     "url": "https://en.wikipedia.org/wiki/Write_barrier_(computer_science)"
   },
   "YJIT": {
     "name": "YJIT",
     "description": "Shopifyが開発し、現在は公式に標準搭載されている、世界最速級のRuby用JITコンパイラ。",
-    "detail": "YJITは、実用的なRuby/Railsアプリケーションの性能向上を目的としてShopifyによって開発されたJITコンパイラです。",
+    "detail": "YJITは、CRubyに搭載されたJITコンパイラです。Basic Block Versioning (BBV) 等の技術を用いて高速化を行います。",
     "url": "https://github.com/ruby/ruby/blob/master/doc/yjit/yjit.md"
   },
   "ZJIT": {
     "name": "ZJIT",
     "description": "YJITの手法をさらに発展させた、JITコンパイラの研究プロジェクト。",
-    "detail": "メソッドのインライン化などの高度なコンパイラ最適化をRubyに適用し、さらなる実行性能の向上を目指した開発が行われています。",
+    "detail": "ZJITは、メソッドのインライン化や副作用分析（side effect analysis）等を実装したJITコンパイラです。",
     "url": "https://rubykaigi.org/2026/presentations/k0kubun.html"
   },
   "Live Coding": {
@@ -1022,7 +1022,7 @@
   "monoruby": {
     "name": "monoruby",
     "description": "Rustでゼロから書かれたRubyの実験的なJIT実装。",
-    "detail": "Ruby互換を目指しながら、Rustの安全性と近代的なコンパイラ技術を用い、JITコンパイラの研究・実験プラットフォームとして開発されています。",
+    "detail": "monorubyは、Rustで実装されたRuby処理系です。JITコンパイラを備え、不変条件（Invariants）や逆最適化（Deoptimization）を実装しています。",
     "url": "https://github.com/sisshiki1969/monoruby"
   },
   "FreeRTOS": {
@@ -1124,7 +1124,7 @@
   "Duck Typing": {
     "name": "ダックタイピング (Duck Typing)",
     "description": "オブジェクトの型に依存せず、必要なメソッドを持っているかどうかで振る舞いを決定する型付けのスタイル。",
-    "detail": "オブジェクトの具体的な型ではなく、その振る舞い（メソッドの有無）に基づいて操作を決定する設計思想です。特定のクラスであることを要求せずに、そのメッセージ（メソッド名）に反応できるかどうかを基準にコードを記述する手法を指します。",
+    "detail": "オブジェクトのクラスにかかわらず、必要なメソッドを持っているかどうかで挙動を決定する設計です。",
     "url": "https://ja.wikipedia.org/wiki/%E3%83%80%E3%83%83%E3%82%AF%E3%83%BB%E3%82%BF%E3%82%A4%E3%83%94%E3%83%B3%E3%82%B0"
   },
   "Coverage": {
