@@ -122,7 +122,7 @@
   "DSL": {
     "name": "DSL (ドメイン特化言語)",
     "description": "特定の目的（領域）に特化した、表現力豊かなプログラム記述方法。",
-    "detail": "DSL (Domain Specific Language) は、Rubyの自由な文法を駆使して、特定の問題（テスト、DB定義、文書作成など）をあたかも専用言語のように記述する手法です。RubyはDSLを作るのが得意な言語とされており、RSpecやRakeなどの著名なツールでそのが発揮されています。",
+    "detail": "DSL (Domain Specific Language) は、Rubyの自由な文法を駆使して、特定の問題（テスト、DB定義、文書作成など）をあたかも専用言語のように記述する手法です。RubyはDSLを作るのが得意な言語とされており、RSpecやRakeなどの著名なツールでその強みが発揮されています。",
     "url": "https://en.wikipedia.org/wiki/Domain-specific_language"
   },
   "Data Format": {
@@ -152,7 +152,7 @@
   "Deoptimization": {
     "name": "逆最適化 (Deoptimization)",
     "description": "JITコンパイラが行った最適化の前提が崩れた際に、安全なインタプリタ実行へ切り戻す仕組み。",
-    "detail": "JITコンパイラは実行効率向上のため、特定の前提（例：メソッドの非再定義）に基づき最適化コードを生成します。その前提が崩れた際、安全性を確保するために元の実行状態に戻す仕組みを指します。",
+    "detail": "JITコンパイラは実行効率向上のため、特定の前提（不変条件 / Invariants）に基づき最適化コードを生成します。その前提が崩れた際（メソッドが再定義された場合など）、安全性を確保するために元のインタプリタ実行状態へ切り戻す仕組みを指します。",
     "url": "https://en.wikipedia.org/wiki/Inline_caching#Deoptimization"
   },
   "ESP32": {
@@ -164,7 +164,7 @@
   "Edge Computing": {
     "name": "エッジコンピューティング (Edge Computing)",
     "description": "データの処理をユーザーに近い場所（エッジ）で行うことで、応答速度を向上させる技術。",
-    "detail": "従来のクラウド（中央集権）とは異なり、ユーザーの物理的な近く（CDNサーバーなど）でプログラムを動かす技術です。RubyをWebAssembly(WASM)化することで、Cloudflare Workersなどのエッジ環境でもRubyを高速に動かす試みが活発になっています。",
+    "detail": "従来のクラウド（中央集権）とは異なり、ユーザーの物理的な近く（CDNサーバーなど）でプログラムを動かす技術です。近年ではRubyをWebAssembly(WASM)化することで、Cloudflare Workersなどのエッジ環境でもRubyを高速に動かす試みが活発になっています。",
     "url": "https://en.wikipedia.org/wiki/Edge_computing"
   },
   "Education": {
@@ -176,7 +176,7 @@
   "Extensibility": {
     "name": "拡張性 (Extensibility)",
     "description": "システムを根本から変えることなく、新しい機能を追加できる柔軟性の高さ。",
-    "detail": "Rubyのの一つです。オープンクラスやメタプログラミングといった動的な機能を提供しており、プログラマは言語そのものの挙動を自由に変えたり、新しい機能を付け加えたりすることができます。Railsなどのフレームワークも、この拡張性を利用しています。",
+    "detail": "Rubyの強みの一つです。オープンクラスやメタプログラミングといった動的な機能を提供しており、プログラマは言語そのものの挙動を自由に変えたり、新しい機能を付け加えたりすることができます。Railsなどのフレームワークも、この拡張性を利用しています。",
     "url": "https://en.wikipedia.org/wiki/Extensibility"
   },
   "ext/profile": {
@@ -206,7 +206,7 @@
   "Fork": {
     "name": "fork",
     "description": "実行中のプロセスを複製して、別のプロセスとして並列処理を行うUnixの機能。",
-    "detail": "fork（フォーク）は、動作中のプログラムを丸ごとコピーして、別のプロセスとして動かす仕組みです。Rubyの並列テストなどで、複数のプロセッサを最大活用するために使われます。一方で、WindowsなどのOSではこの仕組みが標準ではなく、ポータビリティ上の課題となることもあります。",
+    "detail": "fork（フォーク）は、動作中のプログラムを丸ごとコピーして、別のプロセスとして動かす仕組みです。Rubyの並列テストなどで、複数のプロセッサを最大活用するために使われます。一方で、WindowsなどのOSではこの仕組みが標準ではありませんでしたが、現在ではWSL等を用いることでfork相当の機能を利用できるようになっており、ポータビリティ上の課題に対する一つの解となっています。",
     "url": "https://en.wikipedia.org/wiki/Fork_(system_call)"
   },
   "Frontend": {
@@ -229,7 +229,7 @@
   },
   "GVL": {
     "name": "GVL (Global VM Lock) / GIL",
-    "description": "Rubyのスレッドが同時に動くのを制御するロック。安全性を守る一方、並列実行の制約にもなります。",
+    "description": "ある瞬間に1つのスレッドしかRubyコードを実行できないようにするロック。安全性を守る一方、並列実行の制約にもなります。",
     "detail": "GVL (Global VM Lock) は、ある瞬間に一つのRubyスレッドしか実行されないようにする仕組みです。これによりメモリの安全性が保たれていますが、CPUを複数使う重い計算では効率が下がります。RactorはこのGVLの制約を超えて「本当の並列実行」をするために導入されました。",
     "url": "https://en.wikipedia.org/wiki/Global_interpreter_lock"
   },
@@ -278,7 +278,7 @@
   "Hotspot": {
     "name": "Hotspot (ホットスポット)",
     "description": "プログラムの中で特に何度も実行されている、処理の「急所」となる部分。",
-    "detail": "実行時間の大部分を占めている特定の数行のことです。JITコンパイラはこのホットスポットを見分けて、そこだけを効果的に「機械語」に変換することで、全体を大幅に速くします。パフォーマンス改善は、このホットスポットを正確に探したから始まります。",
+    "detail": "実行時間の大部分を占めている特定の数行のことです。JITコンパイラはこのホットスポットを見分けて、そこだけを効果的に「機械語」に変換することで、全体を大幅に速くします。パフォーマンス改善は、このホットスポットを正確に探すことから始まります。",
     "url": "https://en.wikipedia.org/wiki/Hotspot_(computer_programming)"
   },
   "HTTP/2": {
@@ -308,7 +308,7 @@
   "Invariants": {
     "name": "不変条件 (Invariants)",
     "description": "プログラムの実行中、常に正しいと仮定できるルールのこと。",
-    "detail": "JITコンパイラが、「このメソッドは中身が書き換わらない」などの「前提条件」を用いて、チェック処理を最適化して実行速度を向上させるために使われます。もしこの前提が破られた（メソッドが再定義された）場合には、安全な実行モードへと切り替えます。",
+    "detail": "JITコンパイラが、「このメソッドは中身が書き換わらない」などの「前提条件（Invariants）」を用いて、チェック処理を最適化して実行速度を向上させるために使われます。もしこの前提が破られた（メソッドが再定義された）場合には、安全なインタプリタ実行状態へ切り戻す仕組み（Deoptimization）が働きます。",
     "url": "https://en.wikipedia.org/wiki/Invariant_(computer_science)"
   },
   "IoT": {
@@ -368,7 +368,7 @@
   "Lrama": {
     "name": "Lrama (LALR Parser Generator)",
     "description": "Ruby 3.3から採用されたパーサジェネレータ。Bison互換でRubyの複雑な文法を解析します。",
-    "detail": "Lramaは、日本のコミッタによって開発されたRuby専用のパーサジェネレータです。長年使われてきた Bison を置き換え、Rubyの新機能をより追加しやすく、保守しやすくするためにゼロから作られました。Rubyの「」を支える国産のなツールです。",
+    "detail": "Lramaは、日本のコミッタによって開発されたRuby専用のパーサジェネレータです。長年使われてきた Bison を置き換え、Rubyの新機能をより追加しやすく、保守しやすくするためにゼロから作られました。Rubyの「構文解析」を支える国産の重要なツールです。",
     "url": "https://github.com/ruby/lrama"
   },
   "Language Design": {
@@ -494,7 +494,7 @@
   "POSIX": {
     "name": "POSIX (ポジックス)",
     "description": "Unix系OSの標準規格。Rubyの「どこでも動く」移植性の基礎となります。",
-    "detail": "POSIXは、異なるOS（Linux、macOS等）の間でプログラムを使い回しやすくするための世界共通ルールです。Rubyのファイル操作やネットワーク機能はこのルールに則って作られており、Windowsなどの異なる環境でRubyを動かすための努力の裏側には、常にこのPOSIXとの戦いと調和があります。",
+    "detail": "POSIXは、異なるOS（Linux、macOS等）の間でプログラムを使い回しやすくするための世界共通ルールです。Rubyのファイル操作やネットワーク機能はこのルールに則って作られており、Windowsなどの異なる環境でRubyを動かすための努力の裏側には、常にこのPOSIXへの対応が意識されています。",
     "url": "https://en.wikipedia.org/wiki/POSIX"
   },
   "PRK Firmware": {
@@ -506,7 +506,7 @@
   "PSLR(1)": {
     "name": "PSLR(1)",
     "description": "Lramaに実装された、Rubyの複雑な文法をより正確に解析するための新アルゴリズム。",
-    "detail": "Pseudo-Scannerless Minimal LR(1) の略。パーサー（構文解析器）からレクサ（字句解析器）へ「今必要なトークン」を伝えることで、Ruby特有の曖昧で難しい文法を、よりシンプルかつ正確に読み解くことを可能にします。日本のコミッタによる最先端の研究成果です。",
+    "detail": "Pseudo-Scannerless Minimal LR(1) の非公式な略称。パーサー（構文解析器）からレクサ（字句解析器）へ「今必要なトークン」を伝えることで、Ruby特有の曖昧で難しい文法を、よりシンプルかつ正確に読み解くことを可能にします。日本のコミッタによる最先端の研究成果です。",
     "url": "https://rubykaigi.org/2026/presentations/ydah_.html"
   },
   "Parallel Test Runner": {
@@ -697,8 +697,8 @@
   },
   "Ruby 4.0": {
     "name": "Ruby 4.0",
-    "description": "2025年末にリリースされたRubyの現行メジャーバージョン。",
-    "detail": "Ruby Box（定数・クラスの隔離機能）、Ractor-Local GC（Ractor単位の個別GC）、Setのコアクラスへの昇格など、多数の新機能が導入されました。",
+    "description": "2025年12月25日にリリースされたRubyの現行メジャーバージョン。",
+    "detail": "Ruby Box（定数・クラスの隔離機能）、Ractor-Local GC（Ractor単位の個別GC）、Setのコアクラスへの昇格、そして次世代JITコンパイラであるZJITの導入など、多数の新機能が含まれています。",
     "url": "https://github.com/ruby/ruby"
   },
   "Security": {
@@ -771,12 +771,12 @@
     "name": "mruby/c",
     "description": "mrubyをさらに小型化し、わずか数百KBのメモリしかない超小型マイコンでも動くようにした実装。",
     "detail": "mrubyの強みを保ちつつ、最もリソースの厳しい「ワンチップマイコン」などの組み込み現場の最前線で使われるために研ぎ澄まされています。",
-    "url": "https://mrubyc/mrubyc"
+    "url": "https://github.com/mrubyc/mrubyc"
   },
   "mruby/edge": {
     "name": "mruby/edge",
-    "description": "Pure Rustでゼロから構築されたmruby互提のVM。エッジコンピューティング向けに高ポータビリティなWasmバイナリを生成します。",
-    "detail": "mruby/edgeは、Cloudflare Workers、Fastly Computeなどのエッジ環境でRubyを実用的に実行するために開発されたmruby互提のVMです。Pure Rustで実装され、400KiB以下の最小構成ビルドが可能で、OOP、例外処理、クロージャ、キーワード引数などをサポートしています。",
+    "description": "Pure Rustでゼロから構築されたmruby互換のVM。エッジコンピューティング向けに高ポータビリティなWasmバイナリを生成します。",
+    "detail": "mruby/edgeは、Cloudflare Workers、Fastly Computeなどのエッジ環境でRubyを実用的に実行するために開発されたmruby互換のVMです。Pure Rustで実装され、400KiB以下の最小構成ビルドが可能で、OOP、例外処理、クロージャ、キーワード引数などをサポートしています。",
     "url": "https://github.com/udzura/mruby-edge"
   },
   "optcarrot": {
@@ -788,7 +788,7 @@
   "picoruby-net": {
     "name": "picoruby-net",
     "description": "PicoRubyでネットワーク通信を行うための、軽量でポータブルな通信ライブラリ。",
-    "detail": "マイコンなどの非常に限られた環境から、インターネットやローカルネットワークに接続するための窓口を提供します。IoTハックの扉をRubyで開くためのなパーツです。",
+    "detail": "マイコンなどの非常に限られた環境から、インターネットやローカルネットワークに接続するための窓口を提供します。IoTハックの扉をRubyで開くための重要なパーツです。",
     "url": "https://github.com/picoruby/picoruby"
   },
   "ragents": {
@@ -985,7 +985,7 @@
   },
   "YJIT": {
     "name": "YJIT",
-    "description": "Shopifyが開発し、現在は公式に標準搭載されている、世界最速級のRuby用JITコンパイラ。",
+    "description": "Shopifyが開発し、Ruby本体に標準搭載されているJITコンパイラ。",
     "detail": "YJITは、CRubyに搭載されたJITコンパイラです。Basic Block Versioning (BBV) 等の技術を用いて高速化を行います。",
     "url": "https://github.com/ruby/ruby/blob/master/doc/yjit/yjit.md"
   },
