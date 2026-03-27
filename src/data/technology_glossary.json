@@ -26,7 +26,7 @@
   "Apache Arrow": {
     "name": "Apache Arrow",
     "description": "大量データを高速に処理するためのメモリフォーマット標準。異なる言語間でのデータ共有に使われます。",
-    "detail": "Apache Arrowは、インメモリの列指向データフォーマット仕様です。データをメモリ上でどのように配置するかを統一することで、Ruby、Python、Javaといった異なるプログラミング言語間で、コピーの手間をかけずに高速にデータをやり取りできます。データサイエンスや大規模データ処理の分野でRubyを活用するためのな要素です。",
+    "detail": "Apache Arrowは、インメモリの列指向データフォーマット仕様です。データをメモリ上でどのように配置するかを統一することで、Ruby、Python、Javaといった異なるプログラミング言語間で、コピーの手間をかけずに高速にデータをやり取りできます。データサイエンスや大規模データ処理の分野でRubyを活用するための重要な要素です。",
     "url": "https://arrow.apache.org/"
   },
   "Backward Compatibility": {
@@ -38,7 +38,7 @@
   "Benchmarking": {
     "name": "ベンチマーク (Benchmarking)",
     "description": "標準的なプログラムを用いて、システムの性能を数値化して測定すること。",
-    "detail": "ベンチマーク（Benchmarking）は、システムの実行速度やメモリ効率などを、標準的な条件下で測定・比較する作業です。RubyのJITコンパイラの性能向上を証明するために使われる「optcarrot」などがその代表例です。パフォーマンス改善において、感覚ではなく「客観的な数値」を出すためのな工程です。",
+    "detail": "ベンチマーク（Benchmarking）は、システムの実行速度やメモリ効率などを、標準的な条件下で測定・比較する作業です。RubyのJITコンパイラの性能向上を証明するために使われる「optcarrot」などがその代表例です。パフォーマンス改善において、感覚ではなく「客観的な数値」を出すための重要な工程です。",
     "url": "https://en.wikipedia.org/wiki/Benchmark_(computing)"
   },
   "BigDecimal": {
@@ -104,13 +104,13 @@
   "Concurrency": {
     "name": "並行性 (Concurrency)",
     "description": "複数のタスクを切り替えて効率的に進める設計上の概念。",
-    "detail": "並行性 (Concurrency) は、物理的に同時に動く（Parallelism）とは異なり、複数の処理を論理的に切り替えながら進める「段取り」の概念です。Rubyでは Thread、Fiber、Ractor などがこれを提供し、ウェブサーバーなどが大量のリクエストを効率よく捌くためのなキーワードとなります。",
+    "detail": "並行性 (Concurrency) は、物理的に同時に動く（Parallelism）とは異なり、複数の処理を論理的に切り替えながら進める「段取り」の概念です。Rubyでは Thread、Fiber、Ractor などがこれを提供し、ウェブサーバーなどが大量のリクエストを効率よく捌くための重要なキーワードとなります。",
     "url": "https://en.wikipedia.org/wiki/Concurrency_(computer_science)"
   },
   "Cygwin": {
     "name": "Cygwin",
     "description": "Windows上でLinux/Unix互換の実行環境を提供するソフトウェア。Unix系のツールをWindowsで動かせます。",
-    "detail": "CygwinはWindows上でLinuxやUnix向けのソフトウェアをそのままビルド・実行できる互換レイヤーです。POSIX API（Unixの標準API）を実装するDLLを提供することで、gccやbashなどUnix向けのツールをWindows上で動作させることができます。Unixを前提としたRubyのソースコードをWindowsで動かすためのな手段の一つです。",
+    "detail": "CygwinはWindows上でLinuxやUnix向けのソフトウェアをそのままビルド・実行できる互換レイヤーです。POSIX API（Unixの標準API）を実装するDLLを提供することで、gccやbashなどUnix向けのツールをWindows上で動作させることができます。Unixを前提としたRubyのソースコードをWindowsで動かすための有力な手段の一つです。",
     "url": "https://www.cygwin.com/"
   },
   "DJ Controller": {
@@ -140,13 +140,13 @@
   "Datadog": {
     "name": "Datadog",
     "description": "アプリケーションのパフォーマンス監視やメトリクス収集を行うクラウドサービス。",
-    "detail": "Datadogは、インフラやアプリケーションの状態を詳細に可視化（監視）するためのプラットフォームです。Ruby向けの計測用gemを提供しており、テストの実行時間を最適化する「テストインパクト分析」などの高度な機能をRubyアプリケーションへ導入する際にもしています。",
+    "detail": "Datadogは、インフラやアプリケーションの状態を詳細に可視化（監視）するためのプラットフォームです。Ruby向けの計測用gemを提供しており、テストの実行時間を最適化する「テストインパクト分析」などの高度な機能をRubyアプリケーションへ導入する際にも活躍しています。",
     "url": "https://www.datadoghq.com/"
   },
   "Date": {
     "name": "date (標準ライブラリ)",
     "description": "日付や時刻を扱うための、Rubyの標準ライブラリです。カレンダー計算やDateクラスを提供します。",
-    "detail": "dateは、日付（Date）や日時（DateTime）を扱うためのRuby標準ライブラリです。カレンダー計算を正確に行うことができ、かつてはC言語で実装されていましたが、的な保守性などを考慮してRuby自身で再実装（Pure Ruby化）する取り組みも進められています。",
+    "detail": "dateは、日付（Date）や日時（DateTime）を扱うためのRuby標準ライブラリです。カレンダー計算を正確に行うことができ、かつてはC言語で実装されていましたが、長期的な保守性などを考慮してRuby自身で再実装（Pure Ruby化）する取り組みも進められています。",
     "url": "https://github.com/ruby/date"
   },
   "Deoptimization": {
@@ -176,7 +176,7 @@
   "Extensibility": {
     "name": "拡張性 (Extensibility)",
     "description": "システムを根本から変えることなく、新しい機能を追加できる柔軟性の高さ。",
-    "detail": "Rubyの強みの一つです。オープンクラスやメタプログラミングといった動的な機能を提供しており、プログラマは言語そのものの挙動を自由に変えたり、新しい機能を付け加えたりすることができます。Railsなどのフレームワークも、この拡張性を利用しています。",
+    "detail": "Rubyの特徴の一つです。オープンクラスやメタプログラミングといった動的な機能を提供しており、プログラマは言語そのものの挙動を自由に変えたり、新しい機能を付け加えたりすることができます。Railsなどのフレームワークも、この拡張性を利用しています。",
     "url": "https://en.wikipedia.org/wiki/Extensibility"
   },
   "ext/profile": {
@@ -1009,7 +1009,7 @@
   },
   "Rust": {
     "name": "Rust",
-    "description": "Mozillaが開発した、メモリ安全性と高パフォーマンスを両立するシステムプログラミング言語。",
+    "description": "Rust Foundationが管理する、メモリ安全性と高パフォーマンスを両立するシステムプログラミング言語。",
     "detail": "CやC++と同レベルの速度でありながら、独自の所有権システムによりメモリ安全性をコンパイル時に保証します。ガベージコレクションなしでメモリ安全を実現できるため、VMや高性能ツールの実装言語として人気が高まっています。Rubyエコシステムでも、型チェッカーやRubyのサブセット実装にRustが活用されています。",
     "url": "https://www.rust-lang.org/ja"
   },
@@ -1081,7 +1081,7 @@
   },
   "Kafka": {
     "name": "Apache Kafka (カフカ)",
-    "description": "大規模なリアルタイムデータストリームの処理に特化した、分散メッセージキューシステム。",
+    "description": "大規模なリアルタイムデータストリームの処理に特化した、分散イベントストリーミングプラットフォーム。",
     "detail": "LinkedInが開発しApacheに寄贈されたオープンソースの分散ストリーミングプラットフォームです。「パブリッシュ/サブスクライブ」モデルを採用し、1秒間に数百万件のメッセージを処理できます。マイクロサービス間のデータ連携やイベントログ収集に広く使われています。RubyからはKarafkaを使って利用します。",
     "url": "https://kafka.apache.org/"
   },
