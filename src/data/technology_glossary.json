@@ -19,7 +19,7 @@
   },
   "ASTro": {
     "name": "ASTro",
-    "description": "AST（抽象構文木）を直接操作・最適化するフレームワークの総称。",
+    "description": "AST（抽象構文木）を解析し、C言語ソースコードを生成してネイティブ実行を行う特定の最適化プロジェクト。",
     "detail": "ASTroは、RubyプログラムのAST（抽象構文木）を解析し、C言語ソースコードを生成してネイティブ実行を行うフレームワークです。",
     "url": "https://github.com/ruby/ruby"
   },
@@ -144,8 +144,8 @@
     "url": "https://www.datadoghq.com/"
   },
   "Date": {
-    "name": "date (標準ライブラリ)",
-    "description": "日付や時刻を扱うための、Rubyの標準ライブラリです。カレンダー計算やDateクラスを提供します。",
+    "name": "Date (クラス)",
+    "description": "カレンダー計算や日付操作の中心となる、Rubyで日付を表現するためのコアクラス。",
     "detail": "dateは、日付（Date）や日時（DateTime）を扱うためのRuby標準ライブラリです。カレンダー計算を正確に行うことができ、かつてはC言語で実装されていましたが、長期的な保守性などを考慮してRuby自身で再実装（Pure Ruby化）する取り組みも進められています。",
     "url": "https://github.com/ruby/date"
   },
@@ -349,7 +349,7 @@
   },
   "Keynote": {
     "name": "基調講演 (Keynote)",
-    "description": "カンファレンスの冒頭などに行われる、Rubyの方向性やを示す主要な発表。",
+    "description": "カンファレンスの冒頭などに行われる、Rubyの方向性を示す主要な発表。",
     "detail": "カンファレンスにおける主要な講演セッションを指します。",
     "url": "https://en.wikipedia.org/wiki/Keynote"
   },
@@ -390,7 +390,7 @@
     "url": "https://en.wikipedia.org/wiki/Lexer_hack"
   },
   "LLM": {
-    "name": "LLM (大规模言語モデル)",
+    "name": "LLM (大規模言語モデル)",
     "description": "ChatGPTなどに使われている、大量の言葉を学習したAIの頭脳。",
     "detail": "LLM（Large Language Model）は、大規模なテキストデータを学習し、人間のように自然言語を処理するAIモデルです。RubyKaigiでは、LLMによるコード生成や、RubyプログラムとAIの連携技術について議論されます。",
     "url": "https://en.wikipedia.org/wiki/Large_language_model"
@@ -474,7 +474,7 @@
     "url": "https://en.wikipedia.org/wiki/Multi-core_processor"
   },
   "NES": {
-    "name": "NES / ファミコン (Nintendo Entertainment System)",
+    "name": "NES / ファミコン (ハードウェア)",
     "description": "1983年に登場したゲーム機。RubyKaigiではこれをRubyで動かすという極限のハックが行われます。",
     "detail": "ファミコンの海外版がNESです。計算資源が限られたハードウェア上で、Rubyの実行エンジンを動作させるための最適化手法の研究やベンチマークの対象として用いられています。",
     "url": "https://en.wikipedia.org/wiki/Nintendo_Entertainment_System"
@@ -593,12 +593,6 @@
     "detail": "pybind11は、C++の関数やクラスをスクリプト言語から利用可能にするライブラリです。Rubyにおいては、ffmpeg-clangやRice等を用いたC++ツールチェーンの構築事例が存在します。",
     "url": "https://github.com/pybind/pybind11"
   },
-  "QUIC (HTTP/3)": {
-    "name": "QUIC (HTTP/3)",
-    "description": "UDPをベースにした、次世代の超高速通信プロトコル。HTTP/3の基盤技術。",
-    "detail": "TCPの代わりにUDPを使いつつ信頼性を確保した新しい方式です。モバイルネットワークなど不安定な環境においても、接続の確立と維持を高速に行うことが可能になります。",
-    "url": "https://en.wikipedia.org/wiki/QUIC"
-  },
   "R2P2": {
     "name": "R2P2 (PicoRuby Platform)",
     "description": "PicoRubyを搭載した、汎用的な電子工作・教育用デバイスのプラットフォーム。",
@@ -674,7 +668,7 @@
   "QUIC": {
     "name": "QUIC",
     "description": "UDPをベースにした、HTTP/3の基盤となる次世代の超高速通信プロトコル。",
-    "detail": "TCPの制約を解消し、接続の高速化と安定性通信プロトコルです。Ruby 3.4以降のネットワーク関連の改善における重要な要素となっています。",
+    "detail": "TCPの制約を解消し、接続の高速化と安定性を実現する通信プロトコルです。Ruby 3.4以降のネットワーク関連の改善における重要な要素となっています。",
     "url": "https://en.wikipedia.org/wiki/QUIC"
   },
   "RBS": {
@@ -743,15 +737,9 @@
     "detail": "Uzumibiは、mruby/edgeを基盤とするWebフレームワークです。Cloudflare Workers、Fastly Compute、Spin等のWebAssembly実行環境上で動作します。",
     "url": "https://github.com/udzura/uzumibi"
   },
-  "Web Audio": {
-    "name": "Web Audio API",
-    "description": "ブラウザ上で音楽の生成、音声加工、音響解析などを行うための標準API。",
-    "detail": "WebAudioは、Webブラウザ上で音声の生成・加工・解析を行うAPIです。Ruby/WASMを用いることで、Rubyコードからの制御が可能です。",
-    "url": "https://developer.mozilla.org/ja/docs/Web/API/Web_Audio_API"
-  },
   "date": {
-    "name": "date (日付ライブラリ)",
-    "description": "日付や時刻を扱うための、Rubyの非常に多用される標準ライブラリ。",
+    "name": "date (標準添付ライブラリ)",
+    "description": "DateやDateTimeクラスを利用可能にするための、Ruby標準添付のライブラリ（gem）。",
     "detail": "カレンダー計算、期間の算出、フォーマット変換などを行います。以前は重いと言われましたが、Ruby 3.2以降で大幅に最適化され、実用的なパフォーマンスがさらに向上しました。",
     "url": "https://docs.ruby-lang.org/ja/latest/library/date.html"
   },
@@ -864,7 +852,7 @@
     "url": "https://github.com/ruby/ruby"
   },
   "Ruby on NES": {
-    "name": "Ruby on NES",
+    "name": "Ruby on NES (プロジェクト)",
     "description": "ファミコンの実機上で、軽量なRubyを動作させる試み。",
     "detail": "メモリ容量が極めて少ない環境でRubyを動作させるための最適化手法を探求する実験として行われています。",
     "url": "https://github.com/mametter/optcarrot"
@@ -895,8 +883,8 @@
   },
   "Small Ruby": {
     "name": "Small Ruby (小さなRuby)",
-    "description": "フットプリント（占有メモリ）を極限まで削り、組み込み用途などに特化したRubyの総稱。",
-    "detail": "mruby、PicoRuby、SmallRubyなど、フルセットのRubyが重すぎる環境でも快適に動くように工夫された実装です。IoTや組み込み、チップの中などで活躍します。",
+    "description": "フットプリント（占有メモリ）を極限まで削り、組み込み用途などに特化したRubyの総称。",
+    "detail": "mrubyやPicoRubyといった軽量実装の総称です。IoTや組み込み、チップの中などで活躍します。",
     "url": "https://mruby.org/"
   },
   "Socket": {
